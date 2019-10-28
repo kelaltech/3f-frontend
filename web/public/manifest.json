@@ -1,0 +1,21 @@
+{
+  "short_name": "3F",
+  "name": "Finfine Furniture Factory",
+  "description": "Official Website for 3F (Finfine Furniture Factory plc).",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 48x48 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo-512.png",
+      "sizes": "512x512 256x256 192x192 152x152 144x144 128x128",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#bc2239",
+  "background_color": "#f2f2f2"
+}
