@@ -57,7 +57,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s prod & git update-index --again"
+      "pre-commit": "run-s prod"
     }
   }
 }
