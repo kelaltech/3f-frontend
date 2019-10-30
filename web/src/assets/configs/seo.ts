@@ -18,7 +18,8 @@ export default {
     type: 'website',
     locale: 'en_US',
     url: 'https://ethio3f.com/',
-    site_name: '3F | Finfine Furniture Factory plc'
+    site_name: '3F | Finfine Furniture Factory plc',
+    images: [{ url: 'https://ethio3f.com/promo.png' }]
   },
 
   twitter: {
