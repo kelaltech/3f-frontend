@@ -2,9 +2,9 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import { DefaultSeo } from 'next-seo/lib'
 
-import '../assets/styles/_app.scss'
-import SEO from '../assets/configs/seo'
-import Layout from '../shared/components/layout/layout'
+import '../src/assets/styles/_app.scss'
+import SEO from '../src/assets/configs/seo'
+import Layout from '../src/shared/components/layout/layout'
 
 // AMP support
 export const config = { amp: 'hybrid' }
