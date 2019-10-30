@@ -1,0 +1,28 @@
+@import "../../../../../assets/styles/theme";
+
+.form-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+
+.img-container {
+  width: 20%;
+  height: 100px;
+  margin: 0 10px;
+  align-self: center;
+  //border-radius: $space;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+  display: flex;
+  justify-content: center;
+  .img-add-placeholder {
+    align-self: center;
+    padding: $padding-S;
+    border-radius: $radius * 12;
+    color: #5c5c5c;
+  }
+}

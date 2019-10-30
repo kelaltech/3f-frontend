@@ -1,25 +1,21 @@
 import { IServerAppConfig } from 'meseret'
-import { galleryRouter } from '../modules/gallery/galleryRouter'
-import { testimonyRouter } from '../modules/testimony/testimonyRouter'
-import { newsRouter } from '../modules/news/news.route'
-import { GalleryModel } from '../models/gallery/gallery.model'
-import { TestimonyModel } from '../models/testimony/TestimonyModel'
-import { NewsModel } from '../models/news/news.model'
+import { productRouter } from '../modules/product/productRouter'
+import { ProductModel } from '../models/products/product.model'
 
 export const serverAppConfig: IServerAppConfig = {
-  name: 'East-side',
+  name: 'Finine Furniture Factory',
 
-  mongoUris: process.env.MONGO_URL || 'mongodb://localhost/east-side-base',
+  mongoUris: process.env.MONGO_URL || 'mongodb://localhost/3f',
   mongooseConnectionOptions: { useUnifiedTopology: true },
   httpServers: [
     {
       hostname: process.env.HOSTNAME || undefined,
-      port: Number(process.env.PORT) || 4100
+      port: Number(process.env.PORT) || 4200
     }
   ],
 
-  routers: [galleryRouter, testimonyRouter, newsRouter],
-  models: [GalleryModel, TestimonyModel, NewsModel],
+  routers: [productRouter],
+  models: [ProductModel],
 
   cacheFiles: {
     '/service-worker.js': { cacheControl: 'no-cache', maxAge: 0 }
