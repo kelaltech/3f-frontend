@@ -1,0 +1,32 @@
+@import 'theme';
+
+.card-house {
+  margin-bottom: $space;
+}
+
+%card-nanny {
+  display: inline-block;
+  padding: $space / 2;
+
+  > * {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@for $i from 1 through 5 {
+  .card-nanny-#{$i} {
+    @extend %card-nanny;
+    width: 100% / $i;
+  }
+
+  @if ($i > 1) {
+    @for $j from $i through 1 {
+      @media (max-width: $mobile * $j / 2) {
+        .card-nanny-#{$i} {
+          width: 100% / ($j - 1);
+        }
+      }
+    }
+  }
+}
