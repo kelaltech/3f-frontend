@@ -1,14 +1,14 @@
 import React from 'react'
 
 import LayoutDefault from '../src/shared/components/layout/layout'
-import Home from '../src/app/home/home'
+import Products from '../src/app/products/products'
 
-function IndexPage() {
+function ProductsPage() {
   return (
     <LayoutDefault>
-      <Home />
+      <Products />
     </LayoutDefault>
   )
 }
 
-export default IndexPage
+export default ProductsPage

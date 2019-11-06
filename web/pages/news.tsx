@@ -1,14 +1,14 @@
 import React from 'react'
 
 import LayoutDefault from '../src/shared/components/layout/layout'
-import Home from '../src/app/home/home'
+import News from '../src/app/news/news'
 
-function IndexPage() {
+function NewsPage() {
   return (
     <LayoutDefault>
-      <Home />
+      <News />
     </LayoutDefault>
   )
 }
 
-export default IndexPage
+export default NewsPage
