@@ -1,0 +1,30 @@
+@import 'theme';
+
+// CORE:
+
+.opera-mini *[data-aos] {
+  opacity: 1;
+  transition: none;
+  transform: none;
+  filter: none;
+  visibility: visible;
+}
+
+// APP:
+
+body {
+  background-image: linear-gradient(
+    to top right,
+    transparentize($primary, 0.95),
+    transparentize(white, 0.05)
+  );
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .font-family-display;
+}

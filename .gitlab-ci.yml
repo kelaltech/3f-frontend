@@ -12,13 +12,14 @@ image: node:latest
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
   paths:
-    - web/node_modules/
+    - node_modules/
 
-check_web:
+build:
   script:
-    - cd web
     - yarn install
-    - yarn run-p build test
+    - yarn prod
 
-# todo: check_admin
-# todo: api?
+test:
+  script:
+    - yarn install
+    - yarn test
