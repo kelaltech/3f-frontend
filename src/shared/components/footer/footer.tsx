@@ -19,7 +19,7 @@ const DotSpace = () => (
 
 function Footer() {
   return (
-    <footer className="footer font-family-display">
+    <footer className="footer">
       <Content size="3XL" transparent>
         <Block first>
           <LiteImage

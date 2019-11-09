@@ -13,6 +13,8 @@
 // APP:
 
 body {
+  @extend .font-family-body;
+
   background-image: linear-gradient(
     to top right,
     transparentize($primary, 0.95),
@@ -26,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  @extend .font-family-display;
+  @extend .font-family-title;
 }
 
 a {
