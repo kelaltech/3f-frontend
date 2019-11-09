@@ -28,3 +28,9 @@ h5,
 h6 {
   @extend .font-family-display;
 }
+
+a {
+  @extend .gerami-anchor;
+
+  font-weight: bold;
+}

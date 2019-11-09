@@ -3,10 +3,21 @@
 .footer {
   display: block;
 
-  padding: 48px 0 24px;
+  padding: $space 0 0;
 
-  font-size: 0.84em;
-  text-align: center;
+  font-size: 0.7em;
 
-  color: rgba(0, 0, 0, 0.42);
+  background-color: $primary;
+  color: transparentize($bg, 0.25);
+
+  a,
+  .gerami-anchor {
+    color: inherit;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: transparentize($bg, 0.03);
+    }
+  }
 }
