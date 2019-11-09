@@ -1,4 +1,50 @@
 @import '../../../assets/styles/theme';
+@import 'header-height';
 
 .header {
+  position: fixed;
+
+  height: $headerHeight;
+  width: 100%;
+
+  top: 0;
+  right: 0;
+  left: 0;
+
+  .header-in-1 {
+    margin: $space;
+
+    .header-in-2 {
+      padding: $space;
+    }
+  }
+}
+
+.header-logo-and-wordmark {
+  display: inline-block;
+
+  height: 42px;
+
+  .header-logo {
+    display: inline-block;
+    vertical-align: top;
+
+    height: 42px;
+  }
+
+  .header-wordmark {
+    display: inline-block;
+    vertical-align: top;
+
+    height: 42px;
+
+    padding: 0 ($space) 0 ($space / 4);
+
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+
+    color: $primary;
+  }
 }

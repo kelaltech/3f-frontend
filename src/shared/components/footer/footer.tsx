@@ -1,6 +1,5 @@
 import React from 'react'
 
-import './footer.scss'
 import { Block, Content, Flex } from 'gerami'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,6 +10,8 @@ import {
   faTwitter,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons'
+
+import './footer.scss'
 import LiteImage from '../lite-image/lite-image'
 
 const DotSpace = () => (
@@ -26,7 +27,7 @@ function Footer() {
             <Block first>
               <LiteImage
                 src={require('../../../assets/images/brand/logo-white.png')}
-                height={42}
+                height={50}
                 native
               />
             </Block>
