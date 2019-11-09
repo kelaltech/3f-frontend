@@ -7,9 +7,11 @@ import Footer from '../footer/footer'
 function Layout({ children }: PropsWithChildren<{}>) {
   return (
     <>
-      <Header />
+      <main style={{ minHeight: '100vh' }}>
+        <Header />
 
-      <main style={{ minHeight: '100vh' }}>{children}</main>
+        <article>{children}</article>
+      </main>
 
       <Footer />
     </>
