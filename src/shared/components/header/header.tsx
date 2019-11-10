@@ -1,5 +1,5 @@
 import React from 'react'
-import { Content } from 'gerami'
+import { Content, FlexSpacer } from 'gerami'
 
 import './header.scss'
 import LiteImage from '../lite-image/lite-image'
@@ -24,6 +24,28 @@ function Header() {
               </div>
             </a>
           </Link>
+
+          <FlexSpacer />
+
+          <div className="header-nav-container">
+            <nav>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+              <Link href="/about">
+                <a>About</a>
+              </Link>
+              <Link href="/products">
+                <a>Products</a>
+              </Link>
+              <Link href="/locations">
+                <a>Locations</a>
+              </Link>
+              <Link href="/news">
+                <a>News</a>
+              </Link>
+            </nav>
+          </div>
         </Content>
       </header>
     </div>

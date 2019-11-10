@@ -1,3 +1,8 @@
 @import '../../../assets/styles/theme';
 
-$headerHeight: ($space) + ($space) + 42px + ($space) + ($space);
+$headerMarginHeight: $space;
+$headerPaddingHeight: $space;
+$headerContentHeight: 42px;
+
+$headerHeight: ($headerMarginHeight * 2) + ($headerPaddingHeight * 2) +
+  $headerContentHeight;

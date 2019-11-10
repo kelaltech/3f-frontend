@@ -23,6 +23,11 @@
 
   .footer-flex {
     display: flex;
+    direction: rtl;
+
+    > * {
+      direction: ltr;
+    }
 
     @media (max-width: $mobile) {
       display: block;
@@ -43,7 +48,7 @@
           display: block;
 
           margin: 0 0 (-$space / 2);
-          padding: ($space * 2) $space 0;
+          padding: $space $space 0;
 
           font-weight: bold;
         }

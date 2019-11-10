@@ -23,6 +23,81 @@ function Footer() {
     <footer className="footer">
       <Content size="3XL" transparent>
         <div className="footer-flex">
+          <div className="top footer-contact-info">
+            <Block first last>
+              <div className="margin-top-none">
+                <div
+                  className="italic left"
+                  style={{
+                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    opacity: 0.95
+                  }}
+                >
+                  Mail
+                </div>
+                <div>
+                  Ethiopia
+                  <br />
+                  Addis Ababa
+                  <br />
+                  P.O. Box. 1498
+                </div>
+              </div>
+
+              <div className="margin-top-big">
+                <div
+                  className="italic left"
+                  style={{
+                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    opacity: 0.95
+                  }}
+                >
+                  Email
+                </div>
+                <div>
+                  <a href="mailto:3f@ethionet.et">3f@ethionet.et</a>
+                </div>
+              </div>
+
+              <div className="margin-top-big">
+                <div
+                  className="italic left"
+                  style={{
+                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    opacity: 0.95
+                  }}
+                >
+                  Phone
+                </div>
+                <div>
+                  <a href="tel:+251114420022">+251 11 442 0022</a>
+                </div>
+                <div>
+                  <a href="tel:+251114425826">+251 11 442 5826</a>
+                </div>
+                <div>
+                  <a href="tel:+251114420427">+251 11 442 0427</a>
+                </div>
+                <div>
+                  <a href="tel:+251114402299">+251 11 440 2299</a>
+                </div>
+              </div>
+
+              <div className="margin-top-big">
+                <div
+                  className="italic left"
+                  style={{
+                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    opacity: 0.95
+                  }}
+                >
+                  Fax
+                </div>
+                <div>+251 11 443 1566</div>
+              </div>
+            </Block>
+          </div>
+
           <div className="top" style={{ flex: 1 }}>
             <Block first>
               <LiteImage
@@ -127,81 +202,6 @@ function Footer() {
                   kelal tech.
                 </a>
               </span>
-            </Block>
-          </div>
-
-          <div className="top footer-contact-info">
-            <Block first last>
-              <div className="margin-top-none">
-                <div
-                  className="italic left"
-                  style={{
-                    borderBottom: '1px solid rgba(255,255,255,0.42)',
-                    opacity: 0.95
-                  }}
-                >
-                  Mail
-                </div>
-                <div>
-                  Ethiopia
-                  <br />
-                  Addis Ababa
-                  <br />
-                  P.O. Box. 1498
-                </div>
-              </div>
-
-              <div className="margin-top-big">
-                <div
-                  className="italic left"
-                  style={{
-                    borderBottom: '1px solid rgba(255,255,255,0.42)',
-                    opacity: 0.95
-                  }}
-                >
-                  Email
-                </div>
-                <div>
-                  <a href="mailto:3f@ethionet.et">3f@ethionet.et</a>
-                </div>
-              </div>
-
-              <div className="margin-top-big">
-                <div
-                  className="italic left"
-                  style={{
-                    borderBottom: '1px solid rgba(255,255,255,0.42)',
-                    opacity: 0.95
-                  }}
-                >
-                  Phone
-                </div>
-                <div>
-                  <a href="tel:+251114420022">+251 11 442 0022</a>
-                </div>
-                <div>
-                  <a href="tel:+251114425826">+251 11 442 5826</a>
-                </div>
-                <div>
-                  <a href="tel:+251114420427">+251 11 442 0427</a>
-                </div>
-                <div>
-                  <a href="tel:+251114402299">+251 11 440 2299</a>
-                </div>
-              </div>
-
-              <div className="margin-top-big">
-                <div
-                  className="italic left"
-                  style={{
-                    borderBottom: '1px solid rgba(255,255,255,0.42)',
-                    opacity: 0.95
-                  }}
-                >
-                  Fax
-                </div>
-                <div>+251 11 443 1566</div>
-              </div>
             </Block>
           </div>
         </div>

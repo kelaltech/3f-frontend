@@ -3,6 +3,7 @@
 
 .header {
   position: fixed;
+  z-index: 7;
 
   height: $headerHeight;
   width: 100%;
@@ -12,10 +13,12 @@
   left: 0;
 
   .header-in-1 {
-    margin: $space;
+    margin: $headerMarginHeight;
 
     .header-in-2 {
-      padding: $space;
+      display: flex;
+
+      padding: $headerPaddingHeight;
     }
   }
 }
@@ -23,7 +26,7 @@
 .header-logo-and-wordmark {
   display: inline-block;
 
-  height: 42px;
+  height: $headerContentHeight;
 
   text-decoration: none !important;
 
@@ -33,14 +36,14 @@
     display: inline-block;
     vertical-align: top;
 
-    height: 42px;
+    height: $headerContentHeight;
   }
 
   .header-wordmark {
     display: inline-block;
     vertical-align: top;
 
-    height: 42px;
+    height: $headerContentHeight;
 
     padding: 0 ($space) 0 ($space / 4);
 
@@ -50,5 +53,22 @@
     line-height: 14px;
 
     color: $primary;
+  }
+}
+
+.header-nav-container {
+  height: $headerContentHeight;
+
+  nav {
+    height: $headerContentHeight;
+
+    a {
+      height: $headerContentHeight;
+
+      padding: 0 $space;
+
+      font-weight: lighter;
+      line-height: $headerContentHeight;
+    }
   }
 }

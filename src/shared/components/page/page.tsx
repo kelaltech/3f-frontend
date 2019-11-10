@@ -3,15 +3,30 @@ import { PropsWithChildren } from 'react'
 
 import './page.scss'
 
-type PageProps = {
+type PageProps = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+> & {
   /**
    * @default true
    */
   space?: boolean
 }
 
-function Page({ children, space = true }: PropsWithChildren<PageProps>) {
-  return <div className={`page ${space ? 'page-space' : ''}`}>{children}</div>
+function Page({
+  children,
+  className,
+  space = true,
+  ...rest
+}: PropsWithChildren<PageProps>) {
+  return (
+    <div
+      {...rest}
+      className={`page ${space ? 'page-space' : ''} ${className || ''}`}
+    >
+      {children}
+    </div>
+  )
 }
 
 export default Page
