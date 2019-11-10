@@ -5,7 +5,7 @@
 
   padding: $space 0 0;
 
-  font-size: 0.7em;
+  font-size: 0.84em;
 
   background-color: $primary;
   color: transparentize($bg, 0.22);
@@ -18,6 +18,36 @@
     &:focus,
     &:hover {
       color: transparentize($bg, 0.03);
+    }
+  }
+
+  .footer-flex {
+    display: flex;
+
+    @media (max-width: $mobile) {
+      display: block;
+    }
+
+    .footer-contact-info {
+      text-align: right;
+
+      font-size: 14px;
+      line-height: 1.52;
+
+      @media (max-width: $mobile) {
+        text-align: left;
+
+        &::before {
+          content: 'Contact Information';
+
+          display: block;
+
+          margin: 0 0 (-$space / 2);
+          padding: ($space * 2) $space 0;
+
+          font-weight: bold;
+        }
+      }
     }
   }
 }

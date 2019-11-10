@@ -1,7 +1,9 @@
 import React from 'react'
 
+import Page from '../../shared/components/page/page'
+
 function Locations() {
-  return <>Locations</>
+  return <Page>Locations</Page>
 }
 
 export default Locations

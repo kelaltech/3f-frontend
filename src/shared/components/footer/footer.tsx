@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Block, Content, Flex } from 'gerami'
+import { Block, Content } from 'gerami'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -22,12 +22,12 @@ function Footer() {
   return (
     <footer className="footer">
       <Content size="3XL" transparent>
-        <Flex>
-          <div className="left top" style={{ flex: 1 }}>
+        <div className="footer-flex">
+          <div className="top" style={{ flex: 1 }}>
             <Block first>
               <LiteImage
                 src={require('../../../assets/images/brand/logo-white.png')}
-                height={50}
+                height={70}
                 native
               />
             </Block>
@@ -54,44 +54,49 @@ function Footer() {
               </Link>
             </Block>
 
-            <Block className="font-XXL padding-bottom-big" first>
+            <Block className="font-XXL" first last>
               <a
                 href="https://www.facebook.com/ethio3f"
-                className="margin-bottom-normal margin-right-very-big"
+                className="margin-vertical-normal margin-right-very-big"
                 target="_blank"
                 rel="noreferrer nofollow"
+                title="Facebook"
               >
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
               <a
                 href="https://www.instagram.com/ethio3f"
-                className="margin-bottom-normal margin-right-very-big"
+                className="margin-vertical-normal margin-right-very-big"
                 target="_blank"
                 rel="noreferrer nofollow"
+                title="Instagram"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
                 href="https://www.linkedin.com/company/ethio3f"
-                className="margin-bottom-normal margin-right-very-big"
+                className="margin-vertical-normal margin-right-very-big"
                 target="_blank"
                 rel="noreferrer nofollow"
+                title="LinkedIn"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
               <a
                 href="https://www.twitter.com/ethio3f"
-                className="margin-bottom-normal margin-right-very-big"
+                className="margin-vertical-normal margin-right-very-big"
                 target="_blank"
                 rel="noreferrer nofollow"
+                title="Twitter"
               >
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
               <a
                 href="https://www.youtube.com/user/ethio3f"
-                className="margin-bottom-normal margin-right-very-big"
+                className="margin-vertical-normal margin-right-very-big"
                 target="_blank"
                 rel="noreferrer nofollow"
+                title="YouTube"
               >
                 <FontAwesomeIcon icon={faYoutube} />
               </a>
@@ -125,17 +130,52 @@ function Footer() {
             </Block>
           </div>
 
-          <div className="right top">
-            <Block className="padding-left-none" first last>
+          <div className="top footer-contact-info">
+            <Block first last>
               <div className="margin-top-none">
-                <h5 className="italic">Email</h5>
+                <div
+                  className="italic left"
+                  style={{
+                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    opacity: 0.95
+                  }}
+                >
+                  Mail
+                </div>
+                <div>
+                  Ethiopia
+                  <br />
+                  Addis Ababa
+                  <br />
+                  P.O. Box. 1498
+                </div>
+              </div>
+
+              <div className="margin-top-big">
+                <div
+                  className="italic left"
+                  style={{
+                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    opacity: 0.95
+                  }}
+                >
+                  Email
+                </div>
                 <div>
                   <a href="mailto:3f@ethionet.et">3f@ethionet.et</a>
                 </div>
               </div>
 
               <div className="margin-top-big">
-                <h5 className="italic">Phone</h5>
+                <div
+                  className="italic left"
+                  style={{
+                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    opacity: 0.95
+                  }}
+                >
+                  Phone
+                </div>
                 <div>
                   <a href="tel:+251114420022">+251 11 442 0022</a>
                 </div>
@@ -151,23 +191,20 @@ function Footer() {
               </div>
 
               <div className="margin-top-big">
-                <h5 className="italic">Mail</h5>
-                <div>
-                  Ethiopia
-                  <br />
-                  Addis Ababa
-                  <br />
-                  P.O. Box. 1498
+                <div
+                  className="italic left"
+                  style={{
+                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    opacity: 0.95
+                  }}
+                >
+                  Fax
                 </div>
-              </div>
-
-              <div className="margin-top-big">
-                <h5 className="italic">Fax</h5>
                 <div>+251 11 443 1566</div>
               </div>
             </Block>
           </div>
-        </Flex>
+        </div>
       </Content>
     </footer>
   )
