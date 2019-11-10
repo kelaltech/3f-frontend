@@ -1,5 +1,9 @@
 @import '../../components/header/header-height';
 
+.page {
+  min-height: 100vh;
+}
+
 .page.page-space {
   padding-top: $headerHeight;
 }

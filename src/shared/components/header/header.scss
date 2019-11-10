@@ -12,6 +12,12 @@
   right: 0;
   left: 0;
 
+  background-image: linear-gradient(
+    transparentize($bg, 0.5),
+    transparentize($bg, 0.84),
+    rgba(255, 255, 255, 0)
+  );
+
   .header-in-1 {
     margin: $headerMarginHeight;
 
