@@ -2,7 +2,7 @@
 
 @keyframes home-slides-item-drama {
   0% {
-    transform: scale3d(1, 1, 1);
+    transform: scale3d(1.03, 1.03, 1.03);
   }
   100% {
     transform: scale3d(1.14, 1.14, 1);
@@ -26,5 +26,23 @@
 
     animation: 15s ease-in-out 0s infinite alternate home-slides-item-drama;
     transition: all 5s linear;
+
+    @media (max-width: $mobile) {
+      max-height: $mobile;
+    }
+  }
+
+  .home-slides-item-links-container {
+    position: absolute;
+
+    width: 100%;
+
+    margin-top: -$space * 8;
+
+    text-align: center;
+
+    .home-slides-item-link {
+      margin: $space;
+    }
   }
 }

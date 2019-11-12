@@ -3,6 +3,7 @@ import Slider from 'react-slick'
 
 import './home-slides.scss'
 import { homeSlideItems } from '../../../../../data/home-slides-items'
+import Link from 'next/link'
 
 function HomeSlides() {
   return (
@@ -18,13 +19,24 @@ function HomeSlides() {
         autoplay={true}
         autoplaySpeed={5000}
       >
-        {homeSlideItems.map(item => (
-          <>
+        {homeSlideItems.map((item, i) => (
+          <div key={i}>
             <div
               className="home-slides-item"
               style={{ backgroundImage: `url(${item.src})` }}
             />
-          </>
+            <div className="home-slides-item-links-container">
+              {item.links &&
+                item.links.map(({ href, className, ...aProps }, i) => (
+                  <Link href={href} key={i}>
+                    <a
+                      className={`home-slides-item-link ${className || ''}`}
+                      {...aProps}
+                    />
+                  </Link>
+                ))}
+            </div>
+          </div>
         ))}
       </Slider>
     </div>
