@@ -1,0 +1,30 @@
+@import '../../../../assets/styles/theme';
+
+@keyframes home-slides-item-drama {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    transform: scale3d(1.14, 1.14, 1);
+  }
+}
+
+.home-slides {
+  .slick-dots {
+    bottom: $space;
+  }
+
+  .home-slides-item {
+    height: 100vh;
+    width: 100%;
+
+    background-attachment: scroll;
+    background-color: $bg;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    animation: 15s ease-in-out 0s infinite alternate home-slides-item-drama;
+    transition: all 5s linear;
+  }
+}
