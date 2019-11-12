@@ -1,0 +1,27 @@
+@import '../../../../assets/styles/theme';
+
+.home-about-flex {
+  display: flex;
+
+  @media (max-width: $mobile) {
+    display: block;
+  }
+
+  > * {
+    margin: auto;
+  }
+
+  .home-about-flex-in-1 {
+    display: block;
+
+    flex: 1;
+
+    @media (max-width: $mobile * 1.4) {
+      display: none !important;
+    }
+  }
+
+  .home-about-flex-in-2 {
+    flex: 2;
+  }
+}
