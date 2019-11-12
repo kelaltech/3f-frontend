@@ -82,6 +82,19 @@ $navMobileRate: 1.4;
 
       font-weight: lighter;
       line-height: $headerContentHeight;
+
+      transition-property: all;
+      transition-duration: 0.7s;
+
+      &:active,
+      &:focus,
+      &:hover {
+        box-shadow: inset $headerContentHeight -$headerContentHeight 0 -$headerContentHeight
+          $primary;
+        color: $bg;
+
+        transition-duration: 0.3s;
+      }
     }
   }
 }
