@@ -7,7 +7,7 @@ import LiteImage from '../../../../shared/components/lite-image/lite-image'
 
 function HomeAbout() {
   return (
-    <div className="bg-accent padding-vertical-big">
+    <div className="bg-accent fg-whitish padding-vertical-big">
       <Content size="3XL" transparent>
         <div className="home-about-flex">
           <div className="inline-block middle center home-about-flex-in-1">
@@ -20,7 +20,7 @@ function HomeAbout() {
 
           <div className="inline-block middle home-about-flex-in-2">
             <Block first>
-              <h1>
+              <h1 className="fg-white">
                 Since 1959 <small>E.C.</small>
               </h1>
             </Block>
@@ -38,8 +38,9 @@ function HomeAbout() {
             </Block>
 
             <Block first last>
+              &gt;{' '}
               <Link href="/about">
-                <a>Learn More</a>
+                <a className="fg-white">Learn More</a>
               </Link>
             </Block>
           </div>
