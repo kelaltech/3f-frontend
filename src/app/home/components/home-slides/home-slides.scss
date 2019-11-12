@@ -11,11 +11,12 @@
 
 .home-slides {
   .slick-dots {
-    bottom: $space;
+    bottom: $space * 2;
   }
 
   .home-slides-item {
     height: 100vh;
+    min-height: $mobile;
     width: 100%;
 
     background-attachment: scroll;

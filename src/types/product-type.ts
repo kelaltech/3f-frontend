@@ -7,20 +7,23 @@ export type ProductCategoryType =
   | 'OFFICE_FURNITURE'
   | 'DOORS'
   | 'CUPBOARDS'
-  | 'ACRYLIC_KITCHEN_CABINETS'
-  | 'ZEBRANO_KITCHEN_CABINETS'
-  | 'PVC_KITCHEN_CABINETS'
-  | 'CONDO_KITCHEN_CABINETS'
-  | 'KITCHEN_ACCESSORIES'
-  | 'LOCKS_AND_HANDLES'
-  | 'IMPORTED_FURNITURE'
+  | 'KITCHEN_CABINETS'
 
 export type FabricIdType = any // todo
 
 export type ProductType = {
-  itemNumber: string
+  _id: string
   name: string
-  description: string
+  description: {
+    composition: string[]
+    material: string[]
+    dimension: {
+      height: number
+      width: number
+      length: number
+    }[]
+    color: string[]
+  }
   category: ProductCategoryType
   prices: number[]
   fabrics: FabricIdType[]
