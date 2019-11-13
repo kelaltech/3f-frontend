@@ -1,3 +1,5 @@
+import { IImgSrcInput } from '../lib/img-src'
+
 export type ProductCategoryType =
   | 'DINING_ROOM_FURNITURE'
   | 'LIVING_ROOM_FURNITURE'
@@ -24,6 +26,7 @@ export type ProductType = {
     }[]
     color: string[]
   }
+  imgSrc: IImgSrcInput
   category: ProductCategoryType
   prices: number[]
   fabrics: FabricIdType[]
