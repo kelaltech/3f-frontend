@@ -1,0 +1,32 @@
+@import '../../../../assets/styles/theme';
+
+.home-instagram-flex {
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.home-instagram-photo {
+  height: $space * 14;
+
+  margin: $space * 2;
+
+  background-color: transparentize($bg, 0.05);
+  background-size: cover;
+
+  @media (max-width: $mobile * 1.4) {
+    margin: $space;
+
+    &:nth-child(2) {
+      display: none !important;
+    }
+  }
+}
+
+.home-instagram-see-more {
+  padding: ($space * 3) 0;
+  line-height: $space * 4;
+  text-align: center;
+}

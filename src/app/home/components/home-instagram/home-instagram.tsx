@@ -1,13 +1,35 @@
 import React from 'react'
-import { Block, Content } from 'gerami'
+import { Content } from 'gerami'
+
+import './home-instagram.scss'
+import LiteImage from '../../../../shared/components/lite-image/lite-image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 function HomeInstagram() {
   return (
-    <div className="padding-vertical-big">
+    <div className="bg-accent fg-whitish padding-vertical-big">
       <Content size="3XL" transparent>
-        <Block first last>
-          todo: HomeInstagram
-        </Block>
+        <div className="home-instagram-flex">
+          <LiteImage
+            src={require('../../../../assets/images/sofa-sample.jpg' /* todo */)}
+            className="home-instagram-photo"
+          />
+          <LiteImage
+            src={require('../../../../assets/images/sofa-sample.jpg' /* todo */)}
+            className="home-instagram-photo"
+          />
+          <a
+            href="https://www.instagram.com/ethio3f"
+            rel="noopener nofollow"
+            target="_blank"
+            className="home-instagram-photo home-instagram-see-more"
+          >
+            <FontAwesomeIcon icon={faInstagram} size="5x" />
+            <br />
+            See More
+          </a>
+        </div>
       </Content>
     </div>
   )
