@@ -39,6 +39,12 @@
       font-size: 14px;
       line-height: 1.52;
 
+      a {
+        font-weight: inherit;
+
+        color: inherit;
+      }
+
       @media (max-width: $mobile) {
         text-align: left;
 
