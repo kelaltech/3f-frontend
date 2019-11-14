@@ -15,11 +15,16 @@ const offline = require('next-offline')
 const bundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
+const mdx = require('@zeit/next-mdx')({
+  extension: /\.mdx?$/
+})
 
 dotenvLoad()
 
 const nextConfig = {
   target: 'serverless',
+
+  pageExtensions: ['tsx', 'mdx'],
 
   webpack: (config, { dev }) => {
     if (!dev) {
@@ -99,7 +104,10 @@ module.exports = withPlugins(
     ],
 
     // @next/bundle-analyzer
-    bundleAnalyzer
+    bundleAnalyzer,
+
+    // @zeit/next-mdx
+    mdx
   ],
   nextConfig
 )
