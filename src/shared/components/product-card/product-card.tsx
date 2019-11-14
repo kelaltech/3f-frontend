@@ -15,7 +15,7 @@ function ProductCard({ product }: ProductCardProps) {
   const src = useImgSrc(product.imgSrc)
 
   return (
-    <Link href={`/product/${product._id}`}>
+    <Link href="/product/[id]" as={`/product/${product._id}`}>
       <a
         className="block padding-normal padding-bottom-big light"
         style={{ boxShadow: 'none' }}
