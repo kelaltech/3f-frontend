@@ -8,9 +8,17 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 function HomeInstagram() {
   return (
-    <div className="bg-accent fg-whitish padding-vertical-big">
+    <div className="bg-primary fg-whitish padding-vertical-big">
       <Content size="3XL" transparent>
         <div className="home-instagram-flex">
+          <LiteImage
+            src={require('../../../../assets/images/sofa-sample.jpg' /* todo */)}
+            className="home-instagram-photo"
+          />
+          <LiteImage
+            src={require('../../../../assets/images/sofa-sample.jpg' /* todo */)}
+            className="home-instagram-photo"
+          />
           <LiteImage
             src={require('../../../../assets/images/sofa-sample.jpg' /* todo */)}
             className="home-instagram-photo"
@@ -24,10 +32,9 @@ function HomeInstagram() {
             rel="noopener nofollow"
             target="_blank"
             className="home-instagram-photo home-instagram-see-more"
+            title="See More on Instagram"
           >
-            <FontAwesomeIcon icon={faInstagram} size="5x" />
-            <br />
-            See More
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>
       </Content>

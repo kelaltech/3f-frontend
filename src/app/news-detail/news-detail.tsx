@@ -5,14 +5,18 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
-import Layout from '../../src/shared/components/layout/layout'
-import Page from '../../src/shared/components/page/page'
-import { newsMetas } from '../../data/news-metas'
-import ErrorPage from '../_error'
+import Layout from '../../shared/components/layout/layout'
+import Page from '../../shared/components/page/page'
+import { newsMetas } from '../../../data/news-metas'
+import ErrorPage from '../../../pages/_error'
 
-function NewsDetailPage() {
+type NewsDetailProps = {
+  idParamName: string
+}
+
+function NewsDetail({ idParamName }: NewsDetailProps) {
   const router = useRouter()
-  const newsId = router.query.id
+  const newsId = router.query[idParamName]
 
   const news = newsMetas.find(m => m.id === newsId)
   if (!news) return <ErrorPage statusCode={404} />
@@ -60,4 +64,4 @@ function NewsDetailPage() {
   )
 }
 
-export default NewsDetailPage
+export default NewsDetail

@@ -1,13 +1,13 @@
 import React from 'react'
 
-import LayoutDefault from '../src/shared/components/layout/layout'
+import Layout from '../src/shared/components/layout/layout'
 import News from '../src/app/news/news'
 
 function NewsPage() {
   return (
-    <LayoutDefault>
+    <Layout>
       <News />
-    </LayoutDefault>
+    </Layout>
   )
 }
 

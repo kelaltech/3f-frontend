@@ -190,7 +190,7 @@ function Footer() {
             </Block>
 
             <Block last>
-              <span>2019 &copy; Finfine Furniture Factory plc.</span>
+              <span>2019 &copy; (3F) Finfine Furniture Factory PLC</span>
               <DotSpace />
               <span>
                 Powered by{' '}

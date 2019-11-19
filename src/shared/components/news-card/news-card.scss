@@ -1,0 +1,51 @@
+@import '../../../assets/styles/theme';
+
+.news-card-container {
+  margin: ($space / 2);
+  padding: ($space);
+
+  border-top: solid (($border + 1px)) transparentize($accent, 0.05);
+
+  background-color: $bg;
+  box-shadow: none;
+
+  transition: box-shadow 0.7s;
+
+  &:active,
+  &:focus,
+  &:hover {
+    box-shadow: $shade-L;
+
+    transition-duration: 0.3s;
+  }
+
+  a {
+    font-weight: inherit;
+
+    color: inherit;
+  }
+}
+
+.news-card-title {
+  font-size: $font-L;
+}
+
+.news-card-subtitle {
+  padding: ($space / 2) 0 0;
+
+  font-size: $font-S;
+  font-weight: normal;
+
+  opacity: 0.56;
+}
+
+.news-card-description {
+  padding: ($space) 0 0;
+
+  > span {
+    opacity: 0.7;
+  }
+}
+
+.news-card-read-more {
+}

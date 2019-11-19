@@ -1,13 +1,13 @@
 import React from 'react'
 
-import LayoutDefault from '../src/shared/components/layout/layout'
+import Layout from '../src/shared/components/layout/layout'
 import About from '../src/app/about/about'
 
 function AboutPage() {
   return (
-    <LayoutDefault>
+    <Layout>
       <About />
-    </LayoutDefault>
+    </Layout>
   )
 }
 
