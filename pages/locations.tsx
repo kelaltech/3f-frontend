@@ -1,13 +1,13 @@
 import React from 'react'
 
-import LayoutDefault from '../src/shared/components/layout/layout'
+import Layout from '../src/shared/components/layout/layout'
 import Locations from '../src/app/locations/locations'
 
 function LocationsPage() {
   return (
-    <LayoutDefault>
+    <Layout>
       <Locations />
-    </LayoutDefault>
+    </Layout>
   )
 }
 

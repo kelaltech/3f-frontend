@@ -1,11 +1,11 @@
 import { NextSeoProps } from 'next-seo/lib'
 
 export default {
-  title: 'Official Website -- 3F | Finfine Furniture Factory plc',
-  description: 'Official Website for 3F (Finfine Furniture Factory plc).',
+  title: 'Official Website – (3F) Finfine Furniture Factory PLC',
+  description: 'Official Website for (3F) Finfine Furniture Factory PLC',
   additionalMetaTags: [
     { name: 'author', content: 'kelal tech plc' },
-    { name: 'copyright', content: '2019 © Finfine Furniture Factory plc' },
+    { name: 'copyright', content: '2019 © (3F) Finfine Furniture Factory PLC' },
     {
       name: 'keywords',
       content: '3f,finfine furniture factory plc,furniture company in ethiopia'
@@ -18,7 +18,7 @@ export default {
     type: 'website',
     locale: 'en_US',
     url: 'https://ethio3f.com/',
-    site_name: '3F | Finfine Furniture Factory plc',
+    site_name: '(3F) Finfine Furniture Factory PLC',
     images: [{ url: 'https://ethio3f.com/promo.png' }]
   },
 
