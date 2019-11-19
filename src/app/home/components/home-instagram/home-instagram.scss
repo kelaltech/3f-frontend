@@ -3,30 +3,45 @@
 .home-instagram-flex {
   display: flex;
 
+  padding: $space;
+
   > * {
     flex: 1;
   }
 }
 
 .home-instagram-photo {
-  height: $space * 14;
+  height: $space * 10;
 
-  margin: $space * 2;
+  margin: $space;
 
   background-color: transparentize($bg, 0.05);
   background-size: cover;
 
-  @media (max-width: $mobile * 1.4) {
+  @media (max-width: $mobile * 1.8) {
     margin: $space;
 
-    &:nth-child(2) {
+    &:nth-child(even) {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin: $space;
+
+    &:nth-child(3) {
       display: none !important;
     }
   }
 }
 
 .home-instagram-see-more {
-  padding: ($space * 3) 0;
-  line-height: $space * 4;
+  padding: ($space * 2) 0;
+
+  font-size: $space * 6;
+  line-height: $space * 6;
   text-align: center;
+
+  background-color: transparent;
+  color: $bg !important;
 }
