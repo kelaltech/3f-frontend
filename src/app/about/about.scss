@@ -1,0 +1,49 @@
+@import '../../assets/styles/theme';
+
+.ab-card-box {
+  position: relative;
+  height: 70vh;
+  .back-card {
+    height: 300px;
+    text-align: center;
+    background-color: #bc2239;
+    color: white;
+
+    .back-card-block {
+      width: 63.5%;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .front-card {
+    position: absolute;
+    right: 100px;
+    top: -$space;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    color: $primary;
+  }
+}
+
+.ab-who-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visoion-box {
+}
+.vision-sub-box {
+  p {
+    text-align: left;
+  }
+  display: flex;
+  align-items: center;
+}
