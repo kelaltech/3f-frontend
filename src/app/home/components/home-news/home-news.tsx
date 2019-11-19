@@ -34,7 +34,7 @@ function HomeNews() {
               initialSlide={0}
               responsive={[
                 {
-                  breakpoint: 720,
+                  breakpoint: 840,
                   settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
