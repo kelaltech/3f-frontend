@@ -1,29 +1,40 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import Link from 'next/link'
-import { Card } from 'gerami'
 
+import './news-card.scss'
 import { NewsMetaType } from '../../../types/news-meta-type'
 
 export type NewsCardProps = {
   newsMeta: NewsMetaType
 }
 
+const NewsLink = ({
+  children,
+  newsMeta
+}: PropsWithChildren<{ newsMeta: NewsMetaType }>) => (
+  <Link href="/news/[newsId]" as={`/news/${newsMeta.id}`}>
+    <a>{children}</a>
+  </Link>
+)
+
 function NewsCard({ newsMeta }: NewsCardProps) {
   return (
-    <Link href="/news/[newsId]" as={`/news/${newsMeta.id}`}>
-      <a
-        className="block padding-normal padding-bottom-big light"
-        style={{ boxShadow: 'none' }}
-      >
-        {/* todo: use a different custom style */}
-        <Card
-          title={newsMeta.title}
-          subtitle={`Posted on ${newsMeta.postedOn.toDateString()}`}
-        >
-          {newsMeta.description}
-        </Card>
-      </a>
-    </Link>
+    <div className="news-card-container">
+      <div className="news-card-title">
+        <NewsLink newsMeta={newsMeta}>{newsMeta.title}</NewsLink>
+      </div>
+      <div className="news-card-subtitle">
+        <NewsLink newsMeta={newsMeta}>
+          Posted on {newsMeta.postedOn.toDateString()}
+        </NewsLink>
+      </div>
+      <div className="news-card-description">
+        <span>{newsMeta.description}</span>
+        <small className="inline padding-left-normal fg-primary">
+          <NewsLink newsMeta={newsMeta}>read more</NewsLink>
+        </small>
+      </div>
+    </div>
   )
 }
 

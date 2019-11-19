@@ -15,7 +15,7 @@ import Sample8 from './news/sample-8.mdx'
 export const newsMetas: NewsMetaType[] = [
   {
     id: 'sample-0',
-    title: 'Sample 0',
+    title: 'Sample 0 Sample 6 Sa ple The aui ck brown fox jums over the lazy dog.',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
     content: <Sample0 />
