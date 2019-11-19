@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
 export type NewsMetaType = {
-  id: 'sample'
+  id: string
   title: string
   description: string
   postedOn: Date

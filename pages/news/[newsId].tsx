@@ -6,7 +6,7 @@ import NewsDetail from '../../src/app/news-detail/news-detail'
 function NewsDetailPage() {
   return (
     <Layout>
-      <NewsDetail />
+      <NewsDetail idParamName="newsId" />
     </Layout>
   )
 }

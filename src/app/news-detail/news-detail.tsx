@@ -10,9 +10,13 @@ import Page from '../../shared/components/page/page'
 import { newsMetas } from '../../../data/news-metas'
 import ErrorPage from '../../../pages/_error'
 
-function NewsDetail() {
+type NewsDetailProps = {
+  idParamName: string
+}
+
+function NewsDetail({ idParamName }: NewsDetailProps) {
   const router = useRouter()
-  const newsId = router.query.id
+  const newsId = router.query[idParamName]
 
   const news = newsMetas.find(m => m.id === newsId)
   if (!news) return <ErrorPage statusCode={404} />
