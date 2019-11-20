@@ -4,7 +4,7 @@ export function stringifyCurrency(amount: number, currency = 'ETB'): string {
 
   const __paper = whole.toString()
   const _paper: string[] = []
-  for (let i = __paper.length; i >= 0; i -= 3) {
+  for (let i = __paper.length; i > 0; i -= 3) {
     _paper.push(__paper.slice(i - 3 >= 0 ? i - 3 : 0, i))
   }
   const paper = _paper.reverse().join(',')
