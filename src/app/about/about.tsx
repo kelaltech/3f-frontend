@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Page from '../../shared/components/page/page'
-import { Block, Content } from 'gerami'
+import { Block, Content, Yoga } from 'gerami'
 import './about.scss'
 import LiteImage from '../../shared/components/lite-image/lite-image'
 import fffLogo from '../../assets/images/brand/logo-red.png'
@@ -51,33 +51,15 @@ function About() {
         </Block>
       </Block>
 
-      {/* <Block>
-        <Content size={'S'} className={'vision-box center'}>
-            <h1 className={'padding-top-very-big'}>Vision</h1>
-          <Block className={'vision-sub-box'}>
-            <p>
-              The vision is to be excellent and second to none in manufacturing
-              Furniture, Doors, Kitchen Cabinets etc using skilled manpower and
-              state of the art technology to produce quality furniture, doors,
-              kitchen cabinets etc for local and export markets.
-            </p>
-
-            <div>
-              <LiteImage src={fffWhite} alt={'3f logo'} height={100} native />
-            </div>
-          </Block>
-        </Content>
-      </Block>*/}
-
       {/*vision*/}
-      <Block first className={'margin-top-very-big ab-card-box'}>
+      <Block first className={'margin-top-very-big ab-card-box ab-vision-box'}>
         <Content size={'S'} className={'front-card '}>
           <div>
             <LiteImage src={vision} alt={'3f logo'} height={100} native />
           </div>
         </Content>
         <Content size={'XL'} className={'back-card vision-front-card'}>
-          <Block className={'back-card-block'}>
+          <Block className={'back-card-block back-vision-card'}>
             <h1>Our Vision</h1>
             <p className={'center fg-whitish'}>
               The vision is to be excellent and second to none in manufacturing
@@ -124,11 +106,35 @@ function About() {
       </Block>
 
       {/*Team*/}
-      <Block first className={' '}>
+      <Block first last className={' '}>
         <h1 className={'center'}>Meet the Team</h1>
-        <Content size={'XL'} className={'back-card'}>
-          <Block className={'back-card-block'}>
-            <h1>About</h1>
+        <Content size={'XXL'} transparent className={'back-card'}>
+          <Block first last className={'back-card-block'}>
+            <Yoga maxCol={3}>
+              <div>
+                <Content size={'XS'} className={'padding-normal'}>
+                  <LiteImage src={value} alt={'3f logo'} height={300} native />
+                </Content>
+                <h4 className={'margin-top-big'}>Genet Sahilu (Mrs.)</h4>
+                <span>Dep.general manager</span>
+              </div>
+
+              <div>
+                <Content size={'XS'} className={'padding-normal'}>
+                  <LiteImage src={value} alt={'3f logo'} height={300} native />
+                </Content>
+                <h4 className={'margin-top-big'}>Demelash Shimelis (Mr.)</h4>
+                <span>Marketing manager</span>
+              </div>
+
+              <div>
+                <Content size={'XS'} className={'padding-normal'}>
+                  <LiteImage src={value} alt={'3f logo'} height={300} native />
+                </Content>
+                <h4 className={'margin-top-big'}>Adane Tasena (Mr.)</h4>
+                <span>Procurement Division Manager</span>
+              </div>
+            </Yoga>
           </Block>
         </Content>
       </Block>
