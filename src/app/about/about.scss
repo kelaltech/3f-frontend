@@ -38,7 +38,9 @@
   align-items: center;
 }
 
-.visoion-box {
+.vision-box {
+  background-color: $accent;
+  color: $bg;
 }
 .vision-sub-box {
   p {
@@ -46,4 +48,56 @@
   }
   display: flex;
   align-items: center;
+}
+
+.vision-front-card {
+  background-color: $accent !important;
+}
+
+.value-card-box {
+  position: relative;
+  height: 70vh;
+  .value-back-card {
+    height: 350px;
+    //height: auto;
+    background-color: $accent;
+    color: white;
+
+    .value-back-card-block {
+      width: 63.5%;
+      float: right;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        span {
+          display: inline-block;
+          //border-left: 2px solid $bg;
+          margin-bottom: $space/3;
+          padding-left: $space;
+          //border-radius: $space;
+
+          &:before {
+            width: 10px;
+            height: 10px;
+            background-color: #bc2239;
+          }
+        }
+      }
+    }
+  }
+  .value-front-card {
+    position: absolute;
+    left: 100px;
+    top: -$space;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    color: $primary;
+  }
 }
