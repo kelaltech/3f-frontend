@@ -33,15 +33,15 @@ function News() {
           <Yoga maxCol={2}>
             <div className="top">
               {news.slice(0, news.length / 2 + 1).map((newsMeta, i) => (
-                <div className="padding-bottom-big">
-                  <NewsCard newsMeta={newsMeta} key={i} />
+                <div className="padding-bottom-big" key={i}>
+                  <NewsCard newsMeta={newsMeta} />
                 </div>
               ))}
             </div>
             <div className="top">
               {news.slice(news.length / 2 + 1).map((newsMeta, i) => (
-                <div className="padding-bottom-big">
-                  <NewsCard newsMeta={newsMeta} key={i} />
+                <div className="padding-bottom-big" key={i}>
+                  <NewsCard newsMeta={newsMeta} />
                 </div>
               ))}
             </div>
