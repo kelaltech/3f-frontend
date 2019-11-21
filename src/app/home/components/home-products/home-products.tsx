@@ -64,6 +64,9 @@ function HomeProducts() {
               {homeProducts.map((product, i) => (
                 <ProductCard product={product} key={i} />
               ))}
+              {homeProducts.length <= 2 && <></>}
+              {homeProducts.length <= 1 && <></>}
+              {homeProducts.length <= 0 && <></>}
             </Slider>
           </div>
         </Block>

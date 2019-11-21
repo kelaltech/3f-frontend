@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Block, Content, FlexSpacer } from 'gerami'
 import Link from 'next/link'
 import Slider from 'react-slick'
@@ -8,6 +8,11 @@ import { homeNewsMetas } from '../../../../../data/home-news-metas'
 import NewsCard from '../../../../shared/components/news-card/news-card'
 
 function HomeNews() {
+  const news = useMemo(
+    () => homeNewsMetas.filter(newsMeta => newsMeta.active !== false),
+    [homeNewsMetas]
+  )
+
   return (
     <div className="padding-vertical-very-big">
       <Content size="3XL" transparent>
@@ -53,9 +58,12 @@ function HomeNews() {
                 }
               ]}
             >
-              {homeNewsMetas.map((newsMeta, i) => (
+              {news.map((newsMeta, i) => (
                 <NewsCard newsMeta={newsMeta} key={i} />
               ))}
+              {news.length <= 2 && <></>}
+              {news.length <= 1 && <></>}
+              {news.length <= 0 && <></>}
             </Slider>
           </div>
         </Block>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { Block } from 'gerami'
 import { IBlockProps } from 'gerami/src/components/Block/Block'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -25,20 +24,19 @@ function LocationCard({ location, blockProps }: LocationCardProps) {
             location.address
           )}
         </div>
-        <Link href={location.mapUrl}>
-          <a
-            className="location-card-description-maps-link"
-            title="Open in Maps"
-            target="_blank"
-            rel="noopener nofollow"
-          >
-            <FontAwesomeIcon
-              className="location-card-description-maps-link-icon"
-              icon={faMapMarkedAlt}
-            />
-            <div className="location-card-description-maps-link-label">Map</div>
-          </a>
-        </Link>
+        <a
+          href={location.mapUrl}
+          className="location-card-description-maps-link"
+          title="Open in Maps"
+          target="_blank"
+          rel="noopener nofollow"
+        >
+          <FontAwesomeIcon
+            className="location-card-description-maps-link-icon"
+            icon={faMapMarkedAlt}
+          />
+          <div className="location-card-description-maps-link-label">Map</div>
+        </a>
       </div>
     </Block>
   )

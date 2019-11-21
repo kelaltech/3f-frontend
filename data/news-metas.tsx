@@ -16,13 +16,16 @@ const Sample8 = dynamic(() => import('./news/sample-8.mdx'))
 export const newsMetas: NewsMetaType[] = [
   {
     id: 'sample-0',
-    title: 'Sample 0 Sample 6 Sa ple The aui ck brown fox jums over the lazy dog.',
+    active: true,
+    title:
+      'Sample 0 Sample 6 Sa ple The aui ck brown fox jums over the lazy dog.',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
     content: <Sample0 />
   },
   {
     id: 'sample-1',
+    active: true,
     title: 'Sample 1',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
@@ -30,6 +33,7 @@ export const newsMetas: NewsMetaType[] = [
   },
   {
     id: 'sample-2',
+    active: true,
     title: 'Sample 2',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
@@ -37,6 +41,7 @@ export const newsMetas: NewsMetaType[] = [
   },
   {
     id: 'sample-3',
+    active: true,
     title: 'Sample 3',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
@@ -44,6 +49,7 @@ export const newsMetas: NewsMetaType[] = [
   },
   {
     id: 'sample-4',
+    active: true,
     title: 'Sample 4',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
@@ -51,6 +57,7 @@ export const newsMetas: NewsMetaType[] = [
   },
   {
     id: 'sample-5',
+    active: true,
     title: 'Sample 5',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
@@ -58,6 +65,7 @@ export const newsMetas: NewsMetaType[] = [
   },
   {
     id: 'sample-6',
+    active: true,
     title: 'Sample 6',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
@@ -65,6 +73,7 @@ export const newsMetas: NewsMetaType[] = [
   },
   {
     id: 'sample-7',
+    active: true,
     title: 'Sample 7',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
@@ -72,6 +81,7 @@ export const newsMetas: NewsMetaType[] = [
   },
   {
     id: 'sample-8',
+    active: true,
     title: 'Sample 8',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
