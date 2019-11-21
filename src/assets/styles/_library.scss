@@ -17,7 +17,7 @@ body {
 
   line-height: 1.5;
 
-  background-color: rgb(250, 249, 248);
+  background-color: rgb(255, 250, 245);
 }
 
 h1,
@@ -78,4 +78,11 @@ a {
     background-color: white;
     box-shadow: $shade-M, $shade-L;
   }
+}
+
+.fg-blackish {
+  color: transparentize($fg, 0.35) !important;
+}
+.fg-whitish {
+  color: transparentize($bg, 0.28) !important;
 }

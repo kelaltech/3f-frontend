@@ -9,6 +9,7 @@ import { products } from '../../../data/products'
 import { nameProductCategory } from '../../lib/name-product-category'
 import ProductCard from '../../shared/components/product-card/product-card'
 import DotSpace from '../../shared/components/dot-space/dot-space'
+import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 
 function Products() {
   const categorizedProducts = useMemo(
@@ -33,26 +34,34 @@ function Products() {
 
   return (
     <Page space={false}>
-      <div className="products-header fg-whitish">
-        <Content size="3XL" transparent>
-          <Block first last className="center">
-            <h1 className="fg-white">Our Products</h1>
-          </Block>
+      <LiteParallax
+        bgImage={require('../../assets/images/brand/logo-white.png')}
+        strength={500}
+        className="bg-accent"
+      >
+        <div className="products-header bg-accent fg-whitish">
+          <Content size="3XL" transparent>
+            <Block first last className="center">
+              <h1 className="fg-white">Our Products</h1>
+            </Block>
 
-          <Block last className="center">
-            {filteredCategories.map((products, i) =>
-              !products.length ? null : (
-                <span key={i}>
-                  <Link href={`#${products[0].category}`}>
-                    <a>{nameProductCategory(products[0].category)}</a>
-                  </Link>
-                  {filteredCategories.length - 1 <= i ? null : <DotSpace />}
-                </span>
-              )
-            )}
-          </Block>
-        </Content>
-      </div>
+            <Block last className="center">
+              {filteredCategories.map((products, i) =>
+                !products.length ? null : (
+                  <span key={i}>
+                    <Link href={`#${products[0].category}`}>
+                      <a>{nameProductCategory(products[0].category)}</a>
+                    </Link>
+                    {filteredCategories.length - 1 <= i ? null : <DotSpace />}
+                  </span>
+                )
+              )}
+            </Block>
+          </Content>
+        </div>
+      </LiteParallax>
+
+      <div className="padding-vertical-very-big" />
 
       <div>
         {categorizedProducts.map((productCategory, i) =>

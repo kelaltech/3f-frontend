@@ -4,6 +4,7 @@ import { Block, Content, Yoga } from 'gerami'
 import Page from '../../shared/components/page/page'
 import { newsMetas } from '../../../data/news-metas'
 import NewsCard from '../../shared/components/news-card/news-card'
+import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 
 function News() {
   const news = useMemo(
@@ -12,13 +13,23 @@ function News() {
   )
 
   return (
-    <Page>
-      <Content size="3XL" transparent className="margin-top-big">
-        <Block first className="center">
-          <h1 className="fg-accent">Latest News</h1>
-        </Block>
+    <Page space={false}>
+      <LiteParallax
+        bgImage={require('../../assets/images/brand/logo-white.png')}
+        strength={500}
+        className="bg-accent"
+      >
+        <div className="products-header bg-accent fg-whitish">
+          <Content size="3XL" transparent>
+            <Block first last className="center">
+              <h1 className="fg-white">Latest News</h1>
+            </Block>
+          </Content>
+        </div>
+      </LiteParallax>
 
-        <Block last>
+      <Content size="3XL" transparent className="margin-top-big">
+        <Block first last>
           <Yoga maxCol={2}>
             <div className="top">
               {news.slice(0, news.length / 2 + 1).map((newsMeta, i) => (
