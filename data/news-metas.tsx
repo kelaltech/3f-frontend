@@ -1,16 +1,17 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 
 import { NewsMetaType } from '../src/types/news-meta-type'
 
-import Sample0 from './news/sample-0.mdx'
-import Sample1 from './news/sample-1.mdx'
-import Sample2 from './news/sample-2.mdx'
-import Sample3 from './news/sample-3.mdx'
-import Sample4 from './news/sample-4.mdx'
-import Sample5 from './news/sample-5.mdx'
-import Sample6 from './news/sample-6.mdx'
-import Sample7 from './news/sample-7.mdx'
-import Sample8 from './news/sample-8.mdx'
+const Sample0 = dynamic(() => import('./news/sample-0.mdx'))
+const Sample1 = dynamic(() => import('./news/sample-1.mdx'))
+const Sample2 = dynamic(() => import('./news/sample-2.mdx'))
+const Sample3 = dynamic(() => import('./news/sample-3.mdx'))
+const Sample4 = dynamic(() => import('./news/sample-4.mdx'))
+const Sample5 = dynamic(() => import('./news/sample-5.mdx'))
+const Sample6 = dynamic(() => import('./news/sample-6.mdx'))
+const Sample7 = dynamic(() => import('./news/sample-7.mdx'))
+const Sample8 = dynamic(() => import('./news/sample-8.mdx'))
 
 export const newsMetas: NewsMetaType[] = [
   {
