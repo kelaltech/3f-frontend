@@ -27,11 +27,13 @@ function HomeNews() {
           <div className="home-news-anti-news-card-space">
             <Slider
               dots={true}
-              infinite={false}
+              infinite={true}
               speed={500}
               slidesToShow={3}
               slidesToScroll={1}
               initialSlide={0}
+              autoplay={true}
+              autoplaySpeed={7000}
               responsive={[
                 {
                   breakpoint: 840,

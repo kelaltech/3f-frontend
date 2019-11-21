@@ -27,11 +27,13 @@ function HomeProducts() {
           <div className="home-products-anti-product-card-space">
             <Slider
               dots={true}
-              infinite={false}
+              infinite={true}
               speed={500}
               slidesToShow={4}
               slidesToScroll={1}
               initialSlide={0}
+              autoplay={true}
+              autoplaySpeed={3000}
               responsive={[
                 {
                   breakpoint: 1024,
