@@ -6,25 +6,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons'
 
 import './location-card.scss'
+import { LocationType } from '../../../types/location-type'
 
 type LocationCardProps = {
-  // todo
+  location: LocationType
   blockProps?: IBlockProps
 }
 
-function LocationCard({ blockProps }: LocationCardProps) {
+function LocationCard({ location, blockProps }: LocationCardProps) {
   return (
     <Block className="location-card" last {...blockProps}>
-      <h3 className="location-card-name">Jacros Showroom</h3>
+      <h3 className="location-card-name">{location.name}</h3>
       <div className="location-card-description">
         <div className="location-card-description-address">
-          Civil Service College, S, 1
-          <br />
-          Addis Ababa
-          <br />
-          Ethiopia
+          {typeof location.address === 'string' ? (
+            <pre>{location.address}</pre>
+          ) : (
+            location.address
+          )}
         </div>
-        <Link href="https://goo.gl/maps/dosmgWqNgzoV3Bjo8">
+        <Link href={location.mapUrl}>
           <a
             className="location-card-description-maps-link"
             title="Open in Maps"

@@ -23,7 +23,7 @@
 .location-card-description-address {
   flex: 1;
 
-  padding: 0 ($space / 2) 0 0;
+  padding: 0 ($space) 0 0;
 }
 
 .location-card-description-maps-link {
@@ -47,5 +47,7 @@
 }
 
 .location-card-description-maps-link-label {
+  margin: 0 0 ($space / 2);
+
   text-align: center;
 }

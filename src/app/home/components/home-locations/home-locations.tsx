@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Block, Content, Yoga } from 'gerami'
 
 import './home-locations.scss'
+import { homeLocationsShowrooms } from '../../../../../data/home-locations-showrooms'
 import LocationCard from '../../../../shared/components/location-card/location-card'
 
 function HomeLocations() {
@@ -15,9 +16,9 @@ function HomeLocations() {
 
         <Block className="padding-top-none">
           <Yoga maxCol={3}>
-            <LocationCard />
-            <LocationCard />
-            <LocationCard />
+            {homeLocationsShowrooms.map((l, i) => (
+              <LocationCard key={i} location={l} />
+            ))}
           </Yoga>
         </Block>
 
