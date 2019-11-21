@@ -4,12 +4,10 @@ import { homeLocationsShowrooms } from './home-locations-showrooms'
 export const locations: LocationsWithCategoryType[] = [
   {
     categoryTitle: 'Our Showrooms',
-    categoryDescription: '',
     locations: homeLocationsShowrooms
   },
   {
     categoryTitle: 'Our HQ',
-    categoryDescription: '',
     locations: [
       {
         name: '(3F) Finfinne Furniture Factory HQ',
