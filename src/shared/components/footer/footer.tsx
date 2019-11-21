@@ -13,10 +13,7 @@ import {
 
 import './footer.scss'
 import LiteImage from '../lite-image/lite-image'
-
-const DotSpace = () => (
-  <span className="inline-block margin-horizontal-normal">•</span>
-)
+import DotSpace from '../dot-space/dot-space'
 
 function Footer() {
   return (

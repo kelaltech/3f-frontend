@@ -1,0 +1,22 @@
+@import '../../assets/styles/theme';
+@import '../../shared/components/header/header-height';
+
+.products-header {
+  padding-top: $headerHeight + $space;
+  margin-bottom: $space * 4;
+
+  background-color: $accent;
+
+  a {
+    font-size: $font-S;
+    font-weight: normal;
+
+    color: inherit;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $bg;
+    }
+  }
+}
