@@ -6,7 +6,7 @@ import ProductDetail from '../../src/app/product-detail/product-detail'
 function ProductDetailPage() {
   return (
     <LayoutDefault>
-      <ProductDetail />
+      <ProductDetail idParamName="productId" />
     </LayoutDefault>
   )
 }
