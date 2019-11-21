@@ -8,7 +8,7 @@ import LocationCard from '../../../../shared/components/location-card/location-c
 
 function HomeLocations() {
   return (
-    <div className="bg-accent fg-whitish padding-vertical-big">
+    <div className="bg-accent fg-whitish padding-vertical-very-big">
       <Content size="3XL" transparent>
         <Block first>
           <h1 className="center">Come Visit Our Showrooms</h1>
@@ -16,8 +16,8 @@ function HomeLocations() {
 
         <Block className="padding-top-none">
           <Yoga maxCol={3}>
-            {homeLocationsShowrooms.map((l, i) => (
-              <LocationCard key={i} location={l} />
+            {homeLocationsShowrooms.map((location, i) => (
+              <LocationCard key={i} location={location} />
             ))}
           </Yoga>
         </Block>

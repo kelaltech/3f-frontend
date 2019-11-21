@@ -9,7 +9,7 @@ import NewsCard from '../../../../shared/components/news-card/news-card'
 
 function HomeNews() {
   return (
-    <div className="padding-vertical-big">
+    <div className="padding-vertical-very-big">
       <Content size="3XL" transparent>
         <Block first>
           <div className="flex">

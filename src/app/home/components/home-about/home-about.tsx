@@ -7,7 +7,7 @@ import LiteImage from '../../../../shared/components/lite-image/lite-image'
 
 function HomeAbout() {
   return (
-    <div className="bg-accent fg-whitish padding-vertical-big">
+    <div className="bg-accent fg-whitish padding-vertical-very-big">
       <Content size="3XL" transparent>
         <div className="home-about-flex">
           <div className="inline-block middle center home-about-flex-in-1">

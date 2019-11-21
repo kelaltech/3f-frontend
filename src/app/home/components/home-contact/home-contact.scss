@@ -1,0 +1,28 @@
+@import '../../../../assets/styles/theme';
+
+.home-contact-form-container {
+  padding: $space * 2;
+}
+
+.home-contact-form-send-message-input {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+
+  .gerami-textarea {
+    padding-top: $space !important;
+    line-height: 1.5 !important;
+  }
+}
+
+.home-contact-form-send-message-submit {
+  margin: ($space / 4) 0 0;
+  padding: 0;
+
+  height: $space * 3.5;
+  width: 100% !important;
+
+  &:disabled {
+    background-color: $primary !important;
+  }
+}

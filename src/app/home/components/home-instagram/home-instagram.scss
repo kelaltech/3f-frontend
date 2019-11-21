@@ -3,7 +3,7 @@
 .home-instagram-flex {
   display: flex;
 
-  padding: $space;
+  padding: $space * 1.5;
 
   > * {
     flex: 1;
@@ -13,7 +13,7 @@
 .home-instagram-photo {
   height: $space * 10;
 
-  margin: $space;
+  margin: $space / 2;
 
   background-color: transparentize($bg, 0.05);
   background-size: cover;

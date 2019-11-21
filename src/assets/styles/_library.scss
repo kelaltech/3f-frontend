@@ -34,3 +34,48 @@ a {
 
   font-weight: bold;
 }
+
+.gerami-button-primary {
+  padding: ($space / 2) $space;
+}
+
+.gerami-input,
+.gerami-textarea {
+  margin: 0;
+  padding: ($space) ($space) !important;
+}
+.gerami-input-placeholder,
+.gerami-textarea-placeholder {
+  margin: 0;
+  padding: ($space) ($space + 1) !important;
+
+  color: transparentize($accent, 0.56);
+}
+.gerami-input-float,
+.gerami-textarea-float {
+  margin-top: ($space / 2 - 4px);
+  padding: ($space / 8) ($space / 4) !important;
+
+  background-color: $primary !important;
+  color: white !important;
+  box-shadow: $shade-S;
+}
+
+.gerami-input,
+.gerami-textarea {
+  margin: 0 !important;
+
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: $accent;
+  border-radius: $radius !important;
+
+  background-color: white !important;
+  box-shadow: $shade-L;
+
+  &:active,
+  &:focus {
+    background-color: white;
+    box-shadow: $shade-M, $shade-L;
+  }
+}

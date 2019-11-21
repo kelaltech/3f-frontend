@@ -8,7 +8,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 function HomeInstagram() {
   return (
-    <div className="bg-primary fg-whitish padding-vertical-big">
+    <div className="bg-primary fg-whitish padding-vertical-very-big">
       <Content size="3XL" transparent>
         <div className="home-instagram-flex">
           <LiteImage
