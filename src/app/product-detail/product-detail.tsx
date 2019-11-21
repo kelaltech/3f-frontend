@@ -77,7 +77,9 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
             </h5>
           </Block>
 
-          {!product.description.dimension.length ? null : (
+          {!product.description.composition.length &&
+          !product.description.material.length &&
+          !product.fabrics.length ? null : (
             <Block>
               <h5>
                 <span className="fg-accent margin-right-normal">
@@ -111,7 +113,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
                 {product.description.dimension.map(
                   ({ width, height, length }, i) => (
                     <li key={i}>
-                      {width}x{height}x{length}
+                      {width}x{height}x{length} cm
                     </li>
                   )
                 )}

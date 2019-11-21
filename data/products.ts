@@ -16,9 +16,9 @@ export const products: ProductType[] = [
     imgSrc: require('../src/assets/images/sofa-sample.jpg')
   },
   {
-    _id: '1',
+    _id: '2',
     category: 'OFFICE_FURNITURE',
-    name: 'Office Chair',
+    name: 'Office Table',
     description: {
       composition: [],
       material: [],
@@ -30,9 +30,9 @@ export const products: ProductType[] = [
     imgSrc: require('../src/assets/images/sofa-sample.jpg')
   },
   {
-    _id: '1',
+    _id: '3',
     category: 'BEDROOM_FURNITURE',
-    name: 'Office Chair',
+    name: 'King-Size Bed',
     description: {
       composition: [],
       material: [],
@@ -44,9 +44,9 @@ export const products: ProductType[] = [
     imgSrc: require('../src/assets/images/sofa-sample.jpg')
   },
   {
-    _id: '1',
+    _id: '4',
     category: 'BEDROOM_FURNITURE',
-    name: 'Office Chair',
+    name: 'Bed-side Lamp',
     description: {
       composition: [],
       material: [],
@@ -58,13 +58,13 @@ export const products: ProductType[] = [
     imgSrc: require('../src/assets/images/sofa-sample.jpg')
   },
   {
-    _id: '1',
-    category: 'BEDROOM_FURNITURE',
-    name: 'Office Chair',
+    _id: '5',
+    category: 'DOORS',
+    name: 'Wooden 80cm Door',
     description: {
       composition: [],
-      material: [],
-      dimension: [],
+      material: ['Wood'],
+      dimension: [{ width: 80, height: 220, length: 10 }],
       color: []
     },
     prices: [2500, 1400, 6000],
@@ -72,9 +72,9 @@ export const products: ProductType[] = [
     imgSrc: require('../src/assets/images/sofa-sample.jpg')
   },
   {
-    _id: '1',
+    _id: '6',
     category: 'OFFICE_FURNITURE',
-    name: 'Office Chair',
+    name: 'Office Guest Chair',
     description: {
       composition: [],
       material: [],
@@ -86,9 +86,9 @@ export const products: ProductType[] = [
     imgSrc: require('../src/assets/images/sofa-sample.jpg')
   },
   {
-    _id: '1',
-    category: 'BEDROOM_FURNITURE',
-    name: 'Office Chair',
+    _id: '7',
+    category: 'DOORS',
+    name: 'Wooden French Door',
     description: {
       composition: [],
       material: [],
@@ -100,9 +100,9 @@ export const products: ProductType[] = [
     imgSrc: require('../src/assets/images/sofa-sample.jpg')
   },
   {
-    _id: '1',
+    _id: '8',
     category: 'DINING_ROOM_FURNITURE',
-    name: 'Office Chair',
+    name: 'Dining Table',
     description: {
       composition: [],
       material: [],
