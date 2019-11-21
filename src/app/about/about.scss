@@ -1,0 +1,161 @@
+@import '../../assets/styles/theme';
+
+.ab-card-box {
+  position: relative;
+  height: 70vh;
+
+  @media screen and (max-width: 1040px) {
+    display: flex;
+  }
+  @media screen and (max-width: $mobile) {
+    flex-direction: column-reverse;
+    height: 100vh;
+    margin-top: 0 !important;
+  }
+  .back-card {
+    height: 300px;
+    text-align: center;
+    background-color: #bc2239;
+    color: white;
+
+    .back-card-block {
+      width: 63.5%;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width: 1040px) {
+        width: 100%;
+        align-self: center;
+      }
+    }
+  }
+  .front-card {
+    position: absolute;
+    right: 100px;
+    top: -$space;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    color: $primary;
+
+    @media screen and (max-width: 1040px) {
+      position: static !important;
+    }
+  }
+}
+
+.ab-who-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 550px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+      margin-right: 0 !important;
+      img {
+        height: 50px;
+      }
+    }
+  }
+}
+
+.ab-vision-box {
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  .back-vision-card {
+    @media screen and (max-width: 640px) {
+      font-size: 14px;
+    }
+  }
+}
+.vision-box {
+  background-color: $accent;
+  color: $bg;
+}
+.vision-sub-box {
+  p {
+    text-align: left;
+  }
+  display: flex;
+  align-items: center;
+}
+
+.vision-front-card {
+  background-color: $accent !important;
+}
+
+.value-card-box {
+  position: relative;
+  //height: 70vh;
+  height: 100vh !important;
+
+  @media screen and (max-width: 1040px) {
+    display: flex;
+  }
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+    margin-top: 0 !important;
+  }
+
+  .value-back-card {
+    height: 350px;
+    background-color: $accent;
+    color: white;
+
+    @media screen and (max-width: 1040px) {
+      height: auto !important;
+    }
+
+    .value-back-card-block {
+      width: 63.5%;
+      float: right;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        span {
+          display: inline-block;
+          margin-bottom: $space/3;
+          padding-left: $space;
+
+          &:before {
+            width: 10px;
+            height: 10px;
+            background-color: #bc2239;
+          }
+        }
+      }
+      @media screen and (max-width: 1040px) {
+        width: 100%;
+        align-self: center;
+      }
+    }
+  }
+  .value-front-card {
+    position: absolute;
+    left: 100px;
+    top: -$space;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    color: $primary;
+
+    @media screen and (max-width: 1040px) {
+      position: static !important;
+    }
+  }
+}
