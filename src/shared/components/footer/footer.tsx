@@ -29,7 +29,7 @@ function Footer() {
                 <div
                   className="italic left"
                   style={{
-                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    borderBottom: '2px solid rgba(255,255,255,0.42)',
                     opacity: 0.95
                   }}
                 >
@@ -48,7 +48,7 @@ function Footer() {
                 <div
                   className="italic left"
                   style={{
-                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    borderBottom: '2px solid rgba(255,255,255,0.42)',
                     opacity: 0.95
                   }}
                 >
@@ -63,7 +63,7 @@ function Footer() {
                 <div
                   className="italic left"
                   style={{
-                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    borderBottom: '2px solid rgba(255,255,255,0.42)',
                     opacity: 0.95
                   }}
                 >
@@ -87,7 +87,7 @@ function Footer() {
                 <div
                   className="italic left"
                   style={{
-                    borderBottom: '1px solid rgba(255,255,255,0.42)',
+                    borderBottom: '2px solid rgba(255,255,255,0.42)',
                     opacity: 0.95
                   }}
                 >
