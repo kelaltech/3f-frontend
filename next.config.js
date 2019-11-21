@@ -24,7 +24,7 @@ dotenvLoad()
 const nextConfig = {
   target: 'serverless',
 
-  pageExtensions: ['tsx', 'mdx'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'mdx'],
 
   webpack: (config, { dev }) => {
     if (!dev) {
