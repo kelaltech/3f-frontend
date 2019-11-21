@@ -24,7 +24,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
   return (
     <Layout>
       <Page>
-        <Content size="XL" className="margin-top-normal font-L">
+        <Content size="3XL" transparent>
           <Block first className="font-S">
             <Yoga maxCol={2}>
               <span>
@@ -44,20 +44,24 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
             </Yoga>
           </Block>
 
-          <Block>
-            <h1>{news.title}</h1>
-            <h5 className="fg-blackish light">
-              Posted on {news.postedOn.toDateString()}
-            </h5>
-          </Block>
-
-          <Block>
-            <Block className="bg-accent fg-white padding-big">
-              {news.description}
+          <Content size="L" transparent className="font-L">
+            <Block first>
+              <h1>{news.title}</h1>
+              <h5 className="fg-blackish light padding-top-normal">
+                Posted on {news.postedOn.toDateString()}
+              </h5>
             </Block>
-          </Block>
 
-          <Block last>{news.content}</Block>
+            <Block first last>
+              <Block className="bg-accent fg-white padding-big">
+                {news.description}
+              </Block>
+            </Block>
+
+            <Block last style={{ lineHeight: 2 }}>
+              {news.content}
+            </Block>
+          </Content>
         </Content>
       </Page>
     </Layout>
