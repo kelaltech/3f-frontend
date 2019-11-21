@@ -2,8 +2,24 @@ import React from 'react'
 import { Block, Content, Yoga } from 'gerami'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  LinkedinShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton
+} from 'react-share'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import {
+  faFacebook,
+  faLinkedin,
+  faTelegram,
+  faTwitter,
+  faWhatsapp
+} from '@fortawesome/free-brands-svg-icons'
 
 import Page from '../../shared/components/page/page'
 import { newsMetas } from '../../../data/news-metas'
@@ -36,9 +52,53 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
               </Link>
             </span>
 
-            <small className="fg-blackish right">
-              {/* todo: share options */}
-            </small>
+            <span className="fg-blackish right">
+              <small className="inline-block middle margin-small margin-right-normal">
+                Share:
+              </small>
+
+              <EmailShareButton
+                url={location.href}
+                subject={`${news.title} | News – (3F) Finfine Furniture Factory`}
+                body={news.description}
+              >
+                <FontAwesomeIcon icon={faEnvelope} />
+              </EmailShareButton>
+
+              <FacebookShareButton
+                url={location.href}
+                quote={`${news.title} | News – (3F) Finfine Furniture Factory\n\n${news.description}`}
+                hashtag="#3F"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </FacebookShareButton>
+
+              <LinkedinShareButton url={location.href}>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </LinkedinShareButton>
+
+              <TelegramShareButton
+                url={location.href}
+                title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.description}`}
+              >
+                <FontAwesomeIcon icon={faTelegram} />
+              </TelegramShareButton>
+
+              <TwitterShareButton
+                url={location.href}
+                title={`${news.title} | News – (3F) Finfine Furniture Factory`}
+                hashtags={['3F']}
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+              </TwitterShareButton>
+
+              <WhatsappShareButton
+                url={location.href}
+                title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.description}`}
+              >
+                <FontAwesomeIcon icon={faWhatsapp} />
+              </WhatsappShareButton>
+            </span>
           </Yoga>
         </Block>
 

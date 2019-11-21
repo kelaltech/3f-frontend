@@ -2,6 +2,14 @@ import React from 'react'
 import { Block, Content, Yoga } from 'gerami'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  LinkedinShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton
+} from 'react-share'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faArrowLeft,
@@ -10,6 +18,14 @@ import {
   faPaintRoller,
   faRulerCombined
 } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import {
+  faFacebook,
+  faLinkedin,
+  faTelegram,
+  faTwitter,
+  faWhatsapp
+} from '@fortawesome/free-brands-svg-icons'
 
 import Page from '../../shared/components/page/page'
 import { products } from '../../../data/products'
@@ -45,9 +61,62 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
               </Link>
             </span>
 
-            <small className="fg-blackish right">
-              {/* todo: share options */}
-            </small>
+            <span className="fg-blackish right">
+              <small className="inline-block middle margin-small margin-right-normal">
+                Share:
+              </small>
+
+              <EmailShareButton
+                url={location.href}
+                subject={`${nameProductCategory(
+                  product.category
+                )} by (3F) Finfine Furniture Factory: ${product.name}`}
+              >
+                <FontAwesomeIcon icon={faEnvelope} />
+              </EmailShareButton>
+
+              <FacebookShareButton
+                url={location.href}
+                quote={`${nameProductCategory(
+                  product.category
+                )} by (3F) Finfine Furniture Factory: ${product.name}`}
+                hashtag="#3F"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </FacebookShareButton>
+
+              <LinkedinShareButton url={location.href}>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </LinkedinShareButton>
+
+              <TelegramShareButton
+                url={location.href}
+                title={`${nameProductCategory(
+                  product.category
+                )} by (3F) Finfine Furniture Factory: ${product.name}`}
+              >
+                <FontAwesomeIcon icon={faTelegram} />
+              </TelegramShareButton>
+
+              <TwitterShareButton
+                url={location.href}
+                title={`${nameProductCategory(
+                  product.category
+                )} by (3F) Finfine Furniture Factory: ${product.name}`}
+                hashtags={['3F']}
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+              </TwitterShareButton>
+
+              <WhatsappShareButton
+                url={location.href}
+                title={`${nameProductCategory(
+                  product.category
+                )} by (3F) Finfine Furniture Factory: ${product.name}`}
+              >
+                <FontAwesomeIcon icon={faWhatsapp} />
+              </WhatsappShareButton>
+            </span>
           </Yoga>
         </Block>
       </Content>

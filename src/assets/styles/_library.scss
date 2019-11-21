@@ -86,3 +86,14 @@ a {
 .fg-whitish {
   color: transparentize($bg, 0.28) !important;
 }
+
+.SocialMediaShareButton {
+  display: inline-block;
+  vertical-align: middle;
+
+  padding: ($space / 4) ($space / 2);
+
+  font-size: $font-L;
+
+  cursor: pointer;
+}
