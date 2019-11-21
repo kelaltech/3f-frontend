@@ -14,7 +14,7 @@ type LocationCardProps = {
 
 function LocationCard({ location, blockProps }: LocationCardProps) {
   return (
-    <Block className="location-card" last {...blockProps}>
+    <Block className="location-card" {...blockProps}>
       <h3 className="location-card-name">{location.name}</h3>
       <div className="location-card-description">
         <div className="location-card-description-address">

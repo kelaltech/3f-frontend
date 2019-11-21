@@ -17,7 +17,11 @@ function HomeLocations() {
         <Block className="padding-top-none">
           <Yoga maxCol={3}>
             {homeLocationsShowrooms.map((location, i) => (
-              <LocationCard location={location} key={i} />
+              <LocationCard
+                location={location}
+                key={i}
+                blockProps={{ first: true, last: true }}
+              />
             ))}
           </Yoga>
         </Block>
