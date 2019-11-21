@@ -1,0 +1,51 @@
+@import '../../../assets/styles/theme';
+
+.location-card {
+}
+
+.location-card-name {
+  border-bottom: 2px solid transparentize($bg, 0.77);
+
+  font-size: $font-L;
+  font-weight: bold;
+
+  color: $bg;
+}
+
+.location-card-description {
+  display: flex;
+
+  > * {
+    margin: auto;
+  }
+}
+
+.location-card-description-address {
+  flex: 1;
+
+  padding: 0 ($space / 2) 0 0;
+}
+
+.location-card-description-maps-link {
+  text-align: center;
+
+  color: inherit;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $bg;
+  }
+}
+
+.location-card-description-maps-link-icon {
+  display: inline-block;
+
+  margin: ($space / 2) 0;
+
+  font-size: $font-M * 2;
+}
+
+.location-card-description-maps-link-label {
+  text-align: center;
+}
