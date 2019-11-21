@@ -1,0 +1,7 @@
+@import '../../assets/styles/theme';
+@import '../../shared/components/header/header-height';
+
+.locations {
+  padding-top: $headerHeight + $space;
+  padding-bottom: $space;
+}
