@@ -37,7 +37,7 @@ function HomeContact() {
 
   return (
     <LiteParallax
-      bgImage={require('../../../../assets/images/brand/logo-red.png')}
+      src={{ src: require('../../../../assets/images/brand/logo-red.png') }}
       strength={250}
     >
       <div className="padding-vertical-very-big bg-whitish">

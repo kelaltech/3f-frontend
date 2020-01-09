@@ -9,7 +9,7 @@ import LiteParallax from '../../../../shared/components/lite-parallax/lite-paral
 function HomeAbout() {
   return (
     <LiteParallax
-      bgImage={require('../../../../assets/images/brand/logo-white.png')}
+      src={{ src: require('../../../../assets/images/brand/logo-white.png') }}
       strength={250}
       className="bg-accent"
     >
