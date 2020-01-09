@@ -11,7 +11,7 @@
 
 .home-slides {
   .slick-dots {
-    bottom: $space * 2;
+    bottom: $space;
   }
 
   .home-slides-item {
@@ -39,7 +39,7 @@
 
     width: 100%;
 
-    margin-top: -$space * 9;
+    margin-top: -$space * 11;
 
     text-align: center;
 
@@ -51,7 +51,7 @@
 
       border-radius: $radius;
 
-      background-color: transparentize($bg, 0.42);
+      background-color: transparentize($bg, 0.35);
       color: $primary !important;
 
       &:active,

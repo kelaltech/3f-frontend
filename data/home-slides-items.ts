@@ -12,6 +12,13 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ]
   },
   {
+    src: require('./product-pictures/sofa-sample.jpg'),
+    links: [
+      { href: '/products', children: 'See All Products' },
+      { href: '/about', children: 'Learn More' }
+    ]
+  },
+  {
     src: require('./product-pictures/sample-1.jpg'),
     links: [
       {
@@ -21,11 +28,4 @@ export const homeSlideItems: HomeSlidesItemType[] = [
       { href: '/products', children: 'See All Products' }
     ]
   },
-  {
-    src: require('./product-pictures/sofa-sample.jpg'),
-    links: [
-      { href: '/products', children: 'See All Products' },
-      { href: '/about', children: 'Learn More' }
-    ]
-  }
 ]
