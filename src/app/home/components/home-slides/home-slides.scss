@@ -15,7 +15,7 @@
   }
 
   .home-slides-item {
-    height: 100vh;
+    height: 98vh;
     min-height: $mobile;
     width: 100%;
 
@@ -34,16 +34,33 @@
   }
 
   .home-slides-item-links-container {
+    z-index: 10000;
     position: absolute;
 
     width: 100%;
 
-    margin-top: -$space * 8;
+    margin-top: -$space * 9;
 
     text-align: center;
 
     .home-slides-item-link {
-      margin: $space;
+      z-index: 10000;
+
+      margin: $space / 2;
+      padding: ($space) ($space * 2);
+
+      border-radius: $radius;
+
+      background-color: transparentize($bg, 0.42);
+      color: $primary !important;
+
+      &:active,
+      &:hover,
+      &:focus {
+        background-color: transparentize($bg, 0.14);
+        box-shadow: inset 0 -2em 0 -1.9em currentColor,
+          0 3px 14px 0px transparentize($accent, 0.84);
+      }
     }
   }
 }

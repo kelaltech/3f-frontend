@@ -17,25 +17,25 @@ export const newsMetas: NewsMetaType[] = [
   {
     id: 'sample-0',
     active: true,
-    title:
-      'Sample 0 Sample 6 Sa ple The aui ck brown fox jums over the lazy dog.',
-    description: 'Sample',
+    title: '(3F) Finfine Furniture Factory Launches New Website',
+    description:
+      '3F launches its newly redesigned website in partnership with kelal tech plc. The new design focuses on ease of use and brand identity.',
     postedOn: new Date(2019, 11, 14),
     content: <Sample0 />
   },
   {
     id: 'sample-1',
     active: true,
-    title: 'Sample 1',
-    description: 'Sample',
+    title: 'This is a Sample Title for Some News',
+    description: 'This is also a sample mini description for this sample news article.',
     postedOn: new Date(2019, 11, 14),
     content: <Sample1 />
   },
   {
     id: 'sample-2',
     active: true,
-    title: 'Sample 2',
-    description: 'Sample',
+    title: 'New Textile Patterns Just Got In',
+    description: 'Five new textile patterns are available for January 2020.',
     postedOn: new Date(2019, 11, 14),
     content: <Sample2 />
   },

@@ -6,6 +6,7 @@ import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
+import { homeInstagramTop } from '../../../../../data/home-instagram-top'
 
 function HomeInstagram() {
   return (
@@ -17,22 +18,9 @@ function HomeInstagram() {
       <div className="bg-primary fg-whitish padding-vertical-very-big">
         <Content size="3XL" transparent>
           <div className="home-instagram-flex">
-            <LiteImage
-              src={require('../../../../../data/product-pictures/sofa-sample.jpg' /* todo */)}
-              className="home-instagram-photo"
-            />
-            <LiteImage
-              src={require('../../../../../data/product-pictures/sofa-sample.jpg' /* todo */)}
-              className="home-instagram-photo"
-            />
-            <LiteImage
-              src={require('../../../../../data/product-pictures/sofa-sample.jpg' /* todo */)}
-              className="home-instagram-photo"
-            />
-            <LiteImage
-              src={require('../../../../../data/product-pictures/sofa-sample.jpg' /* todo */)}
-              className="home-instagram-photo"
-            />
+            {homeInstagramTop.map((src, i) => (
+              <LiteImage src={src} className="home-instagram-photo" key={i} />
+            ))}
             <a
               href="https://www.instagram.com/ethio3f"
               rel="noopener nofollow"

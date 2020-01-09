@@ -14,6 +14,7 @@ import './home-contact.scss'
 import { IMessage } from '../../../../../pages/api/message'
 import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
+import { homeContactBg } from '../../../../../data/home-contact-bg'
 
 function HomeContact() {
   const [msg, setMsg] = useState<IMessage>({ from: '', subject: '', text: '' })
@@ -36,12 +37,9 @@ function HomeContact() {
   }
 
   return (
-    <LiteParallax
-      src={{ src: require('../../../../assets/images/brand/logo-red.png') }}
-      strength={250}
-    >
-      <div className="padding-vertical-very-big bg-whitish">
-        <Content size="3XL" transparent>
+    <LiteParallax src={homeContactBg} strength={250}>
+      <div className="padding-vertical-very-big bg-blackish">
+        <Content size="3XL" transparent className="padding-vertical-big">
           <Block first className="center">
             <LiteImage
               src={require('../../../../assets/images/brand/logo-red.png')}
@@ -51,11 +49,15 @@ function HomeContact() {
           </Block>
 
           <Block last>
-            <Block className="center">
-              <h1 className="fg-primary">Contact Us</h1>
+            <Block className="center" first last>
+              <h1 className="fg-whitish">Contact Us</h1>
             </Block>
 
-            <Content size="L" className="home-contact-form-container">
+            <Content
+              size="L"
+              transparent
+              className="home-contact-form-container"
+            >
               <form method="POST" onSubmit={handleSubmit}>
                 {error && (
                   <Warning

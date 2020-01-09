@@ -10,7 +10,7 @@ import ProductCard from '../../../../shared/components/product-card/product-card
 function HomeProducts() {
   return (
     <div className="padding-vertical-very-big">
-      <Content size="3XL" transparent>
+      <Content size="3XL" transparent className="padding-vertical-big">
         <Block first>
           <div className="flex">
             <h1 className="inline-block margin-vertical-auto">Products</h1>

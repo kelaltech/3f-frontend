@@ -11,10 +11,10 @@ function HomeAbout() {
     <LiteParallax
       src={{ src: require('../../../../assets/images/brand/logo-white.png') }}
       strength={250}
-      className="bg-accent"
+      className="home-about-lite-parallax bg-accent"
     >
       <div className="bg-accent fg-whitish padding-vertical-very-big">
-        <Content size="3XL" transparent>
+        <Content size="3XL" transparent className="padding-vertical-big">
           <div className="home-about-flex">
             <div className="inline-block middle center home-about-flex-in-1">
               <LiteImage

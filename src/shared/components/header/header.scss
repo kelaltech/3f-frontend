@@ -13,6 +13,7 @@
   left: 0;
 
   background-image: linear-gradient(
+    to bottom,
     transparentize($bg, 0.5),
     transparentize($bg, 0.84),
     rgba(255, 255, 255, 0)
@@ -24,7 +25,15 @@
     .header-in-2 {
       display: flex;
 
-      padding: $headerPaddingHeight;
+      padding: $headerPaddingHeight ($headerPaddingHeight + $space / 2);
+
+      background-image: linear-gradient(
+        to bottom,
+        transparentize($bg, 0.03),
+        transparentize($bg, 0.14)
+      );
+      background-color: transparent !important;
+      box-shadow: $shade-L !important;
     }
   }
 }
@@ -80,8 +89,11 @@ $navMobileRate: 1.4;
 
       padding: 0 $space;
 
+      font-size: $font-M;
       font-weight: lighter;
       line-height: $headerContentHeight;
+
+      color: $primary !important;
 
       transition-property: all;
       transition-duration: 0.7s;
@@ -91,7 +103,7 @@ $navMobileRate: 1.4;
       &:hover {
         box-shadow: inset $headerContentHeight -$headerContentHeight 0 -$headerContentHeight
           $primary;
-        color: $bg;
+        color: $bg !important;
 
         transition-duration: 0.3s;
       }
