@@ -65,6 +65,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
                 </small>
 
                 <EmailShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   subject={`${news.title} | News – (3F) Finfine Furniture Factory`}
                   body={news.description}
@@ -73,6 +74,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
                 </EmailShareButton>
 
                 <FacebookShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   quote={`${news.title} | News – (3F) Finfine Furniture Factory\n\n${news.description}`}
                   hashtag="#3F"
@@ -80,11 +82,15 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
                   <FontAwesomeIcon icon={faFacebook} />
                 </FacebookShareButton>
 
-                <LinkedinShareButton url={location.href}>
+                <LinkedinShareButton
+                  className="margin-horizontal-normal font-L middle"
+                  url={location.href}
+                >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </LinkedinShareButton>
 
                 <TelegramShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.description}`}
                 >
@@ -92,6 +98,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
                 </TelegramShareButton>
 
                 <TwitterShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   title={`${news.title} | News – (3F) Finfine Furniture Factory`}
                   hashtags={['3F']}
@@ -100,6 +107,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
                 </TwitterShareButton>
 
                 <WhatsappShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.description}`}
                 >

@@ -79,6 +79,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
                 </small>
 
                 <EmailShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   subject={`${nameProductCategory(
                     product.category
@@ -88,6 +89,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
                 </EmailShareButton>
 
                 <FacebookShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   quote={`${nameProductCategory(
                     product.category
@@ -97,11 +99,15 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
                   <FontAwesomeIcon icon={faFacebook} />
                 </FacebookShareButton>
 
-                <LinkedinShareButton url={location.href}>
+                <LinkedinShareButton
+                  className="margin-horizontal-normal font-L middle"
+                  url={location.href}
+                >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </LinkedinShareButton>
 
                 <TelegramShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   title={`${nameProductCategory(
                     product.category
@@ -111,6 +117,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
                 </TelegramShareButton>
 
                 <TwitterShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   title={`${nameProductCategory(
                     product.category
@@ -121,6 +128,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
                 </TwitterShareButton>
 
                 <WhatsappShareButton
+                  className="margin-horizontal-normal font-L middle"
                   url={location.href}
                   title={`${nameProductCategory(
                     product.category

@@ -29,6 +29,10 @@ h6 {
   @extend .font-family-title;
 }
 
+.gerami-anchor {
+  color: $primary;
+}
+
 a {
   @extend .gerami-anchor;
 
