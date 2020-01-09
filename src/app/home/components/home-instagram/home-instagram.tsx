@@ -18,19 +18,19 @@ function HomeInstagram() {
         <Content size="3XL" transparent>
           <div className="home-instagram-flex">
             <LiteImage
-              src={require('../../../../assets/images/sofa-sample.jpg' /* todo */)}
+              src={require('../../../../../data/product-pictures/sofa-sample.jpg' /* todo */)}
               className="home-instagram-photo"
             />
             <LiteImage
-              src={require('../../../../assets/images/sofa-sample.jpg' /* todo */)}
+              src={require('../../../../../data/product-pictures/sofa-sample.jpg' /* todo */)}
               className="home-instagram-photo"
             />
             <LiteImage
-              src={require('../../../../assets/images/sofa-sample.jpg' /* todo */)}
+              src={require('../../../../../data/product-pictures/sofa-sample.jpg' /* todo */)}
               className="home-instagram-photo"
             />
             <LiteImage
-              src={require('../../../../assets/images/sofa-sample.jpg' /* todo */)}
+              src={require('../../../../../data/product-pictures/sofa-sample.jpg' /* todo */)}
               className="home-instagram-photo"
             />
             <a

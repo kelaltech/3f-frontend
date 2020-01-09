@@ -13,7 +13,7 @@ export const products: ProductType[] = [
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('../src/assets/images/sofa-sample.jpg')
+    imgSrc: require('./product-pictures/sample-0.jpg')
   },
   {
     _id: '2',
@@ -27,7 +27,7 @@ export const products: ProductType[] = [
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('../src/assets/images/sofa-sample.jpg')
+    imgSrc: require('./product-pictures/sample-1.jpg')
   },
   {
     _id: '3',
@@ -41,7 +41,7 @@ export const products: ProductType[] = [
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('../src/assets/images/sofa-sample.jpg')
+    imgSrc: require('./product-pictures/sample-2.jpg')
   },
   {
     _id: '4',
@@ -55,7 +55,7 @@ export const products: ProductType[] = [
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('../src/assets/images/sofa-sample.jpg')
+    imgSrc: require('./product-pictures/sample-3.jpg')
   },
   {
     _id: '5',
@@ -69,7 +69,7 @@ export const products: ProductType[] = [
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('../src/assets/images/sofa-sample.jpg')
+    imgSrc: require('./product-pictures/sample-4.jpg')
   },
   {
     _id: '6',
@@ -83,7 +83,7 @@ export const products: ProductType[] = [
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('../src/assets/images/sofa-sample.jpg')
+    imgSrc: require('./product-pictures/sample-5.jpg')
   },
   {
     _id: '7',
@@ -97,7 +97,7 @@ export const products: ProductType[] = [
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('../src/assets/images/sofa-sample.jpg')
+    imgSrc: require('./product-pictures/sample-6.jpg')
   },
   {
     _id: '8',
@@ -111,6 +111,6 @@ export const products: ProductType[] = [
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('../src/assets/images/sofa-sample.jpg')
+    imgSrc: require('./product-pictures/sample-7.jpg')
   }
 ]
