@@ -22,7 +22,7 @@
     "lint": "prettier ./{*,public/**/*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,json,md,html}",
     "format": "prettier --write ./{*,public/**/*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,json,md,html}",
     "prod": "run-p format build test",
-    "UNSAFE_upgrade": "yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @mdx-js/loader @next/bundle-analyzer @next/mdx @types/aos @types/jest @types/node @types/nodemailer @types/qs @types/react @types/react-dom @types/react-share @types/react-slick @zeit/next-css @zeit/next-mdx @zeit/next-sass aos axios brotli-webpack-plugin compression-webpack-plugin cross-env dotenv-load gerami husky imagemin-gifsicle imagemin-mozjpeg imagemin-pngquant img-loader isomorphic-unfetch jest next next-compose-plugins next-env next-fonts next-images next-offline next-seo node-sass nodemailer npm-run-all optimize-css-assets-webpack-plugin prettier qs react react-dom react-ga react-parallax react-router-dom react-share react-slick slick-carousel typescript webpack --latest"
+    "UNSAFE_upgrade": "yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @mdx-js/loader @next/bundle-analyzer @next/mdx @types/aos @types/jest @types/node @types/nodemailer @types/qs @types/react @types/react-dom @types/react-share @types/react-slick @zeit/next-css @zeit/next-mdx @zeit/next-sass aos axios brotli-webpack-plugin compression-webpack-plugin cross-env dotenv-load gerami husky imagemin-gifsicle imagemin-mozjpeg imagemin-pngquant img-loader isomorphic-unfetch jest next next-compose-plugins next-env next-fonts next-images next-offline next-seo node-sass nodemailer npm-run-all optimize-css-assets-webpack-plugin prettier qs react react-dom react-ga react-masonry-component react-parallax react-router-dom react-share react-slick slick-carousel typescript webpack --latest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
@@ -75,6 +75,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-ga": "^2.7.0",
+    "react-masonry-component": "^6.2.1",
     "react-parallax": "^3.0.3",
     "react-router-dom": "^5.1.2",
     "react-share": "^4.0.1",
