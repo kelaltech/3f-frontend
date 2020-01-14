@@ -74,12 +74,12 @@ a {
   border-color: $accent;
   border-radius: $radius !important;
 
-  background-color: transparentize($bg, 0.97);
+  background-color: transparentize($bg, 0.97) !important;
   box-shadow: $shade-L;
 
   &:active,
   &:focus {
-    background-color: transparentize($bg, 0.05);
+    background-color: transparentize($bg, 0.05) !important;
     box-shadow: $shade-M, $shade-L;
   }
 }
@@ -88,7 +88,7 @@ a {
   color: transparentize($fg, 0.35) !important;
 }
 .fg-whitish {
-  color: transparentize($bg, 0.28) !important;
+  color: transparentize($bg, 0.24) !important;
 }
 
 .SocialMediaShareButton {
