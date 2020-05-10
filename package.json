@@ -6,7 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "yarn": "1.x"
   },
   "scripts": {
     "dev": "next dev",
@@ -50,7 +51,6 @@
     "dotenv-load": "^2.0.0",
     "gerami": "^0.1.6",
     "husky": "^4.2.5",
-    "img-loader": "^3.0.1",
     "isomorphic-unfetch": "^3.0.0",
     "jest": "^26.0.1",
     "next": "^9.3.6",

@@ -21,7 +21,7 @@
     background-position: center center;
     background-size: cover;
 
-    animation: 15s ease-in-out 0s infinite alternate home-slides-item-drama;
+    animation: home-slides-item-drama 15s ease-in-out 0s infinite alternate;
     transition: all 5s linear;
 
     @media (max-width: $mobile) {
