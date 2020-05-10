@@ -8,26 +8,26 @@ import {
   faInstagram,
   faLinkedin,
   faTwitter,
-  faYoutube
+  faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 
-import './footer.scss'
+import styles from './footer.module.scss'
 import LiteImage from '../lite-image/lite-image'
 import DotSpace from '../dot-space/dot-space'
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className={styles['footer']}>
       <Content size="3XL" transparent>
-        <div className="footer-flex">
-          <div className="top footer-contact-info">
+        <div className={styles['footer-flex']}>
+          <div className={`top ${styles['footer-contact-info']}`}>
             <Block first last>
               <div className="margin-top-none">
                 <div
                   className="italic left"
                   style={{
                     borderBottom: '2px solid rgba(255,255,255,0.42)',
-                    opacity: 0.95
+                    opacity: 0.95,
                   }}
                 >
                   Mail
@@ -46,7 +46,7 @@ function Footer() {
                   className="italic left"
                   style={{
                     borderBottom: '2px solid rgba(255,255,255,0.42)',
-                    opacity: 0.95
+                    opacity: 0.95,
                   }}
                 >
                   Email
@@ -61,7 +61,7 @@ function Footer() {
                   className="italic left"
                   style={{
                     borderBottom: '2px solid rgba(255,255,255,0.42)',
-                    opacity: 0.95
+                    opacity: 0.95,
                   }}
                 >
                   Phone
@@ -85,7 +85,7 @@ function Footer() {
                   className="italic left"
                   style={{
                     borderBottom: '2px solid rgba(255,255,255,0.42)',
-                    opacity: 0.95
+                    opacity: 0.95,
                   }}
                 >
                   Fax

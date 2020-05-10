@@ -4,24 +4,27 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-import './header.scss'
+import styles from './header.module.scss'
 import LiteImage from '../lite-image/lite-image'
 
 function Header() {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false)
 
   return (
-    <div className="header">
-      <header className="header-in-1">
-        <Content size="3XL" className="header-in-2">
+    <div className={styles['header']}>
+      <header className={styles['header-in-1']}>
+        <Content size="3XL" className={styles['header-in-2']}>
           <Link href="/">
-            <a className="header-logo-and-wordmark" title="3F | Homepage">
+            <a
+              className={styles['header-logo-and-wordmark']}
+              title="3F | Homepage"
+            >
               <LiteImage
                 src={require('../../../assets/images/brand/logo-red.png')}
-                className="header-logo"
+                className={styles['header-logo']}
                 native
               />
-              <div className="header-wordmark">
+              <div className={styles['header-wordmark']}>
                 <div>Finfine</div>
                 <div>Furniture</div>
                 <div>Factory</div>
@@ -31,7 +34,7 @@ function Header() {
 
           <FlexSpacer />
 
-          <div className="header-nav-container">
+          <div className={styles['header-nav-container']}>
             <nav>
               <Link href="/">
                 <a>Home</a>
@@ -50,9 +53,9 @@ function Header() {
               </Link>
             </nav>
           </div>
-          <div className="header-mini-nav-container">
+          <div className={styles['header-mini-nav-container']}>
             <Button
-              className="header-mini-nav-menu"
+              className={styles['header-mini-nav-menu']}
               title="Menu"
               onClick={() => setIsNavMenuOpen(true)}
             >

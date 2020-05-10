@@ -1,7 +1,7 @@
 import React from 'react'
 import { PropsWithChildren } from 'react'
 
-import './page.scss'
+import styles from './page.module.scss'
 
 type PageProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
@@ -22,7 +22,9 @@ function Page({
   return (
     <div
       {...rest}
-      className={`page ${space ? 'page-space' : ''} ${className || ''}`}
+      className={`${styles['page']} ${space ? styles['page-space'] : ''} ${
+        className || ''
+      }`}
     >
       {children}
     </div>

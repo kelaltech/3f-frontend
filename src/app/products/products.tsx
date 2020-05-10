@@ -3,7 +3,7 @@ import { Block, Content } from 'gerami'
 import Link from 'next/link'
 import Slider from 'react-slick'
 
-import './products.scss'
+import styles from './products.module.scss'
 import Page from '../../shared/components/page/page'
 import { products } from '../../../data/products'
 import { nameProductCategory } from '../../lib/name-product-category'
@@ -14,21 +14,25 @@ import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 function Products() {
   const categorizedProducts = useMemo(
     () => [
-      products.filter(product => product.category === 'DINING_ROOM_FURNITURE'),
-      products.filter(product => product.category === 'LIVING_ROOM_FURNITURE'),
-      products.filter(product => product.category === 'BEDROOM_FURNITURE'),
-      products.filter(product => product.category === 'SPRING_MATTRESS'),
-      products.filter(product => product.category === 'SOFA'),
-      products.filter(product => product.category === 'OFFICE_FURNITURE'),
-      products.filter(product => product.category === 'DOORS'),
-      products.filter(product => product.category === 'CUPBOARDS'),
-      products.filter(product => product.category === 'KITCHEN_CABINETS')
+      products.filter(
+        (product) => product.category === 'DINING_ROOM_FURNITURE'
+      ),
+      products.filter(
+        (product) => product.category === 'LIVING_ROOM_FURNITURE'
+      ),
+      products.filter((product) => product.category === 'BEDROOM_FURNITURE'),
+      products.filter((product) => product.category === 'SPRING_MATTRESS'),
+      products.filter((product) => product.category === 'SOFA'),
+      products.filter((product) => product.category === 'OFFICE_FURNITURE'),
+      products.filter((product) => product.category === 'DOORS'),
+      products.filter((product) => product.category === 'CUPBOARDS'),
+      products.filter((product) => product.category === 'KITCHEN_CABINETS'),
     ],
     [products]
   )
 
   const filteredCategories = useMemo(
-    () => categorizedProducts.filter(products => products.length > 0),
+    () => categorizedProducts.filter((products) => products.length > 0),
     [categorizedProducts]
   )
 
@@ -39,7 +43,7 @@ function Products() {
         strength={500}
         className="bg-accent"
       >
-        <div className="products-header bg-accent fg-whitish">
+        <div className={`${styles['products-header']} bg-accent fg-whitish`}>
           <Content size="3XL" transparent>
             <Block first last className="center">
               <h1 className="fg-white">Our Products</h1>
@@ -103,16 +107,16 @@ function Products() {
                           slidesToShow: 2,
                           slidesToScroll: 2,
                           infinite: true,
-                          dots: true
-                        }
+                          dots: true,
+                        },
                       },
                       {
                         breakpoint: 480,
                         settings: {
                           slidesToShow: 1,
-                          slidesToScroll: 1
-                        }
-                      }
+                          slidesToScroll: 1,
+                        },
+                      },
                     ]}
                   >
                     {productCategory.map((product, i) => (

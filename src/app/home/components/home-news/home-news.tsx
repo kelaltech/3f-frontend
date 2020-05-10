@@ -3,13 +3,13 @@ import { Block, Content, FlexSpacer } from 'gerami'
 import Link from 'next/link'
 import Slider from 'react-slick'
 
-import './home-news.scss'
+import styles from './home-news.module.scss'
 import { homeNewsMetas } from '../../../../../data/home-news-metas'
 import NewsCard from '../../../../shared/components/news-card/news-card'
 
 function HomeNews() {
   const news = useMemo(
-    () => homeNewsMetas.filter(newsMeta => newsMeta.active !== false),
+    () => homeNewsMetas.filter((newsMeta) => newsMeta.active !== false),
     [homeNewsMetas]
   )
 
@@ -29,7 +29,7 @@ function HomeNews() {
         </Block>
 
         <Block last>
-          <div className="home-news-anti-news-card-space">
+          <div className={styles['home-news-anti-news-card-space']}>
             <Slider
               dots={true}
               infinite={true}
@@ -46,16 +46,16 @@ function HomeNews() {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: true,
-                    dots: true
-                  }
+                    dots: true,
+                  },
                 },
                 {
                   breakpoint: 480,
                   settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                }
+                    slidesToScroll: 1,
+                  },
+                },
               ]}
             >
               {news.map((newsMeta, i) => (

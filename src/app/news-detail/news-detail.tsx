@@ -9,7 +9,7 @@ import {
   LinkedinShareButton,
   TelegramShareButton,
   TwitterShareButton,
-  WhatsappShareButton
+  WhatsappShareButton,
 } from 'react-share'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
@@ -19,7 +19,7 @@ import {
   faLinkedin,
   faTelegram,
   faTwitter,
-  faWhatsapp
+  faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons'
 
 import Page from '../../shared/components/page/page'
@@ -34,7 +34,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
   const router = useRouter()
   const newsId = router.query[idParamName]
 
-  const news = newsMetas.find(m => m.id === newsId)
+  const news = newsMetas.find((m) => m.id === newsId)
   if (!news) return <ErrorPage statusCode={404} />
 
   return (

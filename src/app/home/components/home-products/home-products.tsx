@@ -3,7 +3,7 @@ import { Block, Content, FlexSpacer } from 'gerami'
 import Link from 'next/link'
 import Slider from 'react-slick'
 
-import './home-products.scss'
+import styles from './home-products.module.scss'
 import { homeProducts } from '../../../../../data/home-products'
 import ProductCard from '../../../../shared/components/product-card/product-card'
 
@@ -24,7 +24,7 @@ function HomeProducts() {
         </Block>
 
         <Block last>
-          <div className="home-products-anti-product-card-space">
+          <div className={styles['home-products-anti-product-card-space']}>
             <Slider
               dots={true}
               infinite={true}
@@ -41,24 +41,24 @@ function HomeProducts() {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
-                  }
+                    dots: true,
+                  },
                 },
                 {
                   breakpoint: 600,
                   settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
-                  }
+                    initialSlide: 2,
+                  },
                 },
                 {
                   breakpoint: 480,
                   settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                }
+                    slidesToScroll: 1,
+                  },
+                },
               ]}
             >
               {homeProducts.map((product, i) => (

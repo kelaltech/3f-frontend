@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import { Block, Content, Yoga } from 'gerami'
 
-import './home-locations.scss'
 import { homeLocationsShowrooms } from '../../../../../data/home-locations-showrooms'
 import LocationCard from '../../../../shared/components/location-card/location-card'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'

@@ -1,22 +1,19 @@
 const dotenvLoad = require('dotenv-load')
 const webpack = require('webpack')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const BrotliPlugin = require('brotli-webpack-plugin')
 
 const withPlugins = require('next-compose-plugins')
 
 const env = require('next-env')
-const css = require('@zeit/next-css')
-const sass = require('@zeit/next-sass')
 const fonts = require('next-fonts')
 const images = require('next-images')
 const offline = require('next-offline')
 const bundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
+  enabled: process.env.ANALYZE === 'true',
 })
 const mdx = require('@zeit/next-mdx')({
-  extension: /\.mdx?$/
+  extension: /\.mdx?$/,
 })
 
 dotenvLoad()
@@ -28,9 +25,6 @@ const nextConfig = {
 
   webpack: (config, { dev }) => {
     if (!dev) {
-      // css minification & optimization
-      config.optimization.minimizer.push(new OptimizeCSSAssetsPlugin({}))
-
       // chuck count
       config.plugins.push(
         new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 })
@@ -44,7 +38,7 @@ const nextConfig = {
           test: /\.(js|css|html|json|md|svg|webp|png|jpg|jpeg|gif|tiff|ico)$/,
           threshold: 0,
           minRatio: 0.99,
-          deleteOriginalAssets: false
+          deleteOriginalAssets: false,
         })
       )
 
@@ -55,27 +49,21 @@ const nextConfig = {
           test: /\.(js|css|html|json|md|svg|webp|png|jpg|jpeg|gif|tiff|ico)$/,
           threshold: 0,
           minRatio: 0.99,
-          deleteOriginalAssets: false
+          deleteOriginalAssets: false,
         })
       )
     }
 
     return config
-  }
+  },
 }
 
 module.exports = withPlugins(
   [
     // next-env
     env({
-      staticPrefix: 'REACT_APP_'
+      staticPrefix: 'REACT_APP_',
     }),
-
-    // @zeit/next-css
-    css,
-
-    // @zeit/next-sass
-    sass,
 
     // next-images
     images,
@@ -92,22 +80,22 @@ module.exports = withPlugins(
           runtimeCaching: [
             {
               urlPattern: /^https?.*/,
-              handler: 'NetworkFirst'
+              handler: 'NetworkFirst',
             },
             {
               urlPattern: /(\/service-worker.js$)|(\/api\/)/,
-              handler: 'NetworkFirst'
-            }
-          ]
-        }
-      }
+              handler: 'NetworkFirst',
+            },
+          ],
+        },
+      },
     ],
 
     // @next/bundle-analyzer
     bundleAnalyzer,
 
     // @zeit/next-mdx
-    mdx
+    mdx,
   ],
   nextConfig
 )

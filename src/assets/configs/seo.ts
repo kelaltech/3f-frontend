@@ -8,10 +8,10 @@ export default {
     { name: 'copyright', content: '2019 © (3F) Finfine Furniture Factory PLC' },
     {
       name: 'keywords',
-      content: '3f,finfine furniture factory plc,furniture company in ethiopia'
+      content: '3f,finfine furniture factory plc,furniture company in ethiopia',
     },
     { name: 'robots', content: 'index,follow' },
-    { name: 'theme-color', content: '#bc2239' }
+    { name: 'theme-color', content: '#bc2239' },
   ],
 
   openGraph: {
@@ -19,12 +19,12 @@ export default {
     locale: 'en_US',
     url: 'https://ethio3f.com/',
     site_name: '(3F) Finfine Furniture Factory PLC',
-    images: [{ url: 'https://ethio3f.com/promo.png' }]
+    images: [{ url: 'https://ethio3f.com/promo.png' }],
   },
 
   twitter: {
     handle: '@ethio3f',
     site: '@ethio3f',
-    cardType: 'summary_large_image'
-  }
+    cardType: 'summary_large_image',
+  },
 } as NextSeoProps

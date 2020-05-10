@@ -2,7 +2,7 @@ import React from 'react'
 
 import Page from '../../shared/components/page/page'
 import { Block, Content, Yoga } from 'gerami'
-import './about.scss'
+import styles from './about.module.scss'
 import LiteImage from '../../shared/components/lite-image/lite-image'
 import fffLogo from '../../assets/images/brand/logo-red.png'
 // import fffWhite from '../../assets/images/brand/logo-white.png'
@@ -11,17 +11,17 @@ import value from '../../assets/images/about/value-pointer.png'
 function About() {
   return (
     <Page>
-      <Block first className={'margin-top-very-big ab-card-box'}>
-        <Content size={'XL'} className={'back-card'}>
-          <Block className={'back-card-block'}>
+      <Block first className={`margin-top-very-big ${styles['ab-card-box']}`}>
+        <Content size={'XL'} className={styles['back-card']}>
+          <Block className={styles['back-card-block']}>
             <h1>About</h1>
             <p className={'center'}>
               our mission is to organize the company with the latest technology
-              to give you a better experiance
+              to give you a better experience
             </p>
           </Block>
         </Content>
-        <Content size={'S'} className={'front-card'}>
+        <Content size={'S'} className={styles['front-card']}>
           <div>
             <h1>Finfine</h1>
             <h1>Furniture</h1>
@@ -35,7 +35,7 @@ function About() {
           <h1>Who we Are!</h1>
         </div>
         <Block>
-          <Content size={'XL'} className={'ab-who-box'} transparent>
+          <Content size={'XL'} className={styles['ab-who-box']} transparent>
             <div className={'margin-right-very-big'}>
               <LiteImage src={fffLogo} alt={'3f logo'} height={100} native />
             </div>
@@ -52,14 +52,22 @@ function About() {
       </Block>
 
       {/*vision*/}
-      <Block first className={'margin-top-very-big ab-card-box ab-vision-box'}>
-        <Content size={'S'} className={'front-card '}>
+      <Block
+        first
+        className={`margin-top-very-big ${styles['ab-card-box']} ${styles['ab-vision-box']}`}
+      >
+        <Content size={'S'} className={styles['front-card']}>
           <div>
             <LiteImage src={vision} alt={'3f logo'} height={100} native />
           </div>
         </Content>
-        <Content size={'XL'} className={'back-card vision-front-card'}>
-          <Block className={'back-card-block back-vision-card'}>
+        <Content
+          size={'XL'}
+          className={`${styles['back-card']} ${styles['vision-front-card']}`}
+        >
+          <Block
+            className={`${styles['back-card-block']} ${styles['back-vision-card']}`}
+          >
             <h1>Our Vision</h1>
             <p className={'center fg-whitish'}>
               The vision is to be excellent and second to none in manufacturing
@@ -72,15 +80,21 @@ function About() {
       </Block>
 
       {/*values*/}
-      <Block first className={'margin-top-very-big value-card-box'}>
-        <Content size={'S'} className={'value-front-card value-front-card'}>
+      <Block
+        first
+        className={`margin-top-very-big ${styles['value-card-box']}`}
+      >
+        <Content
+          size={'S'}
+          className={`${styles['value-front-card']} ${styles['value-front-card']}`}
+        >
           <div>
             <LiteImage src={value} alt={'3f logo'} height={100} native />
           </div>
         </Content>
 
-        <Content size={'XL'} className={'value-back-card '}>
-          <Block first last className={'value-back-card-block '}>
+        <Content size={'XL'} className={styles['value-back-card']}>
+          <Block first last className={styles['value-back-card-block']}>
             <h1>Our Values</h1>
             <p className={'fg-whitish'}>
               <span>
@@ -95,10 +109,10 @@ function About() {
                 Continual learning is the root cause of our effectiveness in
                 quality.
               </span>
-              <span>For change is absolute we satnd for it.</span>
+              <span>For change is absolute we stand for it.</span>
               <span>
-                Supplying quality products at a reasonable price accompaied by
-                excellent customer servie and punctuality are our mottoe.
+                Supplying quality products at a reasonable price accompanied by
+                excellent customer service and punctuality are our motto.
               </span>
             </p>
           </Block>
@@ -106,14 +120,14 @@ function About() {
       </Block>
 
       {/*Team*/}
-      <Block first last className={' '}>
+      <Block first last>
         <h1 className={'center'}>Meet the Team</h1>
-        <Content size={'XXL'} transparent className={'back-card'}>
-          <Block first last className={'back-card-block'}>
+        <Content size={'XXL'} transparent className={styles['back-card']}>
+          <Block first last className={styles['back-card-block']}>
             <Yoga maxCol={3}>
               <div>
                 <Content size={'XS'} className={'padding-normal'}>
-                  <LiteImage src={value} alt={'3f logo'} height={300} native />
+                  <LiteImage src={value} alt={'3F logo'} height={300} native />
                 </Content>
                 <h4 className={'margin-top-big'}>Genet Sahilu (Mrs.)</h4>
                 <span>Dep.general manager</span>

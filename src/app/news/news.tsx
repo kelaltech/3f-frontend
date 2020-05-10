@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { Block, Content } from 'gerami'
 import Masonry from 'react-masonry-component'
 
-import './news.scss'
+import styles from './news.module.scss'
 import Page from '../../shared/components/page/page'
 import { newsMetas } from '../../../data/news-metas'
 import NewsCard from '../../shared/components/news-card/news-card'
@@ -10,7 +10,7 @@ import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 
 function News() {
   const news = useMemo(
-    () => newsMetas.filter(newsMeta => newsMeta.active !== false),
+    () => newsMetas.filter((newsMeta) => newsMeta.active !== false),
     [newsMetas]
   )
 
@@ -31,7 +31,7 @@ function News() {
         strength={500}
         className="bg-accent"
       >
-        <div className="products-header bg-accent fg-whitish">
+        <div className={`${styles['products-header']} bg-accent fg-whitish`}>
           <Content size="3XL" transparent>
             <Block first last className="center">
               <h1 className="fg-white">Latest News</h1>

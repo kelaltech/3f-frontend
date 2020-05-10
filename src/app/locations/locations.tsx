@@ -1,7 +1,7 @@
 import React from 'react'
 import { Block, Content, Yoga } from 'gerami'
 
-import './locations.scss'
+import styles from './locations.module.scss'
 import Page from '../../shared/components/page/page'
 import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 import { locations } from '../../../data/locations'
@@ -14,7 +14,10 @@ function Locations() {
       strength={500}
       className="bg-accent"
     >
-      <Page space={false} className={'locations bg-accent fg-whitish'}>
+      <Page
+        space={false}
+        className={`${styles['locations']} bg-accent fg-whitish`}
+      >
         {locations.map((location, i) => (
           <Content size="3XL" transparent key={i}>
             <Block first last className="center">

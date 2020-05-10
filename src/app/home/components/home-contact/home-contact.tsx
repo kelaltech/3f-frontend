@@ -6,11 +6,11 @@ import {
   Input,
   Loading,
   TextArea,
-  Warning
+  Warning,
 } from 'gerami'
 import Axios from 'axios'
 
-import './home-contact.scss'
+import styles from './home-contact.module.scss'
 import { IMessage } from '../../../../../pages/api/message'
 import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
@@ -30,7 +30,7 @@ function HomeContact() {
     setError(undefined)
     Axios.post<IMessage>(`/api/message`, msg)
       .then(() => setStatus('SENT'))
-      .catch(e => {
+      .catch((e) => {
         setStatus('INITIAL')
         setError(e)
       })
@@ -56,7 +56,7 @@ function HomeContact() {
             <Content
               size="L"
               transparent
-              className="home-contact-form-container"
+              className={styles['home-contact-form-container']}
             >
               <form method="POST" onSubmit={handleSubmit}>
                 {error && (
@@ -78,11 +78,15 @@ function HomeContact() {
                     <div>
                       <Input
                         value={msg.from}
-                        onChange={e => setMsg({ ...msg, from: e.target.value })}
+                        onChange={(e) =>
+                          setMsg({ ...msg, from: e.target.value })
+                        }
                         name="email"
                         placeholder={'Your Email'}
                         type={'email'}
-                        className="home-contact-form-send-message-input"
+                        className={
+                          styles['home-contact-form-send-message-input']
+                        }
                         disabled={status === 'SENDING'}
                         required
                       />
@@ -91,11 +95,13 @@ function HomeContact() {
                     <div>
                       <Input
                         value={msg.subject}
-                        onChange={e =>
+                        onChange={(e) =>
                           setMsg({ ...msg, subject: e.target.value })
                         }
                         placeholder={'Subject'}
-                        className="home-contact-form-send-message-input"
+                        className={
+                          styles['home-contact-form-send-message-input']
+                        }
                         disabled={status === 'SENDING'}
                         required
                       />
@@ -104,9 +110,13 @@ function HomeContact() {
                     <div>
                       <TextArea
                         value={msg.text}
-                        onChange={e => setMsg({ ...msg, text: e.target.value })}
+                        onChange={(e) =>
+                          setMsg({ ...msg, text: e.target.value })
+                        }
                         placeholder={'Your Message'}
-                        className="home-contact-form-send-message-input"
+                        className={
+                          styles['home-contact-form-send-message-input']
+                        }
                         rows={7}
                         disabled={status === 'SENDING'}
                         required
@@ -117,7 +127,9 @@ function HomeContact() {
                       <Button
                         primary
                         type="submit"
-                        className="home-contact-form-send-message-submit"
+                        className={
+                          styles['home-contact-form-send-message-submit']
+                        }
                         disabled={status === 'SENDING'}
                         aria-label="Send Message"
                       >

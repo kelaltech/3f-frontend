@@ -9,7 +9,7 @@ import {
   LinkedinShareButton,
   TelegramShareButton,
   TwitterShareButton,
-  WhatsappShareButton
+  WhatsappShareButton,
 } from 'react-share'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -17,7 +17,7 @@ import {
   faHammer,
   faMoneyCheckAlt,
   faPaintRoller,
-  faRulerCombined
+  faRulerCombined,
 } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import {
@@ -25,7 +25,7 @@ import {
   faLinkedin,
   faTelegram,
   faTwitter,
-  faWhatsapp
+  faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons'
 
 import Page from '../../shared/components/page/page'
@@ -43,7 +43,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
   const router = useRouter()
   const productId = router.query[idParamName]
 
-  const product = products.find(p => p._id === productId)
+  const product = products.find((p) => p._id === productId)
   if (!product) return <ErrorPage statusCode={404} />
 
   return (

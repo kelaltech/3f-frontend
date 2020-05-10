@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from 'react'
 
-import './layout.scss'
 import Header from '../header/header'
 import Footer from '../footer/footer'
 

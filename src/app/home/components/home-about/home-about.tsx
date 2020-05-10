@@ -2,7 +2,7 @@ import React from 'react'
 import { Block, Content } from 'gerami'
 import Link from 'next/link'
 
-import './home-about.scss'
+import styles from './home-about.module.scss'
 import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
 
@@ -11,12 +11,14 @@ function HomeAbout() {
     <LiteParallax
       src={{ src: require('../../../../assets/images/brand/logo-white.png') }}
       strength={250}
-      className="home-about-lite-parallax bg-accent"
+      className={`${styles['home-about-lite-parallax']} bg-accent`}
     >
       <div className="bg-accent fg-whitish padding-vertical-very-big">
         <Content size="3XL" transparent className="padding-vertical-big">
-          <div className="home-about-flex">
-            <div className="inline-block middle center home-about-flex-in-1">
+          <div className={styles['home-about-flex']}>
+            <div
+              className={`inline-block middle center ${styles['home-about-flex-in-1']}`}
+            >
               <LiteImage
                 src={require('../../../../assets/images/brand/logo-white.png')}
                 native
@@ -24,7 +26,9 @@ function HomeAbout() {
               />
             </div>
 
-            <div className="inline-block middle home-about-flex-in-2">
+            <div
+              className={`inline-block middle ${styles['home-about-flex-in-2']}`}
+            >
               <Block first>
                 <h1 className="fg-white">
                   Since 1959 <small>E.C.</small>

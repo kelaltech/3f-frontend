@@ -6,11 +6,11 @@ function useImgSrcMulti(
   input?: IImgSrcInput[],
   timeout: number | null = null
 ): string[] {
-  const sources = input !== undefined ? input.map(i => imgSrc(i)) : []
+  const sources = input !== undefined ? input.map((i) => imgSrc(i)) : []
 
   const _currents = useMemo(
     () =>
-      sources.map(s =>
+      sources.map((s) =>
         s.placeholder !== undefined ? s.placeholder : placeholder1x1
       ),
     [sources]

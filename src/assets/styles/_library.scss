@@ -101,3 +101,11 @@ a {
 
   cursor: pointer;
 }
+
+// OVERRIDES:
+
+.global-home-slides {
+  .slick-dots {
+    bottom: $space;
+  }
+}

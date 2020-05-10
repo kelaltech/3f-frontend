@@ -17,7 +17,7 @@ function imgSrc(src: IImgSrcInput = 'none'): IImgSrc | undefined {
         src: src.src,
         webP: src.webP !== undefined ? src.webP : src.src,
         placeholder:
-          src.placeholder !== undefined ? src.placeholder : placeholder1x1
+          src.placeholder !== undefined ? src.placeholder : placeholder1x1,
       }
 }
 

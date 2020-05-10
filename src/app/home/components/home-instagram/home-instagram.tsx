@@ -1,7 +1,7 @@
 import React from 'react'
 import { Content } from 'gerami'
 
-import './home-instagram.scss'
+import styles from './home-instagram.module.scss'
 import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -17,15 +17,19 @@ function HomeInstagram() {
     >
       <div className="bg-primary fg-whitish padding-vertical-very-big">
         <Content size="3XL" transparent>
-          <div className="home-instagram-flex">
+          <div className={styles['home-instagram-flex']}>
             {homeInstagramTop.map((src, i) => (
-              <LiteImage src={src} className="home-instagram-photo" key={i} />
+              <LiteImage
+                src={src}
+                className={styles['home-instagram-photo']}
+                key={i}
+              />
             ))}
             <a
               href="https://www.instagram.com/ethio3f"
               rel="noopener nofollow"
               target="_blank"
-              className="home-instagram-photo home-instagram-see-more"
+              className={`${styles['home-instagram-photo']} ${styles['home-instagram-see-more']}`}
               title="See More on Instagram"
             >
               <FontAwesomeIcon icon={faInstagram} />

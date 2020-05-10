@@ -37,13 +37,13 @@ export function email(config: IEmailConfig): Promise<SentMessageInfo> {
     service: config.service || process.env.EMAIL_SERVICE || 'gmail',
     auth: {
       user: config.from || process.env.EMAIL_FROM,
-      pass: config.pass || process.env.EMAIL_PASS
-    }
+      pass: config.pass || process.env.EMAIL_PASS,
+    },
   }).sendMail({
     from: config.from || process.env.EMAIL_FROM,
     to: config.to,
     subject: config.subject || '',
     html: config.html,
-    text: !config.html ? config.text : ''
+    text: !config.html ? config.text : '',
   })
 }
