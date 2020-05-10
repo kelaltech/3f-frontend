@@ -9,11 +9,11 @@ export const products: ProductType[] = [
       composition: [],
       material: [],
       dimension: [],
-      color: []
+      color: [],
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('./product-pictures/sample-0.jpg')
+    imgSrc: require('./product-pictures/sample-0.jpg'),
   },
   {
     _id: '2',
@@ -23,11 +23,11 @@ export const products: ProductType[] = [
       composition: [],
       material: [],
       dimension: [],
-      color: []
+      color: [],
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('./product-pictures/sample-1.jpg')
+    imgSrc: require('./product-pictures/sample-1.jpg'),
   },
   {
     _id: '3',
@@ -37,11 +37,11 @@ export const products: ProductType[] = [
       composition: [],
       material: [],
       dimension: [],
-      color: []
+      color: [],
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('./product-pictures/sample-2.jpg')
+    imgSrc: require('./product-pictures/sample-2.jpg'),
   },
   {
     _id: '4',
@@ -51,11 +51,11 @@ export const products: ProductType[] = [
       composition: [],
       material: [],
       dimension: [],
-      color: []
+      color: [],
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('./product-pictures/sample-3.jpg')
+    imgSrc: require('./product-pictures/sample-3.jpg'),
   },
   {
     _id: '5',
@@ -65,11 +65,11 @@ export const products: ProductType[] = [
       composition: [],
       material: ['Wood'],
       dimension: [{ width: 80, height: 220, length: 10 }],
-      color: []
+      color: [],
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('./product-pictures/sample-4.jpg')
+    imgSrc: require('./product-pictures/sample-4.jpg'),
   },
   {
     _id: '6',
@@ -79,11 +79,11 @@ export const products: ProductType[] = [
       composition: [],
       material: [],
       dimension: [],
-      color: []
+      color: [],
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('./product-pictures/sample-5.jpg')
+    imgSrc: require('./product-pictures/sample-5.jpg'),
   },
   {
     _id: '7',
@@ -93,11 +93,11 @@ export const products: ProductType[] = [
       composition: [],
       material: [],
       dimension: [],
-      color: []
+      color: [],
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('./product-pictures/sample-6.jpg')
+    imgSrc: require('./product-pictures/sample-6.jpg'),
   },
   {
     _id: '8',
@@ -107,10 +107,10 @@ export const products: ProductType[] = [
       composition: [],
       material: [],
       dimension: [],
-      color: []
+      color: [],
     },
     prices: [2500, 1400, 6000],
     fabrics: [],
-    imgSrc: require('./product-pictures/sample-7.jpg')
-  }
+    imgSrc: require('./product-pictures/sample-7.jpg'),
+  },
 ]

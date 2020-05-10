@@ -7,7 +7,7 @@ const withPlugins = require('next-compose-plugins')
 
 const env = require('next-env')
 const fonts = require('next-fonts')
-const images = require('next-images')
+const optimizedImages = require('next-optimized-images')
 const offline = require('next-offline')
 const bundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -65,8 +65,8 @@ module.exports = withPlugins(
       staticPrefix: 'REACT_APP_',
     }),
 
-    // next-images
-    images,
+    // next-optimized-images
+    optimizedImages,
 
     // next-fonts
     fonts,

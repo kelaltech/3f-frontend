@@ -21,15 +21,16 @@ export const newsMetas: NewsMetaType[] = [
     description:
       '3F launches its newly redesigned website in partnership with kelal tech plc. The new design focuses on ease of use and brand identity.',
     postedOn: new Date(2019, 11, 14),
-    content: <Sample0 />
+    content: <Sample0 />,
   },
   {
     id: 'sample-1',
     active: true,
     title: 'This is a Sample Title for Some News',
-    description: 'This is also a sample mini description for this sample news article.',
+    description:
+      'This is also a sample mini description for this sample news article.',
     postedOn: new Date(2019, 11, 14),
-    content: <Sample1 />
+    content: <Sample1 />,
   },
   {
     id: 'sample-2',
@@ -37,7 +38,7 @@ export const newsMetas: NewsMetaType[] = [
     title: 'New Textile Patterns Just Got In',
     description: 'Five new textile patterns are available for January 2020.',
     postedOn: new Date(2019, 11, 14),
-    content: <Sample2 />
+    content: <Sample2 />,
   },
   {
     id: 'sample-3',
@@ -45,7 +46,7 @@ export const newsMetas: NewsMetaType[] = [
     title: 'Sample 3',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
-    content: <Sample3 />
+    content: <Sample3 />,
   },
   {
     id: 'sample-4',
@@ -53,7 +54,7 @@ export const newsMetas: NewsMetaType[] = [
     title: 'Sample 4',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
-    content: <Sample4 />
+    content: <Sample4 />,
   },
   {
     id: 'sample-5',
@@ -61,7 +62,7 @@ export const newsMetas: NewsMetaType[] = [
     title: 'Sample 5',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
-    content: <Sample5 />
+    content: <Sample5 />,
   },
   {
     id: 'sample-6',
@@ -69,7 +70,7 @@ export const newsMetas: NewsMetaType[] = [
     title: 'Sample 6',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
-    content: <Sample6 />
+    content: <Sample6 />,
   },
   {
     id: 'sample-7',
@@ -77,7 +78,7 @@ export const newsMetas: NewsMetaType[] = [
     title: 'Sample 7',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
-    content: <Sample7 />
+    content: <Sample7 />,
   },
   {
     id: 'sample-8',
@@ -85,6 +86,6 @@ export const newsMetas: NewsMetaType[] = [
     title: 'Sample 8',
     description: 'Sample',
     postedOn: new Date(2019, 11, 14),
-    content: <Sample8 />
-  }
+    content: <Sample8 />,
+  },
 ]

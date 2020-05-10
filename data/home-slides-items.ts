@@ -6,26 +6,26 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     links: [
       {
         href: '/products#DINING_ROOM_FURNITURE',
-        children: 'More Dinning Room Furniture'
+        children: 'More Dinning Room Furniture',
       },
-      { href: '/products', children: 'See All Products' }
-    ]
+      { href: '/products', children: 'See All Products' },
+    ],
   },
   {
     src: require('./product-pictures/sofa-sample.jpg'),
     links: [
       { href: '/products', children: 'See All Products' },
-      { href: '/about', children: 'Learn More' }
-    ]
+      { href: '/about', children: 'Learn More' },
+    ],
   },
   {
     src: require('./product-pictures/sample-1.jpg'),
     links: [
       {
         href: '/products#BEDROOM_FURNITURE',
-        children: 'More Bedroom Furniture'
+        children: 'More Bedroom Furniture',
       },
-      { href: '/products', children: 'See All Products' }
-    ]
+      { href: '/products', children: 'See All Products' },
+    ],
   },
 ]

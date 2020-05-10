@@ -4,7 +4,7 @@ import { homeLocationsShowrooms } from './home-locations-showrooms'
 export const locations: LocationsWithCategoryType[] = [
   {
     categoryTitle: 'Our Showrooms',
-    locations: homeLocationsShowrooms
+    locations: homeLocationsShowrooms,
   },
   {
     categoryTitle: 'Our HQ',
@@ -12,9 +12,9 @@ export const locations: LocationsWithCategoryType[] = [
       {
         name: '(3F) Finfinne Furniture Factory HQ',
         address: 'Saris Adey Abeba Area, 4\nAddis Ababa, Ethiopia',
-        mapUrl: 'https://goo.gl/maps/xkuAzDZNMevSugLi8'
-      }
+        mapUrl: 'https://goo.gl/maps/xkuAzDZNMevSugLi8',
+      },
     ],
-    maxPerCol: 1
-  }
+    maxPerCol: 1,
+  },
 ]
