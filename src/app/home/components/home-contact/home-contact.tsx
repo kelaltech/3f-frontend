@@ -15,6 +15,7 @@ import { IMessage } from '../../../../../pages/api/message'
 import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
 import { homeContactBg } from '../../../../../data/home-contact-bg'
+import Img from '../../../../shared/components/img/img'
 
 function HomeContact() {
   const [msg, setMsg] = useState<IMessage>({ from: '', subject: '', text: '' })
@@ -41,11 +42,7 @@ function HomeContact() {
       <div className="padding-vertical-very-big bg-blackish">
         <Content size="3XL" transparent className="padding-vertical-big">
           <Block first className="center">
-            <LiteImage
-              src={require('../../../../assets/images/brand/logo-red.png')}
-              native
-              height={120}
-            />
+            <Img path={'brand/logo-red.png'} height={120} />
           </Block>
 
           <Block last>

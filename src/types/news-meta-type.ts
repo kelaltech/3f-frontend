@@ -5,6 +5,5 @@ export type NewsMetaType = {
   active: boolean
   title: string
   description: string
-  postedOn: Date
-  content: ReactNode
+  postedOn: number // Date
 }

@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Block, Content, Yoga } from 'gerami'
-import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo/lib'
 import {
@@ -12,30 +12,31 @@ import {
   WhatsappShareButton,
 } from 'react-share'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import {
-  faFacebook,
-  faLinkedin,
-  faTelegram,
-  faTwitter,
-  faWhatsapp,
-} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
+import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft'
 
 import Page from '../../shared/components/page/page'
-import { newsMetas } from '../../../data/news-metas'
-import ErrorPage from '../../../pages/_error'
+import { NewsMetaType } from '../../types/news-meta-type'
 
 type NewsDetailProps = {
-  idParamName: string
+  news: NewsMetaType
 }
 
-function NewsDetail({ idParamName }: NewsDetailProps) {
-  const router = useRouter()
-  const newsId = router.query[idParamName]
+function NewsDetail({ news }: NewsDetailProps) {
+  const [url, setUrl] = useState<string>()
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    setUrl(window?.location?.href)
+  }, [])
 
-  const news = newsMetas.find((m) => m.id === newsId)
-  if (!news) return <ErrorPage statusCode={404} />
+  const NewsContent = dynamic(() =>
+    import('../../../data/news/' + news.id + '.mdx')
+  )
 
   return (
     <>
@@ -66,7 +67,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
 
                 <EmailShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   subject={`${news.title} | News – (3F) Finfine Furniture Factory`}
                   body={news.description}
                 >
@@ -75,7 +76,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
 
                 <FacebookShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   quote={`${news.title} | News – (3F) Finfine Furniture Factory\n\n${news.description}`}
                   hashtag="#3F"
                 >
@@ -84,14 +85,14 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
 
                 <LinkedinShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </LinkedinShareButton>
 
                 <TelegramShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.description}`}
                 >
                   <FontAwesomeIcon icon={faTelegram} />
@@ -99,7 +100,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
 
                 <TwitterShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   title={`${news.title} | News – (3F) Finfine Furniture Factory`}
                   hashtags={['3F']}
                 >
@@ -108,7 +109,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
 
                 <WhatsappShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.description}`}
                 >
                   <FontAwesomeIcon icon={faWhatsapp} />
@@ -121,7 +122,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
             <Block first>
               <h1>{news.title}</h1>
               <h5 className="fg-blackish light padding-top-normal">
-                Posted on {news.postedOn.toDateString()}
+                Posted on {new Date(news.postedOn).toDateString()}
               </h5>
             </Block>
 
@@ -132,7 +133,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
             </Block>
 
             <Block last style={{ lineHeight: 2 }}>
-              {news.content}
+              {<NewsContent />}
             </Block>
           </Content>
         </Content>

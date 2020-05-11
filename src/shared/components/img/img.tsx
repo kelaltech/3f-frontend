@@ -15,29 +15,29 @@ function Img({ path, ...imgProps }) {
   const [other, setOther] = useState<string>(undefined)
 
   useEffect(() => {
-    setWebP(require('../../../../' + path + '?webp'))
-    setOther(require('../../../../' + path + ''))
+    setWebP(require('../../../assets/images/' + path + '?webp'))
+    setOther(require('../../../assets/images/' + path + ''))
   }, [path])
 
   return (
     <picture>
       <source
-        srcSet={webP ?? require('../../../../' + path + '?lqip')}
+        srcSet={webP ?? require('../../../assets/images/' + path + '?lqip')}
         type="image/webp"
       />
       <source
-        srcSet={other ?? require('../../../../' + path + '?lqip')}
+        srcSet={other ?? require('../../../assets/images/' + path + '?lqip')}
         type={`image/${path.slice(path.indexOf('.') + 1).toLowerCase()}`}
       />
       <img
-        src={other ?? require('../../../../' + path + '?lqip')}
+        src={other ?? require('../../../assets/images/' + path + '?lqip')}
         loading="lazy"
         {...imgProps}
         style={{
           overflow: `hidden`,
           ...imgProps?.style,
-          ...(!other
-            ? { filter: `blur(25px) ` + (imgProps?.style?.filter || '') }
+          ...(!other || !webP
+            ? { filter: `blur(16px) ${imgProps?.style?.filter || ''}` }
             : {}),
         }}
       />

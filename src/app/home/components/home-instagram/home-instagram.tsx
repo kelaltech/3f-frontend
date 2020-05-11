@@ -4,7 +4,7 @@ import { Content } from 'gerami'
 import styles from './home-instagram.module.scss'
 import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
 import { homeInstagramTop } from '../../../../../data/home-instagram-top'
 

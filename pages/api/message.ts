@@ -24,7 +24,7 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
       subject: `Message from Contact Us Form (#${Date.now()})`,
       text: `Let's Have a Chat (kelaltech.com)\n\nSENT ON:\n${new Date().toUTCString()}\n\nFROM:\n${
         msg.from
-      }\n\nSUBJECT:\n${msg.subject}\n\nMESSAGE:\n${msg.text}`
+      }\n\nSUBJECT:\n${msg.subject}\n\nMESSAGE:\n${msg.text}`,
     })
 
     response.json({ success: true })

@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Block, Content, Yoga } from 'gerami'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo/lib'
 import {
@@ -12,39 +11,34 @@ import {
   WhatsappShareButton,
 } from 'react-share'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faArrowLeft,
-  faHammer,
-  faMoneyCheckAlt,
-  faPaintRoller,
-  faRulerCombined,
-} from '@fortawesome/free-solid-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import {
-  faFacebook,
-  faLinkedin,
-  faTelegram,
-  faTwitter,
-  faWhatsapp,
-} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
+import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft'
+import { faHammer } from '@fortawesome/free-solid-svg-icons/faHammer'
+import { faMoneyCheckAlt } from '@fortawesome/free-solid-svg-icons/faMoneyCheckAlt'
+import { faPaintRoller } from '@fortawesome/free-solid-svg-icons/faPaintRoller'
+import { faRulerCombined } from '@fortawesome/free-solid-svg-icons/faRulerCombined'
 
 import Page from '../../shared/components/page/page'
-import { products } from '../../../data/products'
-import ErrorPage from '../../../pages/_error'
 import LiteImage from '../../shared/components/lite-image/lite-image'
 import { nameProductCategory } from '../../lib/name-product-category'
 import { stringifyCurrency } from '../../lib/stringify-currency'
+import { ProductType } from '../../types/product-type'
 
 type ProductDetailProps = {
-  idParamName: string
+  product: ProductType
 }
 
-function ProductDetail({ idParamName }: ProductDetailProps) {
-  const router = useRouter()
-  const productId = router.query[idParamName]
-
-  const product = products.find((p) => p._id === productId)
-  if (!product) return <ErrorPage statusCode={404} />
+function ProductDetail({ product }: ProductDetailProps) {
+  const [url, setUrl] = useState<string>()
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    setUrl(window?.location?.href)
+  }, [])
 
   return (
     <>
@@ -80,7 +74,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
 
                 <EmailShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   subject={`${nameProductCategory(
                     product.category
                   )} by (3F) Finfine Furniture Factory: ${product.name}`}
@@ -90,7 +84,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
 
                 <FacebookShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   quote={`${nameProductCategory(
                     product.category
                   )} by (3F) Finfine Furniture Factory: ${product.name}`}
@@ -101,14 +95,14 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
 
                 <LinkedinShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </LinkedinShareButton>
 
                 <TelegramShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   title={`${nameProductCategory(
                     product.category
                   )} by (3F) Finfine Furniture Factory: ${product.name}`}
@@ -118,7 +112,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
 
                 <TwitterShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   title={`${nameProductCategory(
                     product.category
                   )} by (3F) Finfine Furniture Factory: ${product.name}`}
@@ -129,7 +123,7 @@ function ProductDetail({ idParamName }: ProductDetailProps) {
 
                 <WhatsappShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   title={`${nameProductCategory(
                     product.category
                   )} by (3F) Finfine Furniture Factory: ${product.name}`}

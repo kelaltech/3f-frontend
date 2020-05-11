@@ -3,8 +3,8 @@ import { Block, Content } from 'gerami'
 import Link from 'next/link'
 
 import styles from './home-about.module.scss'
-import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
+import Img from '../../../../shared/components/img/img'
 
 function HomeAbout() {
   return (
@@ -19,11 +19,7 @@ function HomeAbout() {
             <div
               className={`inline-block middle center ${styles['home-about-flex-in-1']}`}
             >
-              <LiteImage
-                src={require('../../../../assets/images/brand/logo-white.png')}
-                native
-                height={240}
-              />
+              <Img path={'brand/logo-white.png'} height={240} />
             </div>
 
             <div

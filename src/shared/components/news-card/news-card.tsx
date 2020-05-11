@@ -25,7 +25,7 @@ function NewsCard({ newsMeta }: NewsCardProps) {
       </div>
       <div className={styles['news-card-subtitle']}>
         <NewsLink newsMeta={newsMeta}>
-          Posted on {newsMeta.postedOn.toDateString()}
+          Posted on {new Date(newsMeta.postedOn).toDateString()}
         </NewsLink>
       </div>
       <div className={styles['news-card-description']}>

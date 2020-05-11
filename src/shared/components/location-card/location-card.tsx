@@ -2,7 +2,7 @@ import React from 'react'
 import { Block } from 'gerami'
 import { IBlockProps } from 'gerami/src/components/Block/Block'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkedAlt'
 
 import styles from './location-card.module.scss'
 import { LocationType } from '../../../types/location-type'
