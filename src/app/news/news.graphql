@@ -1,0 +1,16 @@
+query News($limit: Int, $where: JSON){
+    publications(start: 0, limit: $limit, where: $where){
+        id
+        created_at
+        title
+        subject
+        content
+        img{
+        title
+        img{ url }
+        }
+        bg_img{
+        url
+        }
+    }
+}

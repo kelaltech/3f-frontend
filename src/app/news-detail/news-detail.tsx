@@ -25,23 +25,42 @@ import {
 import Page from '../../shared/components/page/page'
 import { newsMetas } from '../../../data/news-metas'
 import ErrorPage from '../../../pages/_error'
+import useLazy from '../../shared/hooks/use-lazy/use-lazy'
 
 type NewsDetailProps = {
   idParamName: string
+}
+type NewsType = {
+  id: string
+  title: string
 }
 
 function NewsDetail({ idParamName }: NewsDetailProps) {
   const router = useRouter()
   const newsId = router.query[idParamName]
+  // console.log('_________________________')
+  // console.log(newsId)
 
-  const news = newsMetas.find((m) => m.id === newsId)
+  // const news = newsMetas.find((m) => m.id === newsId)
+
+  const [news] = useLazy<any>(
+    null,
+    (setNews, setError) => {
+      fetch(`http://localhost:1337/publications/${newsId}`)
+      .then((res)=> res.json())
+      .then((data) => setNews(data))
+      .catch(setError)
+    }
+  )
   if (!news) return <ErrorPage statusCode={404} />
+
+  console.log(news)
 
   return (
     <>
       <NextSeo
         title={`${news.title} | News – (3F) Finfine Furniture Factory`}
-        description={news.description}
+        description={news.subject}
       />
 
       <Page>
@@ -121,13 +140,13 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
             <Block first>
               <h1>{news.title}</h1>
               <h5 className="fg-blackish light padding-top-normal">
-                Posted on {news.postedOn.toDateString()}
+                Posted on {new Date(news.postedOn).toDateString()}
               </h5>
             </Block>
 
             <Block first last>
               <Block className="bg-accent fg-white padding-big">
-                {news.description}
+                {news.subject}
               </Block>
             </Block>
 

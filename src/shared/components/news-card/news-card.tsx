@@ -2,16 +2,16 @@ import React, { PropsWithChildren } from 'react'
 import Link from 'next/link'
 
 import styles from './news-card.module.scss'
-import { NewsMetaType } from '../../../types/news-meta-type'
+// import { NewsMetaType } from '../../../types/news-meta-type'
 
 export type NewsCardProps = {
-  newsMeta: NewsMetaType
+  newsMeta: any
 }
 
 const NewsLink = ({
   children,
   newsMeta,
-}: PropsWithChildren<{ newsMeta: NewsMetaType }>) => (
+}: PropsWithChildren<{ newsMeta: any }>) => (
   <Link href="/news/[newsId]" as={`/news/${newsMeta.id}`}>
     <a>{children}</a>
   </Link>
@@ -24,12 +24,20 @@ function NewsCard({ newsMeta }: NewsCardProps) {
         <NewsLink newsMeta={newsMeta}>{newsMeta.title}</NewsLink>
       </div>
       <div className={styles['news-card-subtitle']}>
-        <NewsLink newsMeta={newsMeta}>
-          Posted on {newsMeta.postedOn.toDateString()}
-        </NewsLink>
+        {/* <NewsLink newsMeta={newsMeta}>
+          Posted on {newsMeta.created_at.toDateString()}
+        </NewsLink> */}
+        {new Date(newsMeta.created_at).toDateString()}
       </div>
       <div className={styles['news-card-description']}>
-        <span>{newsMeta.description}</span>
+        {newsMeta.img?.img.slice(0,1).map(x=>(
+          <div>
+            {/* <img src={x.url}/> */}
+            {x.url}
+          </div>
+        ))}
+        {/* {newsMeta.img[1].title} */}
+        <span>{newsMeta.subject}</span>
         <small className="inline padding-left-normal fg-primary">
           <NewsLink newsMeta={newsMeta}>read more</NewsLink>
         </small>
