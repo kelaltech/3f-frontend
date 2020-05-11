@@ -1,13 +1,10 @@
 import React from 'react'
-
-import Page from '../../shared/components/page/page'
 import { Block, Content, Yoga } from 'gerami'
+
 import styles from './about.module.scss'
-import LiteImage from '../../shared/components/lite-image/lite-image'
-import fffLogo from '../../assets/images/brand/logo-red.png'
-// import fffWhite from '../../assets/images/brand/logo-white.png'
-import vision from '../../assets/images/about/eye.png'
-import value from '../../assets/images/about/value-pointer.png'
+import Page from '../../shared/components/page/page'
+import Img from '../../shared/components/img/img'
+
 function About() {
   return (
     <Page>
@@ -37,7 +34,7 @@ function About() {
         <Block>
           <Content size={'XL'} className={styles['ab-who-box']} transparent>
             <div className={'margin-right-very-big'}>
-              <LiteImage src={fffLogo} alt={'3f logo'} height={100} native />
+              <Img path={'brand/logo-red.png'} alt={'3f logo'} height={100} />
             </div>
             <p>
               Finfine Furniture factory (3F) is established in 1959 E.C. and is
@@ -58,7 +55,7 @@ function About() {
       >
         <Content size={'S'} className={styles['front-card']}>
           <div>
-            <LiteImage src={vision} alt={'3f logo'} height={100} native />
+            <Img path={'about/eye.png'} alt={'3f logo'} height={100} />
           </div>
         </Content>
         <Content
@@ -89,7 +86,11 @@ function About() {
           className={`${styles['value-front-card']} ${styles['value-front-card']}`}
         >
           <div>
-            <LiteImage src={value} alt={'3f logo'} height={100} native />
+            <Img
+              path={'about/value-pointer.png'}
+              alt={'3f logo'}
+              height={100}
+            />
           </div>
         </Content>
 
@@ -127,7 +128,11 @@ function About() {
             <Yoga maxCol={3}>
               <div>
                 <Content size={'XS'} className={'padding-normal'}>
-                  <LiteImage src={value} alt={'3F logo'} height={300} native />
+                  <Img
+                    path={'about/value-pointer.png'}
+                    alt={'3F logo'}
+                    height={300}
+                  />
                 </Content>
                 <h4 className={'margin-top-big'}>Genet Sahilu (Mrs.)</h4>
                 <span>Dep.general manager</span>
@@ -135,7 +140,11 @@ function About() {
 
               <div>
                 <Content size={'XS'} className={'padding-normal'}>
-                  <LiteImage src={value} alt={'3f logo'} height={300} native />
+                  <Img
+                    path={'about/value-pointer.png'}
+                    alt={'3f logo'}
+                    height={300}
+                  />
                 </Content>
                 <h4 className={'margin-top-big'}>Demelash Shimelis (Mr.)</h4>
                 <span>Marketing manager</span>
@@ -143,7 +152,11 @@ function About() {
 
               <div>
                 <Content size={'XS'} className={'padding-normal'}>
-                  <LiteImage src={value} alt={'3f logo'} height={300} native />
+                  <Img
+                    path={'about/value-pointer.png'}
+                    alt={'3f logo'}
+                    height={300}
+                  />
                 </Content>
                 <h4 className={'margin-top-big'}>Adane Tasena (Mr.)</h4>
                 <span>Procurement Division Manager</span>

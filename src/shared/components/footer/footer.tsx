@@ -3,17 +3,15 @@ import React from 'react'
 import { Block, Content } from 'gerami'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faFacebook,
-  faInstagram,
-  faLinkedin,
-  faTwitter,
-  faYoutube,
-} from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube'
 
 import styles from './footer.module.scss'
-import LiteImage from '../lite-image/lite-image'
 import DotSpace from '../dot-space/dot-space'
+import Img from '../img/img'
 
 function Footer() {
   return (
@@ -97,11 +95,7 @@ function Footer() {
 
           <div className="top" style={{ flex: 1 }}>
             <Block first>
-              <LiteImage
-                src={require('../../../assets/images/brand/logo-white.png')}
-                height={70}
-                native
-              />
+              <Img path={'brand/logo-white.png'} height={70} />
             </Block>
 
             <Block first>

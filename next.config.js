@@ -1,5 +1,6 @@
 const dotenvLoad = require('dotenv-load')
 const webpack = require('webpack')
+const path = require('path')
 const CompressionPlugin = require('compression-webpack-plugin')
 const BrotliPlugin = require('brotli-webpack-plugin')
 
@@ -24,6 +25,22 @@ const nextConfig = {
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'mdx'],
 
   webpack: (config, { dev }) => {
+    // suppress @fortawesome imports
+    config.module.rules.push({
+      test: path.resolve(
+        __dirname,
+        'node_modules/gerami/src/components/ImageInput/ImageInput.js'
+      ),
+      use: 'null-loader',
+    })
+    config.module.rules.push({
+      test: path.resolve(
+        __dirname,
+        'node_modules/gerami/src/components/Select/Select.js'
+      ),
+      use: 'null-loader',
+    })
+
     if (!dev) {
       // chuck count
       config.plugins.push(

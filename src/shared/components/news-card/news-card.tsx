@@ -24,10 +24,9 @@ function NewsCard({ newsMeta }: NewsCardProps) {
         <NewsLink newsMeta={newsMeta}>{newsMeta.title}</NewsLink>
       </div>
       <div className={styles['news-card-subtitle']}>
-        {/* <NewsLink newsMeta={newsMeta}>
-          Posted on {newsMeta.created_at.toDateString()}
-        </NewsLink> */}
-        {new Date(newsMeta.created_at).toDateString()}
+        <NewsLink newsMeta={newsMeta}>
+          Posted on {new Date(newsMeta.postedOn).toDateString()}
+        </NewsLink>
       </div>
       <div className={styles['news-card-description']}>
         {newsMeta.img?.img.slice(0,1).map(x=>(

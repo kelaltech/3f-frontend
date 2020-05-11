@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Content, FlexSpacer, MenuDrop, MenuItem } from 'gerami'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars'
 
 import styles from './header.module.scss'
 import LiteImage from '../lite-image/lite-image'

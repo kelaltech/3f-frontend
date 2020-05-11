@@ -20,8 +20,8 @@
     "run-s": "run-s",
     "test": "jest --passWithNoTests --all",
     "test-live": "jest --passWithNoTests --all --watch",
-    "lint": "prettier ./{*,public/**/*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,json,md,html}",
-    "format": "prettier --write ./{*,public/**/*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,json,md,html}",
+    "lint": "prettier data pages public src",
+    "format": "prettier data pages public src --write",
     "prod": "run-p format build test"
   },
   "dependencies": {
@@ -69,6 +69,7 @@
     "node-sass": "^4.14.1",
     "nodemailer": "^6.4.6",
     "npm-run-all": "^4.1.5",
+    "null-loader": "^4.0.0",
     "prettier": "^2.0.5",
     "qs": "^6.9.4",
     "react": "^16.13.1",
@@ -89,7 +90,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s prod & git update-index --again"
+      "pre-commit": "run-s format & git update-index --again"
     }
   }
 }

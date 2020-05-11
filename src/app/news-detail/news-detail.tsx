@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Block, Content, Yoga } from 'gerami'
-import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo/lib'
 import {
@@ -12,47 +12,43 @@ import {
   WhatsappShareButton,
 } from 'react-share'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import {
-  faFacebook,
-  faLinkedin,
-  faTelegram,
-  faTwitter,
-  faWhatsapp,
-} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
+import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft'
 
 import Page from '../../shared/components/page/page'
-import { newsMetas } from '../../../data/news-metas'
-import ErrorPage from '../../../pages/_error'
-import useLazy from '../../shared/hooks/use-lazy/use-lazy'
+// import { newsMetas } from '../../../data/news-metas'
+// import ErrorPage from '../../../pages/_error'
+// import useLazy from '../../shared/hooks/use-lazy/use-lazy'
+import { NewsMetaType } from '../../types/news-meta-type'
 
 type NewsDetailProps = {
-  idParamName: string
+  news: NewsMetaType
 }
 type NewsType = {
   id: string
   title: string
 }
 
-function NewsDetail({ idParamName }: NewsDetailProps) {
-  const router = useRouter()
-  const newsId = router.query[idParamName]
-  // console.log('_________________________')
-  // console.log(newsId)
+function NewsDetail({ news }: NewsDetailProps) {
+  const [url, setUrl] = useState<string>()
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    setUrl(window?.location?.href)
+  }, [])
 
-  // const news = newsMetas.find((m) => m.id === newsId)
-
-  const [news] = useLazy<any>(
-    null,
-    (setNews, setError) => {
-      fetch(`http://localhost:1337/publications/${newsId}`)
-      .then((res)=> res.json())
-      .then((data) => setNews(data))
-      .catch(setError)
-    }
+  const NewsContent = dynamic(() =>
+    import('../../../data/news/' + news.id + '.mdx')
   )
-  if (!news) return <ErrorPage statusCode={404} />
+
+  // fetch(`http://localhost:1337/publications/${newsId}`)
+  // .then((res)=> res.json())
+  // .then((data) => setNews(data))
+  // .catch(setError)
 
   console.log(news)
 
@@ -85,17 +81,17 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
 
                 <EmailShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   subject={`${news.title} | News – (3F) Finfine Furniture Factory`}
-                  body={news.description}
+                  body={news.subject}
                 >
                   <FontAwesomeIcon icon={faEnvelope} />
                 </EmailShareButton>
 
                 <FacebookShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
-                  quote={`${news.title} | News – (3F) Finfine Furniture Factory\n\n${news.description}`}
+                  url={url}
+                  quote={`${news.title} | News – (3F) Finfine Furniture Factory\n\n${news.subject}`}
                   hashtag="#3F"
                 >
                   <FontAwesomeIcon icon={faFacebook} />
@@ -103,22 +99,22 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
 
                 <LinkedinShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </LinkedinShareButton>
 
                 <TelegramShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
-                  title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.description}`}
+                  url={url}
+                  title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.subject}`}
                 >
                   <FontAwesomeIcon icon={faTelegram} />
                 </TelegramShareButton>
 
                 <TwitterShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
+                  url={url}
                   title={`${news.title} | News – (3F) Finfine Furniture Factory`}
                   hashtags={['3F']}
                 >
@@ -127,8 +123,8 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
 
                 <WhatsappShareButton
                   className="margin-horizontal-normal font-L middle"
-                  url={location.href}
-                  title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.description}`}
+                  url={url}
+                  title={`${news.title} | News – (3F) Finfine Furniture Factory: ${news.subject}`}
                 >
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </WhatsappShareButton>
@@ -151,7 +147,7 @@ function NewsDetail({ idParamName }: NewsDetailProps) {
             </Block>
 
             <Block last style={{ lineHeight: 2 }}>
-              {news.content}
+              {<NewsContent />}
             </Block>
           </Content>
         </Content>
