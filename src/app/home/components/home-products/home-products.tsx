@@ -4,10 +4,11 @@ import Link from 'next/link'
 import Slider from 'react-slick'
 
 import styles from './home-products.module.scss'
-import { homeProducts } from '../../../../../data/home-products'
+// import { homeProducts } from '../../../../../data/home-products'
 import ProductCard from '../../../../shared/components/product-card/product-card'
+import { Product } from '../../../../types/product-type'
 
-function HomeProducts() {
+function HomeProducts({ productData }: { productData: Product[] }) {
   return (
     <div className="padding-vertical-very-big">
       <Content size="3XL" transparent className="padding-vertical-big">
@@ -61,13 +62,16 @@ function HomeProducts() {
                 },
               ]}
             >
-              {homeProducts.map((product, i) => (
-                <ProductCard product={product} key={i} />
+              {productData.map((product, i) => (
+                <ProductCard
+                  productType={product.productTypes}
+                  id={product.id}
+                />
               ))}
-              {homeProducts.length <= 3 && <></>}
-              {homeProducts.length <= 2 && <></>}
-              {homeProducts.length <= 1 && <></>}
-              {homeProducts.length <= 0 && <></>}
+              {productData.length <= 3 && <></>}
+              {productData.length <= 2 && <></>}
+              {productData.length <= 1 && <></>}
+              {productData.length <= 0 && <></>}
             </Slider>
           </div>
         </Block>

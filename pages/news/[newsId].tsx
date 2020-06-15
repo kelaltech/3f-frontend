@@ -1,11 +1,15 @@
 import React from 'react'
 import { NextSeo } from 'next-seo/lib'
 import { GetStaticProps, GetStaticPaths } from 'next'
-
+import fetch from 'isomorphic-unfetch'
 import Layout from '../../src/shared/components/layout/layout'
 import NewsDetail from '../../src/app/news-detail/news-detail'
 import { NewsMetaType } from '../../src/types/news-meta-type'
-import { newsMetas } from '../../data/news-metas'
+
+type NewsType = {
+  id: string
+  title: string
+}
 
 function NewsDetailPage({ news }: { news: NewsMetaType }) {
   return (
@@ -13,7 +17,6 @@ function NewsDetailPage({ news }: { news: NewsMetaType }) {
       <NextSeo
         title={`${news.title} | News – (3F) Finfine Furniture Factory`}
       />
-
       <Layout>
         <NewsDetail news={news} />
       </Layout>
@@ -22,14 +25,23 @@ function NewsDetailPage({ news }: { news: NewsMetaType }) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const news = newsMetas.find((n) => n.id === params.newsId)
+  // newsMetas.find((n) => n.id === params.newsId)
+  const news = await fetch(
+    `http://localhost:1337/publications/${params.newsId}`
+  ).then((res) => res.json())
 
   return { props: { news } }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const newsMetas = await fetch(
+    'http://localhost:1337/publications'
+  ).then((res) => res.json())
+
   return {
-    paths: newsMetas.map((news) => ({ params: { newsId: news.id } })),
+    paths: newsMetas.map((news) => ({
+      params: { newsId: news.id.toString() },
+    })),
     fallback: false,
   }
 }

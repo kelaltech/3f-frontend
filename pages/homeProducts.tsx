@@ -1,25 +1,19 @@
 import React from 'react'
-import { NextSeo } from 'next-seo/lib'
 import fetch from 'isomorphic-unfetch'
 
-import Layout from '../src/shared/components/layout/layout'
-import Products from '../src/app/products/products'
 import { GetStaticProps } from 'next'
 import { Product } from '../src/types/product-type'
+import HomeProducts from '../src/app/home/components/home-products/home-products'
 
-function ProductsPage({ products }: { products: Product[] }) {
+function HomeProduct({ products }: { products: Product[] }) {
   return (
     <>
-      <NextSeo title="Products | Official Website – (3F) Finfine Furniture Factory" />
-
-      <Layout>
-        <Products productData={products} />
-      </Layout>
+      <HomeProducts productData={products} />
     </>
   )
 }
 
-export default ProductsPage
+export default HomeProduct
 
 export const getStaticProps: GetStaticProps = async () => {
   // newsMetas.find((n) => n.id === params.newsId)

@@ -2,23 +2,31 @@ import { ProductCategoryType } from '../types/product-type'
 
 export function nameProductCategory(category: ProductCategoryType): string {
   switch (category) {
-    case 'DINING_ROOM_FURNITURE':
-      return 'Dining Room Furniture'
-    case 'LIVING_ROOM_FURNITURE':
-      return 'Living Room Furniture'
-    case 'BEDROOM_FURNITURE':
-      return 'Bedroom Furniture'
-    case 'SPRING_MATTRESS':
-      return 'Spring Mattress'
-    case 'SOFA':
+    case 'sofa_set':
       return 'Sofa'
-    case 'OFFICE_FURNITURE':
-      return 'Office Furniture'
-    case 'DOORS':
-      return 'Doors'
-    case 'CUPBOARDS':
-      return 'Cupboards'
-    case 'KITCHEN_CABINETS':
+    case 'bed':
+      return 'Bedroom Furniture'
+    case 'chest_of_drawer':
+      return 'Chest of Drawer'
+    case 'cupboards':
+      return 'Cupboard'
+    case 'tv_stand':
+      return 'TV Stand'
+    case 'dressing':
+      return 'Dressing'
+    case 'coffee_table':
+      return 'Coffee Table'
+    case 'kitchen_cabinate':
       return 'Kitchen Cabinets'
+    case 'office':
+      return 'Office Furniture'
+    case 'shelves':
+      return 'Shelves'
+    case 'dining_table':
+      return 'Dining Room Furniture'
+    case 'spring_mattress':
+      return 'Spring mattress'
+    case 'doors':
+      return 'Doors'
   }
 }

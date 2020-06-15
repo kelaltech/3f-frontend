@@ -18,19 +18,19 @@ import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft'
-import { faHammer } from '@fortawesome/free-solid-svg-icons/faHammer'
-import { faMoneyCheckAlt } from '@fortawesome/free-solid-svg-icons/faMoneyCheckAlt'
-import { faPaintRoller } from '@fortawesome/free-solid-svg-icons/faPaintRoller'
-import { faRulerCombined } from '@fortawesome/free-solid-svg-icons/faRulerCombined'
+// import { faHammer } from '@fortawesome/free-solid-svg-icons/faHammer'
+// import { faMoneyCheckAlt } from '@fortawesome/free-solid-svg-icons/faMoneyCheckAlt'
+// import { faPaintRoller } from '@fortawesome/free-solid-svg-icons/faPaintRoller'
+// import { faRulerCombined } from '@fortawesome/free-solid-svg-icons/faRulerCombined'
 
 import Page from '../../shared/components/page/page'
-import LiteImage from '../../shared/components/lite-image/lite-image'
+// import LiteImage from '../../shared/components/lite-image/lite-image'
 import { nameProductCategory } from '../../lib/name-product-category'
-import { stringifyCurrency } from '../../lib/stringify-currency'
-import { ProductType } from '../../types/product-type'
+import { Product } from '../../types/product-type'
+import { strapiApiBase } from '../../../constants'
 
 type ProductDetailProps = {
-  product: ProductType
+  product: Product
 }
 
 function ProductDetail({ product }: ProductDetailProps) {
@@ -39,18 +39,17 @@ function ProductDetail({ product }: ProductDetailProps) {
     if (typeof window === 'undefined') return
     setUrl(window?.location?.href)
   }, [])
+  console.log(product)
 
   return (
     <>
       <NextSeo
-        title={`${product.name} | ${nameProductCategory(
-          product.category
+        title={`${product} | ${nameProductCategory(
+          product.productCatagoryType
         )} – (3F) Finfine Furniture Factory`}
         description={`${nameProductCategory(
-          product.category
-        )} by (3F) Finfine Furniture Factory: ${
-          product.name
-        }, starting from ${stringifyCurrency(Math.min(...product.prices))}`}
+          product.productCatagoryType
+        )} by (3F) Finfine Furniture Factory: ${product}`}
       />
       <Page>
         <Content size="3XL" transparent>
@@ -76,8 +75,8 @@ function ProductDetail({ product }: ProductDetailProps) {
                   className="margin-horizontal-normal font-L middle"
                   url={url}
                   subject={`${nameProductCategory(
-                    product.category
-                  )} by (3F) Finfine Furniture Factory: ${product.name}`}
+                    product.productCatagoryType
+                  )} by (3F) Finfine Furniture Factory: ${product}`}
                 >
                   <FontAwesomeIcon icon={faEnvelope} />
                 </EmailShareButton>
@@ -86,8 +85,8 @@ function ProductDetail({ product }: ProductDetailProps) {
                   className="margin-horizontal-normal font-L middle"
                   url={url}
                   quote={`${nameProductCategory(
-                    product.category
-                  )} by (3F) Finfine Furniture Factory: ${product.name}`}
+                    product.productCatagoryType
+                  )} by (3F) Finfine Furniture Factory: ${product}`}
                   hashtag="#3F"
                 >
                   <FontAwesomeIcon icon={faFacebook} />
@@ -104,8 +103,8 @@ function ProductDetail({ product }: ProductDetailProps) {
                   className="margin-horizontal-normal font-L middle"
                   url={url}
                   title={`${nameProductCategory(
-                    product.category
-                  )} by (3F) Finfine Furniture Factory: ${product.name}`}
+                    product.productCatagoryType
+                  )} by (3F) Finfine Furniture Factory: ${product}`}
                 >
                   <FontAwesomeIcon icon={faTelegram} />
                 </TelegramShareButton>
@@ -114,8 +113,8 @@ function ProductDetail({ product }: ProductDetailProps) {
                   className="margin-horizontal-normal font-L middle"
                   url={url}
                   title={`${nameProductCategory(
-                    product.category
-                  )} by (3F) Finfine Furniture Factory: ${product.name}`}
+                    product.productCatagoryType
+                  )} by (3F) Finfine Furniture Factory: ${product}`}
                   hashtags={['3F']}
                 >
                   <FontAwesomeIcon icon={faTwitter} />
@@ -125,118 +124,50 @@ function ProductDetail({ product }: ProductDetailProps) {
                   className="margin-horizontal-normal font-L middle"
                   url={url}
                   title={`${nameProductCategory(
-                    product.category
-                  )} by (3F) Finfine Furniture Factory: ${product.name}`}
+                    product.productCatagoryType
+                  )} by (3F) Finfine Furniture Factory: ${product}`}
                 >
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </WhatsappShareButton>
               </span>
             </Yoga>
           </Block>
-        </Content>
-
-        <Yoga
-          size="3XL"
-          maxCol={2}
-          className="margin-vertical-big margin-bottom-very-big"
-        >
-          <LiteImage
-            src={product.imgSrc}
-            native
-            width={`100%` as any}
-            height={`auto` as any}
-            className="bg-whitish shade-M shade-L margin-bottom-big"
-          />
 
           <div className="fg-blackish">
             <Block first last>
-              <h1>{product.name}</h1>
-              <h5>
-                <Link href={`/products#${product.category}`}>
+              {/* <h1>{product}</h1> */}
+              <h1>
+                <Link href={`/products#${product.productCatagoryType}`}>
                   <a className="fg-primary padding-top-small font-M">
-                    {nameProductCategory(product.category)}
+                    {nameProductCategory(product.productCatagoryType)}
                   </a>
                 </Link>
-              </h5>
+              </h1>
+              <p> {product.descriptions} </p>
+              {product.productTypes.map((productType, key) => (
+                <div key={key}>
+                  <h3>{productType.name}</h3>
+                  <span>{productType.descriptions} </span>
+                  {productType.eachProduct.map((each, key) => (
+                    <div key={key}>
+                      <h4>{each.title} </h4>
+                      <Yoga maxCol={3}>
+                        {each.images.map((img, key) => (
+                          <div key={key}>
+                            <img
+                              src={`${strapiApiBase}${img.url}`}
+                              width={'100%'}
+                            />
+                          </div>
+                        ))}
+                      </Yoga>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </Block>
-
-            {!product.description.composition.length &&
-            !product.description.material.length &&
-            !product.fabrics.length ? null : (
-              <Block>
-                <h5>
-                  <span className="fg-accent margin-right-normal">
-                    <FontAwesomeIcon icon={faHammer} />
-                  </span>
-                  Made of:
-                </h5>
-                <ul className="margin-top-none padding-top-small">
-                  {product.description.composition.map((composition, i) => (
-                    <li key={i}>{composition} (Composition)</li>
-                  ))}
-                  {product.description.material.map((material, i) => (
-                    <li key={i}>{material} (Material)</li>
-                  ))}
-                  {product.fabrics.map((fabric, i) => (
-                    <li key={i}>{fabric /* todo */} (Fabric)</li>
-                  ))}
-                </ul>
-              </Block>
-            )}
-
-            {!product.description.dimension.length ? null : (
-              <Block>
-                <h5>
-                  <span className="fg-accent margin-right-normal">
-                    <FontAwesomeIcon icon={faRulerCombined} />
-                  </span>
-                  Dimensions:
-                </h5>
-                <ul className="margin-top-none padding-top-small">
-                  {product.description.dimension.map(
-                    ({ width, height, length }, i) => (
-                      <li key={i}>
-                        {width}x{height}x{length} cm
-                      </li>
-                    )
-                  )}
-                </ul>
-              </Block>
-            )}
-
-            {!product.description.color.length ? null : (
-              <Block>
-                <h5>
-                  <span className="fg-accent margin-right-normal">
-                    <FontAwesomeIcon icon={faPaintRoller} />
-                  </span>
-                  Colors:
-                </h5>
-                <ul className="margin-top-none padding-top-small">
-                  {product.description.color.map((color, i) => (
-                    <li key={i}>{color}</li>
-                  ))}
-                </ul>
-              </Block>
-            )}
-
-            {!product.prices.length ? null : (
-              <Block>
-                <h5>
-                  <span className="fg-accent margin-right-normal">
-                    <FontAwesomeIcon icon={faMoneyCheckAlt} />
-                  </span>
-                  Prices:
-                </h5>
-                <ul className="margin-top-none padding-top-small">
-                  {product.prices.map((price, i) => (
-                    <li key={i}>{stringifyCurrency(price)}</li>
-                  ))}
-                </ul>
-              </Block>
-            )}
           </div>
-        </Yoga>
+``        </Content>
       </Page>
     </>
   )

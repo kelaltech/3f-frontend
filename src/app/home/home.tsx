@@ -14,7 +14,7 @@ function Home() {
     <Page space={false}>
       <HomeSlides />
       <HomeAbout />
-      <HomeProducts />
+      {/* <HomeProducts /> */}
       <HomeInstagram />
       <HomeNews />
       <HomeLocations />

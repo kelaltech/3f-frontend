@@ -2,16 +2,17 @@ import React, { PropsWithChildren } from 'react'
 import Link from 'next/link'
 
 import styles from './news-card.module.scss'
-// import { NewsMetaType } from '../../../types/news-meta-type'
+import { strapiApiBase } from '../../../../constants'
+import { NewsMetaType } from '../../../types/news-meta-type'
 
 export type NewsCardProps = {
-  newsMeta: any
+  newsMeta: NewsMetaType
 }
 
 const NewsLink = ({
   children,
   newsMeta,
-}: PropsWithChildren<{ newsMeta: any }>) => (
+}: PropsWithChildren<{ newsMeta: NewsMetaType }>) => (
   <Link href="/news/[newsId]" as={`/news/${newsMeta.id}`}>
     <a>{children}</a>
   </Link>
@@ -25,17 +26,15 @@ function NewsCard({ newsMeta }: NewsCardProps) {
       </div>
       <div className={styles['news-card-subtitle']}>
         <NewsLink newsMeta={newsMeta}>
-          Posted on {new Date(newsMeta.postedOn).toDateString()}
+          Posted on {new Date(newsMeta.created_at).toDateString()}
         </NewsLink>
       </div>
       <div className={styles['news-card-description']}>
-        {newsMeta.img?.img.slice(0,1).map(x=>(
-          <div>
-            {/* <img src={x.url}/> */}
-            {x.url}
+        {newsMeta.img?.img.slice(0, 1).map((src, key) => (
+          <div key={key}>
+            <img src={`${strapiApiBase}${src.formats.thumbnail.url}`} />
           </div>
         ))}
-        {/* {newsMeta.img[1].title} */}
         <span>{newsMeta.subject}</span>
         <small className="inline padding-left-normal fg-primary">
           <NewsLink newsMeta={newsMeta}>read more</NewsLink>

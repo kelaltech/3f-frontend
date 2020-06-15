@@ -1,9 +1,56 @@
 import { ReactNode } from 'react'
 
-export type NewsMetaType = {
-  id: string
-  active: boolean
+export interface NewsMetaType {
+  id: number
   title: string
   subject: string
-  postedOn: number // Date
+  content: string
+  created_at: string
+  updated_at: string
+  active: boolean
+  img: NewsMetaType2Img
+}
+
+export interface NewsMetaType2Img {
+  id: number
+  title: string
+  img: ImgElement[]
+}
+
+export interface ImgElement {
+  id: number
+  name: string
+  alternativeText: string
+  caption: string
+  width: number
+  height: number
+  formats: Formats
+  hash: string
+  ext: string
+  mime: string
+  size: number
+  url: string
+  previewUrl: null
+  provider: string
+  provider_metadata: null
+  created_at: string
+  updated_at: string
+}
+
+export interface Formats {
+  large: Large
+  small: Large
+  medium: Large
+  thumbnail: Large
+}
+
+export interface Large {
+  ext: string
+  url: string
+  hash: string
+  mime: string
+  path: null
+  size: number
+  width: number
+  height: number
 }

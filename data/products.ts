@@ -1,6 +1,4 @@
-import { ProductType } from '../src/types/product-type'
-
-export const products: ProductType[] = [
+export const products = [
   {
     _id: '1',
     category: 'OFFICE_FURNITURE',

@@ -19,19 +19,13 @@ import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft'
+import { strapiApiBase } from '../../../constants'
 
 import Page from '../../shared/components/page/page'
-// import { newsMetas } from '../../../data/news-metas'
-// import ErrorPage from '../../../pages/_error'
-// import useLazy from '../../shared/hooks/use-lazy/use-lazy'
 import { NewsMetaType } from '../../types/news-meta-type'
 
 type NewsDetailProps = {
   news: NewsMetaType
-}
-type NewsType = {
-  id: string
-  title: string
 }
 
 function NewsDetail({ news }: NewsDetailProps) {
@@ -40,17 +34,6 @@ function NewsDetail({ news }: NewsDetailProps) {
     if (typeof window === 'undefined') return
     setUrl(window?.location?.href)
   }, [])
-
-  const NewsContent = dynamic(() =>
-    import('../../../data/news/' + news.id + '.mdx')
-  )
-
-  // fetch(`http://localhost:1337/publications/${newsId}`)
-  // .then((res)=> res.json())
-  // .then((data) => setNews(data))
-  // .catch(setError)
-
-  console.log(news)
 
   return (
     <>
@@ -136,18 +119,30 @@ function NewsDetail({ news }: NewsDetailProps) {
             <Block first>
               <h1>{news.title}</h1>
               <h5 className="fg-blackish light padding-top-normal">
-                Posted on {new Date(news.postedOn).toDateString()}
+                Posted on {new Date(news.created_at).toDateString()}
               </h5>
             </Block>
-
+            <Block first last>
+              <Yoga maxCol={2}>
+                {news.img?.img.map((src, key) => (
+                  <div key={key}>
+                    <img
+                      src={`${strapiApiBase}${src.url}`}
+                      style={{ maxWidth: 250, maxHeight: 250 }}
+                    />
+                  </div>
+                ))}
+              </Yoga>
+              <h5> {news.img.title} </h5>
+            </Block>
             <Block first last>
               <Block className="bg-accent fg-white padding-big">
                 {news.subject}
               </Block>
             </Block>
-
             <Block last style={{ lineHeight: 2 }}>
-              {<NewsContent />}
+              {news.content}
+              {/* {<NewsContent />} */}
             </Block>
           </Content>
         </Content>
