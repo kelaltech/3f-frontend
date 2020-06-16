@@ -32,7 +32,7 @@ function NewsCard({ newsMeta }: NewsCardProps) {
       <div className={styles['news-card-description']}>
         {newsMeta.img?.img.slice(0, 1).map((src, key) => (
           <div key={key}>
-            <img src={`${strapiApiBase}${src.formats.thumbnail.url}`} />
+            <img src={`${src.formats.thumbnail.url}`} />
           </div>
         ))}
         <span>{newsMeta.subject}</span>

@@ -16,8 +16,7 @@ type NewsType = {
 }
 
 function News({ newsData }: { newsData: NewsMetaType[] }) {
-  // console.log(newsData)
-
+  
   return (
     <Page space={false}>
       <LiteParallax
@@ -39,7 +38,7 @@ function News({ newsData }: { newsData: NewsMetaType[] }) {
           <Yoga maxCol={2}>
             {newsData.map((newsMeta, i) => (
               <div className="news-card-sizer padding-bottom-big" key={i}>
-                {newsMeta.active ? <NewsCard newsMeta={newsMeta} /> : null}
+                {newsMeta.Active ? <NewsCard newsMeta={newsMeta} /> : null}
               </div>
             ))}
           </Yoga>

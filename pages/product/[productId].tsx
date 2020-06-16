@@ -6,7 +6,7 @@ import fetch from 'isomorphic-unfetch'
 import Layout from '../../src/shared/components/layout/layout'
 import ProductDetail from '../../src/app/product-detail/product-detail'
 import { Product } from '../../src/types/product-type'
-
+import { strapiApiBase } from '../../constants'
 function ProductDetailPage({ product }: { product: Product }) {
   return (
     <>
@@ -24,17 +24,15 @@ function ProductDetailPage({ product }: { product: Product }) {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const product = await fetch(
-    `http://localhost:1337/products/${params.productId}`
+    `${strapiApiBase}/products/${params.productId}`
   ).then((res) => res.json())
 
-  // console.log(params)
-  // console.log(product)
 
   return { props: { product } }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const products = await fetch('http://localhost:1337/products').then((res) =>
+  const products = await fetch(`${strapiApiBase}/products`).then((res) =>
     res.json()
   )
   return {

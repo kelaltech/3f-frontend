@@ -127,7 +127,7 @@ function NewsDetail({ news }: NewsDetailProps) {
                 {news.img?.img.map((src, key) => (
                   <div key={key}>
                     <img
-                      src={`${strapiApiBase}${src.url}`}
+                      src={`${src.url}`}
                       style={{ maxWidth: 250, maxHeight: 250 }}
                     />
                   </div>

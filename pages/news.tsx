@@ -6,6 +6,7 @@ import Layout from '../src/shared/components/layout/layout'
 import News from '../src/app/news/news'
 import { GetStaticProps } from 'next'
 import { NewsMetaType } from '../src/types/news-meta-type'
+import { strapiApiBase } from '../constants'
 
 function NewsPage({ news }: { news: NewsMetaType[] }) {
   return (
@@ -23,7 +24,7 @@ export default NewsPage
 
 export const getStaticProps: GetStaticProps = async () => {
   // newsMetas.find((n) => n.id === params.newsId)
-  const news = await fetch(`http://localhost:1337/publications`).then((res) =>
+  const news = await fetch(`${strapiApiBase}/publications`).then((res) =>
     res.json()
   )
 

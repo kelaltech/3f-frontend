@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Block, Content, Yoga } from 'gerami'
+import styles from './product-detail.module.scss'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo/lib'
 import {
@@ -18,16 +19,14 @@ import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft'
-// import { faHammer } from '@fortawesome/free-solid-svg-icons/faHammer'
-// import { faMoneyCheckAlt } from '@fortawesome/free-solid-svg-icons/faMoneyCheckAlt'
-// import { faPaintRoller } from '@fortawesome/free-solid-svg-icons/faPaintRoller'
-// import { faRulerCombined } from '@fortawesome/free-solid-svg-icons/faRulerCombined'
 
 import Page from '../../shared/components/page/page'
 // import LiteImage from '../../shared/components/lite-image/lite-image'
 import { nameProductCategory } from '../../lib/name-product-category'
 import { Product } from '../../types/product-type'
 import { strapiApiBase } from '../../../constants'
+import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
+import Markdown from 'markdown-to-jsx'
 
 type ProductDetailProps = {
   product: Product
@@ -39,7 +38,6 @@ function ProductDetail({ product }: ProductDetailProps) {
     if (typeof window === 'undefined') return
     setUrl(window?.location?.href)
   }, [])
-  console.log(product)
 
   return (
     <>
@@ -51,9 +49,30 @@ function ProductDetail({ product }: ProductDetailProps) {
           product.productCatagoryType
         )} by (3F) Finfine Furniture Factory: ${product}`}
       />
+      <LiteParallax
+        src={`${
+          product.productCatagoryType === 'sofa_set'
+            ? product.productTypes[0].eachProduct[1].images[0].formats.large.url
+            : product.productTypes[0].eachProduct[0].images[0].formats.large.url
+        }`}
+        strength={250}
+      >
+        <div className={`${styles['product-detail-top-pic']}`}>
+          <div className={`${styles['product-detail-overlay']}`}>
+            <h1>
+              {nameProductCategory(
+                product.productCatagoryType
+              ).toLocaleUpperCase()}
+            </h1>
+            <p>
+              <Markdown>{product.descriptions}</Markdown>
+            </p>
+          </div>
+        </div>
+      </LiteParallax>
       <Page>
         <Content size="3XL" transparent>
-          <Block first className="font-S">
+          {/* <Block first className="font-S">
             <Yoga maxCol={2}>
               <span>
                 <Link href="/products">
@@ -131,43 +150,33 @@ function ProductDetail({ product }: ProductDetailProps) {
                 </WhatsappShareButton>
               </span>
             </Yoga>
-          </Block>
-
+          </Block> */}
           <div className="fg-blackish">
             <Block first last>
-              {/* <h1>{product}</h1> */}
-              <h1>
-                <Link href={`/products#${product.productCatagoryType}`}>
-                  <a className="fg-primary padding-top-small font-M">
-                    {nameProductCategory(product.productCatagoryType)}
-                  </a>
-                </Link>
-              </h1>
-              <p> {product.descriptions} </p>
               {product.productTypes.map((productType, key) => (
-                <div key={key}>
-                  <h3>{productType.name}</h3>
-                  <span>{productType.descriptions} </span>
+                <div className={`${styles['sub-product-type']}`} key={key}>
+                  <h1>{productType.name}</h1>
+                  <p>
+                    <Markdown>{productType.descriptions}</Markdown>
+                  </p>
                   {productType.eachProduct.map((each, key) => (
-                    <div key={key}>
-                      <h4>{each.title} </h4>
+                    <Block key={key}>
+                      <h2>{each.title} </h2>
                       <Yoga maxCol={3}>
                         {each.images.map((img, key) => (
                           <div key={key}>
-                            <img
-                              src={`${strapiApiBase}${img.url}`}
-                              width={'100%'}
-                            />
+                            <img src={`${img.url}`} width={'100%'} />
                           </div>
                         ))}
                       </Yoga>
-                    </div>
+                    </Block>
                   ))}
                 </div>
               ))}
             </Block>
           </div>
-``        </Content>
+          ``{' '}
+        </Content>
       </Page>
     </>
   )

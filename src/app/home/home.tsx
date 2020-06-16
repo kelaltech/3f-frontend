@@ -16,7 +16,7 @@ function Home() {
       <HomeAbout />
       {/* <HomeProducts /> */}
       <HomeInstagram />
-      <HomeNews />
+      {/* <HomeNews /> */}
       <HomeLocations />
       <HomeContact />
     </Page>

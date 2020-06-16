@@ -5,7 +5,7 @@ import fetch from 'isomorphic-unfetch'
 import Layout from '../../src/shared/components/layout/layout'
 import NewsDetail from '../../src/app/news-detail/news-detail'
 import { NewsMetaType } from '../../src/types/news-meta-type'
-
+import { strapiApiBase } from './../../constants'
 type NewsType = {
   id: string
   title: string
@@ -27,7 +27,7 @@ function NewsDetailPage({ news }: { news: NewsMetaType }) {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // newsMetas.find((n) => n.id === params.newsId)
   const news = await fetch(
-    `http://localhost:1337/publications/${params.newsId}`
+    `${strapiApiBase}/publications/${params.newsId}`
   ).then((res) => res.json())
 
   return { props: { news } }
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const newsMetas = await fetch(
-    'http://localhost:1337/publications'
+    `${strapiApiBase}/publications`
   ).then((res) => res.json())
 
   return {

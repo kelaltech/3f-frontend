@@ -1,0 +1,25 @@
+@import '../../../assets/styles/theme';
+
+.product-card-bg {
+  padding: 0 !important;
+  overflow: hidden;
+  transition: 0.3s all ease;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important;
+    // box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22) !important;
+  }
+
+  img {
+    transition: 0.3s all ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  div {
+    padding: 0 !important;
+  }
+}

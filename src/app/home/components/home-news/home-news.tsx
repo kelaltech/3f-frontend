@@ -6,12 +6,9 @@ import Slider from 'react-slick'
 import styles from './home-news.module.scss'
 import { homeNewsMetas } from '../../../../../data/home-news-metas'
 import NewsCard from '../../../../shared/components/news-card/news-card'
-
-function HomeNews() {
-  const news = useMemo(
-    () => homeNewsMetas.filter((newsMeta) => newsMeta.active !== false),
-    [homeNewsMetas]
-  )
+import { NewsMetaType } from '../../../../types/news-meta-type'
+function HomeNews({newsData}: {newsData: NewsMetaType[]}) {
+ 
 
   return (
     <div className="padding-vertical-very-big">
@@ -58,12 +55,12 @@ function HomeNews() {
                 },
               ]}
             >
-              {news.map((newsMeta, i) => (
+              {newsData.map((newsMeta, i) => (
                 <NewsCard newsMeta={newsMeta} key={i} />
               ))}
-              {news.length <= 2 && <></>}
-              {news.length <= 1 && <></>}
-              {news.length <= 0 && <></>}
+              {newsData.length <= 2 && <></>}
+              {newsData.length <= 1 && <></>}
+              {newsData.length <= 0 && <></>}
             </Slider>
           </div>
         </Block>

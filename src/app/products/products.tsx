@@ -9,7 +9,6 @@ import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 import { Product } from '../../types/product-type'
 
 function Products({ productData }: { productData: Product[] }) {
-  console.log(productData)
   return (
     <Page space={false}>
       <LiteParallax
@@ -40,11 +39,8 @@ function Products({ productData }: { productData: Product[] }) {
                 <h1 className="fg-accent">
                   {nameProductCategory(productCategory.productCatagoryType)}
                 </h1>
-              </Block>
-              <Block className="padding-vertical-none">
                 <hr style={{ opacity: 0.84 }} />
-              </Block>
-              <Block>
+
                 <ProductCard
                   productType={productCategory.productTypes}
                   id={productCategory.id}

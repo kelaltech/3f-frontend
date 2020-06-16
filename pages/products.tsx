@@ -6,7 +6,7 @@ import Layout from '../src/shared/components/layout/layout'
 import Products from '../src/app/products/products'
 import { GetStaticProps } from 'next'
 import { Product } from '../src/types/product-type'
-
+import { strapiApiBase } from '../constants'
 function ProductsPage({ products }: { products: Product[] }) {
   return (
     <>
@@ -23,7 +23,7 @@ export default ProductsPage
 
 export const getStaticProps: GetStaticProps = async () => {
   // newsMetas.find((n) => n.id === params.newsId)
-  const products = await fetch(`http://localhost:1337/products`).then((res) =>
+  const products = await fetch(`${strapiApiBase}/products`).then((res) =>
     res.json()
   )
 
