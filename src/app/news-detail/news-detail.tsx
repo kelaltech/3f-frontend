@@ -3,6 +3,7 @@ import { Block, Content, Yoga } from 'gerami'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo/lib'
+import styles from './news-detail.module.scss'
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -19,8 +20,7 @@ import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft'
-import { strapiApiBase } from '../../../constants'
-
+import Markdown from 'markdown-to-jsx'
 import Page from '../../shared/components/page/page'
 import { NewsMetaType } from '../../types/news-meta-type'
 
@@ -122,28 +122,29 @@ function NewsDetail({ news }: NewsDetailProps) {
                 Posted on {new Date(news.created_at).toDateString()}
               </h5>
             </Block>
-            <Block first last>
-              <Yoga maxCol={2}>
-                {news.img?.img.map((src, key) => (
-                  <div key={key}>
-                    <img
-                      src={`${src.url}`}
-                      style={{ maxWidth: 250, maxHeight: 250 }}
-                    />
-                  </div>
-                ))}
-              </Yoga>
-              <h5> {news.img.title} </h5>
-            </Block>
+            {news.headerImg ? (
+              <Block first last>
+                <div>
+                  <img
+                    src={`${news.headerImg.url}`}
+                    style={{ width: '100%', maxHeight: 420 }}
+                  />
+                </div>
+              </Block>
+            ) : null}
             <Block first last>
               <Block className="bg-accent fg-white padding-big">
-                {news.subject}
+                <Markdown>{news.subject}</Markdown>
               </Block>
             </Block>
-            <Block last style={{ lineHeight: 2 }}>
-              {news.content}
-              {/* {<NewsContent />} */}
+            <Block
+              last
+             className={`font-M full-width ${styles['markdown-container']}`}
+            >
+              <Markdown>{news.content}</Markdown>
             </Block>
+
+            <Block first last />
           </Content>
         </Content>
       </Page>

@@ -30,13 +30,13 @@ function NewsCard({ newsMeta }: NewsCardProps) {
         </NewsLink>
       </div>
       <div className={styles['news-card-description']}>
-        {newsMeta.img?.img.slice(0, 1).map((src, key) => (
-          <div key={key}>
-            <img src={`${src.formats.thumbnail.url}`} />
+        {newsMeta.headerImg ? (
+          <div className="center">
+            <div className={`${styles['news-image-thumbnail']}`}  style={{backgroundImage:`url(${newsMeta.headerImg.formats.thumbnail.url})`}} />
           </div>
-        ))}
+        ) : null}
         <span>{newsMeta.subject}</span>
-        <small className="inline padding-left-normal fg-primary">
+        <small className="inline padding-left-normal fg-primary right">
           <NewsLink newsMeta={newsMeta}>read more</NewsLink>
         </small>
       </div>

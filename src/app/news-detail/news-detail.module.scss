@@ -1,0 +1,11 @@
+@import "../../assets/styles/theme";
+
+.markdown-container {
+  color: rgb(41, 41, 41);
+  line-height: 1.5;
+
+  img {
+    width: 100%;
+    max-height: 420px;
+  }
+}

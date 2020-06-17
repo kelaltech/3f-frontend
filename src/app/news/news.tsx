@@ -6,8 +6,6 @@ import styles from './news.module.scss'
 import Page from '../../shared/components/page/page'
 import NewsCard from '../../shared/components/news-card/news-card'
 import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
-// import  getStaticProps from '../../../pages/news/[newsId]'
-// import useLazy from '../../shared/hooks/use-lazy/use-lazy'
 import { NewsMetaType } from '../../types/news-meta-type'
 
 type NewsType = {
@@ -16,7 +14,6 @@ type NewsType = {
 }
 
 function News({ newsData }: { newsData: NewsMetaType[] }) {
-  
   return (
     <Page space={false}>
       <LiteParallax
@@ -26,8 +23,8 @@ function News({ newsData }: { newsData: NewsMetaType[] }) {
       >
         <div className={`${styles['products-header']} bg-accent fg-whitish`}>
           <Content size="3XL" transparent>
-            <Block first last className="center">
-              <h1 className="fg-white">.</h1>
+            <Block first last className="center ">
+              <h1 className="fg-white">Latest News</h1>
             </Block>
           </Content>
         </div>
@@ -35,7 +32,7 @@ function News({ newsData }: { newsData: NewsMetaType[] }) {
 
       <Content size="3XL" transparent className="margin-top-big">
         <Block first last>
-          <Yoga maxCol={2}>
+          <Yoga maxCol={3}>
             {newsData.map((newsMeta, i) => (
               <div className="news-card-sizer padding-bottom-big" key={i}>
                 {newsMeta.Active ? <NewsCard newsMeta={newsMeta} /> : null}

@@ -1,4 +1,4 @@
-@import '../../assets/styles/theme';
+@import "../../assets/styles/theme";
 
 .news-card-sizer {
   display: inline-block;
@@ -7,5 +7,15 @@
 
   @media (max-width: $mobile) {
     width: 100%;
+  }
+}
+
+.products-header {
+  height: 350px;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: 2.5em;
   }
 }

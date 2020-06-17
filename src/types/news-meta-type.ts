@@ -8,7 +8,7 @@ export interface NewsMetaType {
   content: string
   created_at: string
   updated_at: string
-  img: NewsMetaType2Img
+  headerImg: ImgElement
 }
 
 export interface NewsMetaType2Img {

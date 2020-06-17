@@ -1,4 +1,4 @@
-@import '../../../assets/styles/theme';
+@import "../../../assets/styles/theme";
 
 .news-card-container {
   margin: ($space / 2);
@@ -28,6 +28,9 @@
 
 .news-card-title {
   font-size: $font-L;
+  height: 50px;
+  line-height: 25px;
+  overflow: hidden;
 }
 
 .news-card-subtitle {
@@ -39,13 +42,23 @@
   opacity: 0.56;
 }
 
+.news-image-thumbnail {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 156px;
+  width: 100%;
+}
+
 .news-card-description {
   padding: ($space) 0 0;
 
   > span {
+    padding-top: $space;
+    display: inline-block;
     opacity: 0.7;
+    line-height: 20px;
+    height: 60px;
+    overflow: hidden;
   }
-}
-
-.news-card-read-more {
 }
