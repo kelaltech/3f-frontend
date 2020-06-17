@@ -32,7 +32,12 @@ function NewsCard({ newsMeta }: NewsCardProps) {
       <div className={styles['news-card-description']}>
         {newsMeta.headerImg ? (
           <div className="center">
-            <div className={`${styles['news-image-thumbnail']}`}  style={{backgroundImage:`url(${newsMeta.headerImg.formats.thumbnail.url})`}} />
+            <div
+              className={`${styles['news-image-thumbnail']}`}
+              style={{
+                backgroundImage: `url(${newsMeta.headerImg.formats.small.url})`,
+              }}
+            />
           </div>
         ) : null}
         <span>{newsMeta.subject}</span>
