@@ -24,7 +24,7 @@ function Products({ productData }: { productData: Product[] }) {
             <Block first last className="center">
               <h1 className="fg-white">Our Products</h1>
             </Block>
-            <Block
+            {/* <Block
               first
               last
               className={`${styles['product-category-list-box']}`}
@@ -34,7 +34,7 @@ function Products({ productData }: { productData: Product[] }) {
                   {nameProductCategory(name)}
                 </a>
               ))}
-            </Block>
+            </Block> */}
           </Content>
         </div>
       </LiteParallax>
