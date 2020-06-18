@@ -52,8 +52,10 @@ function ProductDetail({ product }: ProductDetailProps) {
       <LiteParallax
         src={`${
           product.productCatagoryType === 'sofa_set'
-            ? product.productTypes[0].eachProduct[1].images[0].formats.large.url
-            : product.productTypes[0].eachProduct[0].images[0].formats.large.url
+            ? product.productTypes[0].eachProduct[1]?.images[0]?.formats.large
+                .url
+            : product.productTypes[0].eachProduct[0]?.images[0]?.formats.large
+                .url ?? undefined
         }`}
         strength={250}
       >
@@ -65,7 +67,7 @@ function ProductDetail({ product }: ProductDetailProps) {
               ).toLocaleUpperCase()}
             </h1>
             <p>
-              <Markdown>{product.descriptions}</Markdown>
+              <Markdown>{product.descriptions || ''}</Markdown>
             </p>
           </div>
         </div>
@@ -153,39 +155,28 @@ function ProductDetail({ product }: ProductDetailProps) {
           </Block> */}
           <div className="fg-blackish">
             <Block first last>
-              {product.productTypes.map((productType, key) =>
-                !productType ? (
-                  <>Product Type Not Available</>
-                ) : (
-                  <div className={`${styles['sub-product-type']}`} key={key}>
-                    <h1>{productType.name}</h1>
-                    <p>
-                      <Markdown>{productType.descriptions}</Markdown>
-                    </p>
-                    {productType.eachProduct.map((each, key) =>
-                      !each ? (
-                        <>The products are not Available</>
-                      ) : (
-                        <Block key={key}>
-                          <h2>{each.title} </h2>
-                          <Yoga maxCol={3}>
-                            {!each.images
-                              ? null
-                              : each.images.map((img, key) => (
-                                  <div key={key}>
-                                    <img src={`${img.url}`} width={'100%'} />
-                                  </div>
-                                ))}
-                          </Yoga>
-                        </Block>
-                      )
-                    )}
-                  </div>
-                )
-              )}
+              {product.productTypes.map((productType, key) => (
+                <div className={`${styles['sub-product-type']}`} key={key}>
+                  <h1>{productType.name}</h1>
+                  <p>
+                    <Markdown>{productType.descriptions || ''}</Markdown>
+                  </p>
+                  {productType.eachProduct.map((each, key) => (
+                    <Block key={key}>
+                      <h2>{each.title} </h2>
+                      <Yoga maxCol={3}>
+                        {each.images.map((img, key) => (
+                          <div key={key}>
+                            <img src={`${img.url}`} width={'100%'} />
+                          </div>
+                        ))}
+                      </Yoga>
+                    </Block>
+                  ))}
+                </div>
+              ))}
             </Block>
           </div>
-          ``{' '}
         </Content>
       </Page>
     </>
