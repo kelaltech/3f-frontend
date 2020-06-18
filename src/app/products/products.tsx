@@ -5,7 +5,6 @@ import styles from './products.module.scss'
 import Page from '../../shared/components/page/page'
 import {
   nameProductCategory,
-  ProductCategory,
 } from '../../lib/name-product-category'
 import ProductCard from '../../shared/components/product-card/product-card'
 import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'

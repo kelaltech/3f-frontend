@@ -42,14 +42,14 @@ function ProductDetail({ product }: ProductDetailProps) {
   return (
     <>
       <NextSeo
-        title={`${product} | ${nameProductCategory(
+        title={`${nameProductCategory(
           product.productCatagoryType
         )} – (3F) Finfine Furniture Factory`}
         description={`${nameProductCategory(
           product.productCatagoryType
         )} by (3F) Finfine Furniture Factory: ${product}`}
       />
-    <LiteParallax
+      <LiteParallax
         src={`${
           product.productCatagoryType === 'sofa_set'
             ? product.productTypes[0].eachProduct[1].images[0].formats.large.url
@@ -153,34 +153,36 @@ function ProductDetail({ product }: ProductDetailProps) {
           </Block> */}
           <div className="fg-blackish">
             <Block first last>
-              {product.productTypes.map((productType, key) => !productType ? (
-                <>  
-                 Product Type Not Available
-                </>
-              ) : (
-                <div className={`${styles['sub-product-type']}`} key={key}>
-                  <h1>{productType.name}</h1>
-                  <p>
-                    <Markdown>{productType.descriptions}</Markdown>
-                  </p>
-                  {productType.eachProduct.map((each, key) => !each ? (
-                    <>
-                      The products are not Available
-                    </>
-                  ) : (
-                    <Block key={key}>
-                      <h2>{each.title} </h2>
-                      <Yoga maxCol={3}>
-                        {!each.images ? null : each.images.map((img, key) => (
-                          <div key={key}>
-                            <img src={`${img.url}`} width={'100%'} />
-                          </div>
-                        ))}
-                      </Yoga>
-                    </Block>
-                  ))}
-                </div>
-              ))}
+              {product.productTypes.map((productType, key) =>
+                !productType ? (
+                  <>Product Type Not Available</>
+                ) : (
+                  <div className={`${styles['sub-product-type']}`} key={key}>
+                    <h1>{productType.name}</h1>
+                    <p>
+                      <Markdown>{productType.descriptions}</Markdown>
+                    </p>
+                    {productType.eachProduct.map((each, key) =>
+                      !each ? (
+                        <>The products are not Available</>
+                      ) : (
+                        <Block key={key}>
+                          <h2>{each.title} </h2>
+                          <Yoga maxCol={3}>
+                            {!each.images
+                              ? null
+                              : each.images.map((img, key) => (
+                                  <div key={key}>
+                                    <img src={`${img.url}`} width={'100%'} />
+                                  </div>
+                                ))}
+                          </Yoga>
+                        </Block>
+                      )
+                    )}
+                  </div>
+                )
+              )}
             </Block>
           </div>
           ``{' '}
