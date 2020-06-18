@@ -190,7 +190,7 @@ function Footer() {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  kelal tech.
+                  Kelal Tech
                 </a>
               </span>
             </Block>
