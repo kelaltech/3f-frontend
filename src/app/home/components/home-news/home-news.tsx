@@ -7,9 +7,7 @@ import styles from './home-news.module.scss'
 import { homeNewsMetas } from '../../../../../data/home-news-metas'
 import NewsCard from '../../../../shared/components/news-card/news-card'
 import { NewsMetaType } from '../../../../types/news-meta-type'
-function HomeNews({newsData}: {newsData: NewsMetaType[]}) {
- 
-
+function HomeNews({ newsData }: { newsData: NewsMetaType[] }) {
   return (
     <div className="padding-vertical-very-big">
       <Content size="3XL" transparent className="padding-vertical-big">

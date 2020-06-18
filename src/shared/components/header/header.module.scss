@@ -1,5 +1,5 @@
-@import "../../../assets/styles/theme";
-@import "header-height";
+@import '../../../assets/styles/theme';
+@import 'header-height';
 
 .header {
   position: fixed;
@@ -27,7 +27,11 @@
 
       padding: $headerPaddingHeight ($headerPaddingHeight + $space / 2);
 
-      background-image: linear-gradient(to bottom, transparentize($bg, 0.03), transparentize($bg, 0.14));
+      background-image: linear-gradient(
+        to bottom,
+        transparentize($bg, 0.03),
+        transparentize($bg, 0.14)
+      );
       background-color: transparent !important;
       box-shadow: $shade-L !important;
     }
@@ -98,7 +102,7 @@ $navMobileRate: 1.4;
         transition: 0.3s all ease-in-out !important;
         position: absolute;
         bottom: 6px;
-        content: "";
+        content: '';
         width: 0px;
         height: 2px;
         background: $primary;

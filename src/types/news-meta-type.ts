@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
 export interface NewsMetaType {
-  Active: boolean;
+  Active: boolean
   id: number
   title: string
   subject: string

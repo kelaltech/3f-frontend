@@ -139,7 +139,7 @@ function NewsDetail({ news }: NewsDetailProps) {
             </Block>
             <Block
               last
-             className={`font-M full-width ${styles['markdown-container']}`}
+              className={`font-M full-width ${styles['markdown-container']}`}
             >
               <Markdown>{news.content}</Markdown>
             </Block>

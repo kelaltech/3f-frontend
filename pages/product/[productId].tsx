@@ -27,7 +27,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `${strapiApiBase}/products/${params.productId}`
   ).then((res) => res.json())
 
-
   return { props: { product } }
 }
 

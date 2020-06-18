@@ -9,20 +9,25 @@ import Home from '../src/app/home/home'
 import { NewsMetaType } from '../src/types/news-meta-type'
 import { Product } from '../src/types/product-type'
 
-function IndexPage({news, products}: {news: NewsMetaType[], products: Product[]}) {
+function IndexPage({
+  news,
+  products,
+}: {
+  news: NewsMetaType[]
+  products: Product[]
+}) {
   return (
     <>
       <NextSeo title="Home | Official Website – (3F) Finfine Furniture Factory" />
 
       <Layout>
-        <Home news={news} products={products}/>
+        <Home news={news} products={products} />
       </Layout>
     </>
   )
 }
 
 export default IndexPage
-
 
 export const getStaticProps: GetStaticProps = async () => {
   // newsMetas.find((n) => n.id === params.newsId)
