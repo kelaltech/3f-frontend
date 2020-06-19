@@ -7,6 +7,7 @@ import styles from './home-products.module.scss'
 // import { homeProducts } from '../../../../../data/home-products'
 import ProductCard from '../../../../shared/components/product-card/product-card'
 import { Product } from '../../../../types/product-type'
+import { nameProductCategory } from '../../../../lib/name-product-category'
 
 function HomeProducts({ productData }: { productData: Product[] }) {
   return (
@@ -64,6 +65,7 @@ function HomeProducts({ productData }: { productData: Product[] }) {
             >
               {productData.map((product, i) => (
                 <ProductCard
+                  title={nameProductCategory(product.productCatagoryType)}
                   productType={product.productTypes}
                   id={product.id}
                 />

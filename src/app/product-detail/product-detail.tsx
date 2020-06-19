@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Block, Content, Yoga } from 'gerami'
+import { Block, Content, Yoga, Anchor } from 'gerami'
 import styles from './product-detail.module.scss'
 import Link from 'next/link'
 import EachProduct from './components/each-product/each-product'
@@ -42,12 +42,12 @@ function ProductDetail({ product }: ProductDetailProps) {
   return (
     <>
       <NextSeo
-        title={`${product} | ${nameProductCategory(
+        title={`${nameProductCategory(
           product.productCatagoryType
         )} – (3F) Finfine Furniture Factory`}
         description={`${nameProductCategory(
           product.productCatagoryType
-        )} by (3F) Finfine Furniture Factory: ${product}`}
+        )} by (3F) Finfine Furniture Factory: ${product.descriptions}`}
       />
       <LiteParallax
         src={`${
@@ -65,14 +65,14 @@ function ProductDetail({ product }: ProductDetailProps) {
               ).toLocaleUpperCase()}
             </h1>
             <p>
-              <Markdown>{product.descriptions}</Markdown>
+              <Markdown>{product.descriptions?product.descriptions: "" }</Markdown>
             </p>
           </div>
         </div>
       </LiteParallax>
       <Page>
         <Content size="3XL" transparent>
-          {/* <Block first className="font-S">
+          <Block className="font-S">
             <Yoga maxCol={2}>
               <span>
                 <Link href="/products">
@@ -95,7 +95,9 @@ function ProductDetail({ product }: ProductDetailProps) {
                   url={url}
                   subject={`${nameProductCategory(
                     product.productCatagoryType
-                  )} by (3F) Finfine Furniture Factory: ${product}`}
+                  )} by (3F) Finfine Furniture Factory: ${
+                    product.descriptions
+                  }`}
                 >
                   <FontAwesomeIcon icon={faEnvelope} />
                 </EmailShareButton>
@@ -105,7 +107,9 @@ function ProductDetail({ product }: ProductDetailProps) {
                   url={url}
                   quote={`${nameProductCategory(
                     product.productCatagoryType
-                  )} by (3F) Finfine Furniture Factory: ${product}`}
+                  )} by (3F) Finfine Furniture Factory: ${
+                    product.descriptions
+                  }`}
                   hashtag="#3F"
                 >
                   <FontAwesomeIcon icon={faFacebook} />
@@ -123,7 +127,9 @@ function ProductDetail({ product }: ProductDetailProps) {
                   url={url}
                   title={`${nameProductCategory(
                     product.productCatagoryType
-                  )} by (3F) Finfine Furniture Factory: ${product}`}
+                  )} by (3F) Finfine Furniture Factory: ${
+                    product.descriptions
+                  }`}
                 >
                   <FontAwesomeIcon icon={faTelegram} />
                 </TelegramShareButton>
@@ -133,7 +139,9 @@ function ProductDetail({ product }: ProductDetailProps) {
                   url={url}
                   title={`${nameProductCategory(
                     product.productCatagoryType
-                  )} by (3F) Finfine Furniture Factory: ${product}`}
+                  )} by (3F) Finfine Furniture Factory: ${
+                    product.descriptions
+                  }`}
                   hashtags={['3F']}
                 >
                   <FontAwesomeIcon icon={faTwitter} />
@@ -144,23 +152,38 @@ function ProductDetail({ product }: ProductDetailProps) {
                   url={url}
                   title={`${nameProductCategory(
                     product.productCatagoryType
-                  )} by (3F) Finfine Furniture Factory: ${product}`}
+                  )} by (3F) Finfine Furniture Factory: ${
+                    product.descriptions
+                  }`}
                 >
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </WhatsappShareButton>
               </span>
             </Yoga>
-          </Block> */}
+          </Block>
+          <Block>
+            <Yoga maxCol={6}>
+              {product.productTypes.map((productType, key) => (
+                <div key={'key'}>
+                  <Link href={`#${productType.name.replace(/\s/g, '')}`}>
+                    {productType.name}
+                  </Link>
+                </div>
+              ))}
+            </Yoga>
+          </Block>
           <div className="fg-blackish">
             <Block first last>
               {product.productTypes.map((productType, key) => (
                 <div className={`${styles['sub-product-type']}`} key={key}>
-                  <h1>{productType.name}</h1>
+                  <h1 id={`${productType.name.replace(/\s/g, '')}`}>
+                    {productType.name}
+                  </h1>
                   <p>
                     <Markdown>{productType.descriptions}</Markdown>
                   </p>
                   {productType.eachProduct.map((each, key) => (
-                    <EachProduct each={each} key={key}/>
+                    <EachProduct each={each} key={key} />
                   ))}
                 </div>
               ))}

@@ -29,10 +29,12 @@
   .full-screen-items-container {
     width: 88%;
     align-self: center;
-    float: 100%;
-
-    img {
+    .image-url {
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
       width: 100%;
+      height: 90vh;
     }
   }
 }
