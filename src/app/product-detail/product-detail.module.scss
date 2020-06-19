@@ -1,4 +1,4 @@
-@import '../../assets/styles/theme';
+@import "../../assets/styles/theme";
 
 .product-detail-top-pic {
   position: relative;
@@ -12,11 +12,7 @@
     color: $bg;
 
     background: rgb(6, 6, 6);
-    background: linear-gradient(
-      0deg,
-      rgba(6, 6, 6, 0.44348161627932425) 0%,
-      rgba(57, 57, 57, 0.4322771344866071) 100%
-    );
+    background: linear-gradient(0deg, rgba(6, 6, 6, 0.44348161627932425) 0%, rgba(57, 57, 57, 0.4322771344866071) 100%);
     h1 {
       font-size: 3.5em;
       color: $bg;
@@ -42,3 +38,7 @@
     border-radius: 5px;
   }
 }
+
+
+
+
