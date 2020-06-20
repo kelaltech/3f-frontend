@@ -67,7 +67,9 @@ function ProductDetail({ product }: ProductDetailProps) {
               ).toLocaleUpperCase()}
             </h1>
             <p>
-              <Markdown>{product.descriptions?product.descriptions: "" }</Markdown>
+              <Markdown>
+                {product.descriptions ? product.descriptions : ''}
+              </Markdown>
             </p>
           </div>
         </div>

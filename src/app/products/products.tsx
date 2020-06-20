@@ -51,7 +51,9 @@ function Products({ productData }: { productData: Product[] }) {
                 </Link>
 
                 <ProductCard
-                title={nameProductCategory(productCategory.productCatagoryType)}
+                  title={nameProductCategory(
+                    productCategory.productCatagoryType
+                  )}
                   productType={productCategory.productTypes}
                   id={productCategory.id}
                 />
