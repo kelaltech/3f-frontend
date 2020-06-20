@@ -31,16 +31,13 @@ const FullImageMode: React.FC<fullImageType> = ({ onClose, each }) => {
         >
           {each &&
             each.images.map((img, key) => (
-              <div key={key}
-              >
+              <div key={key}>
                 <div
-                 style={
-                  {
-                    backgroundImage: `url(${img.url})`
-                  }
-                }
-                className={`${styles['image-url']}`}
-                />  
+                  style={{
+                    backgroundImage: `url(${img.url})`,
+                  }}
+                  className={`${styles['image-url']}`}
+                />
               </div>
             ))}
         </Slider>
