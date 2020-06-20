@@ -52,8 +52,10 @@ function ProductDetail({ product }: ProductDetailProps) {
       <LiteParallax
         src={`${
           product.productCatagoryType === 'sofa_set'
-            ? product.productTypes[0].eachProduct[1].images[0].formats.large.url
-            : product.productTypes[0].eachProduct[0].images[0].formats.large.url
+            ? product.productTypes[0].eachProduct[1]?.images[0]?.formats.large
+                .url
+            : product.productTypes[0].eachProduct[0]?.images[0]?.formats.large
+                .url ?? undefined
         }`}
         strength={250}
       >
@@ -180,7 +182,7 @@ function ProductDetail({ product }: ProductDetailProps) {
                     {productType.name}
                   </h1>
                   <p>
-                    <Markdown>{productType.descriptions}</Markdown>
+                    <Markdown>{productType.descriptions || ''}</Markdown>
                   </p>
                   {productType.eachProduct.map((each, key) => (
                     <EachProduct each={each} key={key} />
@@ -189,7 +191,6 @@ function ProductDetail({ product }: ProductDetailProps) {
               ))}
             </Block>
           </div>
-          ``{' '}
         </Content>
       </Page>
     </>

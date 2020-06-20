@@ -34,9 +34,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const newsMetas = await fetch(
-    `${strapiApiBase}/publications`
-  ).then((res) => res.json())
+  const newsMetas = await fetch(`${strapiApiBase}/publications`).then((res) =>
+    res.json()
+  )
 
   return {
     paths: newsMetas.map((news) => ({
