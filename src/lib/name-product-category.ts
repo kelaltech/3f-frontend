@@ -31,18 +31,18 @@ export function nameProductCategory(category: ProductCategoryType): string {
   }
 }
 
-export const ProductCategory: ProductCategoryType[] = [
-  'sofa_set',
-  'bed',
-  'chest_of_drawer',
-  'cupboards',
-  'tv_stand',
-  'dressing',
-  'coffee_table',
-  'kitchen_cabinate',
-  'office',
-  'shelves',
-  'dining_table',
-  'spring_mattress',
-  'doors',
-]
+// export const ProductCategory: ProductCategoryType[] = [
+//   'sofa_set',
+//   'bed',
+//   'chest_of_drawer',
+//   'cupboards',
+//   'tv_stand',
+//   'dressing',
+//   'coffee_table',
+//   'kitchen_cabinate',
+//   'office',
+//   'shelves',
+//   'dining_table',
+//   'spring_mattress',
+//   'doors',
+// ]
