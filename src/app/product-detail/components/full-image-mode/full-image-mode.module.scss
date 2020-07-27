@@ -1,0 +1,40 @@
+@import '../../../../assets/styles/theme';
+
+.full-sceen-img-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(42, 42, 42, 0.8);
+  z-index: 99;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: $font-M;
+    color: $bg;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .full-screen-items-container {
+    width: 88%;
+    align-self: center;
+    .image-url {
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 90vh;
+    }
+  }
+}

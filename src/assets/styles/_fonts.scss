@@ -1,14 +1,11 @@
 // imports:
 
-@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 // classes:
 
 .font-family-display {
-  font-family: 'Comfortaa', sans-serif;
-  // font-family: "Oswald", sans-serif;
+  font-family: 'Teko', sans-serif;
 }
 
 .font-family-title {
@@ -16,5 +13,5 @@
 }
 
 .font-family-body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }

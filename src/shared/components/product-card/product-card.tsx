@@ -11,9 +11,10 @@ import styles from './product-card.module.scss'
 export type ProductCardProps = {
   productType: ProductType[]
   id: number
+  title: string
 }
 
-function ProductCard({ productType, id }: ProductCardProps) {
+function ProductCard({ productType, id, title }: ProductCardProps) {
   return (
     <Link href="/product/[productId]" as={`/product/${id}`}>
       <a
@@ -27,7 +28,12 @@ function ProductCard({ productType, id }: ProductCardProps) {
                 <div key={key}>
                   {each.images.slice(0, 1).map((img, key) => (
                     <div key={key}>
-                      <img src={`${img.url}`} width={'100%'} />
+                      <img
+                        alt={`picture of ${title} `}
+                        title={title}
+                        src={`${img.url}`}
+                        width={'100%'}
+                      />
                     </div>
                   ))}
                 </div>

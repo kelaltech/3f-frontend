@@ -97,38 +97,12 @@ $navMobileRate: 1.4;
       transition-duration: 0.7s;
       position: relative;
 
-      &::after,
-      &::before {
-        transition: 0.3s all ease-in-out !important;
-        position: absolute;
-        bottom: 6px;
-        content: '';
-        width: 0px;
-        height: 2px;
-        background: $primary;
-      }
-      &::after {
-        width: 2px;
-        height: 0;
-        margin-left: 6px;
-      }
       &:active,
       &:focus,
       &:hover {
-        // box-shadow: inset $headerContentHeight -$headerContentHeight 0 -$headerContentHeight
-        //   $primary;
-        // color: $bg !important;
-
-        box-shadow: none;
-
-        transition-duration: 0.3s;
-
-        &::before {
-          width: 25%;
-        }
-        &::after {
-          height: 18px;
-        }
+        box-shadow: inset $headerContentHeight -$headerContentHeight 0 -$headerContentHeight
+          $primary;
+        color: $bg !important;
       }
     }
   }

@@ -10,17 +10,20 @@
     text-align: center;
     width: 100%;
     color: $bg;
-
-    background: rgb(6, 6, 6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background: linear-gradient(
       0deg,
       rgba(6, 6, 6, 0.44348161627932425) 0%,
       rgba(57, 57, 57, 0.4322771344866071) 100%
     );
     h1 {
-      font-size: 3.5em;
+      font-size: 3em;
       color: $bg;
       margin-bottom: 0;
+      margin: 10px;
     }
     p {
       padding-top: 0;
