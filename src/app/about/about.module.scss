@@ -33,9 +33,9 @@
       font-weight: 500;
       font-size: 48px;
       line-height: 56px;
-      color: whitesmoke
+      color: whitesmoke;
     }
-    span{
+    span {
       color: whitesmoke;
       font-size: 18px;
     }
@@ -60,7 +60,7 @@
     background-color: #bc2239;
     color: white;
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
       height: 500px;
     }
     .back-card-block {
@@ -157,7 +157,7 @@
     background-color: $accent;
     color: white;
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
       height: 500px;
     }
 
@@ -208,6 +208,5 @@
     @media screen and (max-width: 1040px) {
       position: static !important;
     }
-   
   }
 }

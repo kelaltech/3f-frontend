@@ -49,125 +49,138 @@ function HomeContact() {
           <Yoga maxCol={2}>
             <Block last>
               <Block className={'center'} first last>
-                <span className="fg-whitish" style={{fontSize: '24px', fontWeight: 'bold'}}>How can we help you?</span>
+                <span
+                  className="fg-whitish"
+                  style={{ fontSize: '24px', fontWeight: 'bold' }}
+                >
+                  How can we help you?
+                </span>
               </Block>
               <Content
                 size="L"
                 transparent
                 className={styles['home-contact-form-container']}
               >
-                <p style={{textAlign: "center", fontSize: '17px'}} className="fg-whitish padding-top-big padding-bottom-big">
-                  We are here to answer any questions you might have about our company and our products. Reach out to us and we'll respond as soon as possible.
+                <p
+                  style={{ textAlign: 'center', fontSize: '17px' }}
+                  className="fg-whitish padding-top-big padding-bottom-big"
+                >
+                  We are here to answer any questions you might have about our
+                  company and our products. Reach out to us and we'll respond as
+                  soon as possible.
                 </p>
-                <hr/>
-                <p style={{textAlign: "center", fontSize: '17px'}} className="fg-whitish padding-top-big">
-                  Please feel free to visit us. You can find the closest showroom to you {' '}
+                <hr />
+                <p
+                  style={{ textAlign: 'center', fontSize: '17px' }}
+                  className="fg-whitish padding-top-big"
+                >
+                  Please feel free to visit us. You can find the closest
+                  showroom to you{' '}
                   <Link href="/locations">
                     <a>Here</a>
-                  </Link> 
+                  </Link>
                 </p>
               </Content>
-            </Block>  
-
-            <Block last>
-            <Block className="center" first last>
-              <h1 className="fg-whitish">Contact Us</h1>
             </Block>
 
-            <Content
-              size="L"
-              transparent
-              className={styles['home-contact-form-container']}
-            >
-              <form method="POST" onSubmit={handleSubmit}>
-                {error && (
-                  <Warning
-                    problem={error}
-                    shy={setError}
-                    className="margin-bottom-normal"
-                  />
-                )}
+            <Block last>
+              <Block className="center" first last>
+                <h1 className="fg-whitish">Contact Us</h1>
+              </Block>
 
-                {status === 'SENT' ? (
-                  <>
-                    Thank You!
-                    <br />
-                    We'll keep in touch with you very soon.
-                  </>
-                ) : (
-                  <>
-                    <div>
-                      <Input
-                        value={msg.from}
-                        onChange={(e) =>
-                          setMsg({ ...msg, from: e.target.value })
-                        }
-                        name="email"
-                        placeholder={'Your Email'}
-                        type={'email'}
-                        className={
-                          styles['home-contact-form-send-message-input']
-                        }
-                        disabled={status === 'SENDING'}
-                        required
-                      />
-                    </div>
+              <Content
+                size="L"
+                transparent
+                className={styles['home-contact-form-container']}
+              >
+                <form method="POST" onSubmit={handleSubmit}>
+                  {error && (
+                    <Warning
+                      problem={error}
+                      shy={setError}
+                      className="margin-bottom-normal"
+                    />
+                  )}
 
-                    <div>
-                      <Input
-                        value={msg.subject}
-                        onChange={(e) =>
-                          setMsg({ ...msg, subject: e.target.value })
-                        }
-                        placeholder={'Subject'}
-                        className={
-                          styles['home-contact-form-send-message-input']
-                        }
-                        disabled={status === 'SENDING'}
-                        required
-                      />
-                    </div>
+                  {status === 'SENT' ? (
+                    <>
+                      Thank You!
+                      <br />
+                      We'll keep in touch with you very soon.
+                    </>
+                  ) : (
+                    <>
+                      <div>
+                        <Input
+                          value={msg.from}
+                          onChange={(e) =>
+                            setMsg({ ...msg, from: e.target.value })
+                          }
+                          name="email"
+                          placeholder={'Your Email'}
+                          type={'email'}
+                          className={
+                            styles['home-contact-form-send-message-input']
+                          }
+                          disabled={status === 'SENDING'}
+                          required
+                        />
+                      </div>
 
-                    <div>
-                      <TextArea
-                        value={msg.text}
-                        onChange={(e) =>
-                          setMsg({ ...msg, text: e.target.value })
-                        }
-                        placeholder={'Your Message'}
-                        className={
-                          styles['home-contact-form-send-message-input']
-                        }
-                        rows={7}
-                        disabled={status === 'SENDING'}
-                        required
-                      />
-                    </div>
+                      <div>
+                        <Input
+                          value={msg.subject}
+                          onChange={(e) =>
+                            setMsg({ ...msg, subject: e.target.value })
+                          }
+                          placeholder={'Subject'}
+                          className={
+                            styles['home-contact-form-send-message-input']
+                          }
+                          disabled={status === 'SENDING'}
+                          required
+                        />
+                      </div>
 
-                    <div>
-                      <Button
-                        primary
-                        type="submit"
-                        className={
-                          styles['home-contact-form-send-message-submit']
-                        }
-                        disabled={status === 'SENDING'}
-                        aria-label="Send Message"
-                      >
-                        {status === 'SENDING' ? (
-                          <Loading className="padding-none" />
-                        ) : (
-                          <>Send Message</>
-                        )}
-                      </Button>
-                    </div>
-                  </>
-                )}
-              </form>
-            </Content>
-          </Block>
-                         
-          </Yoga>                
+                      <div>
+                        <TextArea
+                          value={msg.text}
+                          onChange={(e) =>
+                            setMsg({ ...msg, text: e.target.value })
+                          }
+                          placeholder={'Your Message'}
+                          className={
+                            styles['home-contact-form-send-message-input']
+                          }
+                          rows={7}
+                          disabled={status === 'SENDING'}
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <Button
+                          primary
+                          type="submit"
+                          className={
+                            styles['home-contact-form-send-message-submit']
+                          }
+                          disabled={status === 'SENDING'}
+                          aria-label="Send Message"
+                        >
+                          {status === 'SENDING' ? (
+                            <Loading className="padding-none" />
+                          ) : (
+                            <>Send Message</>
+                          )}
+                        </Button>
+                      </div>
+                    </>
+                  )}
+                </form>
+              </Content>
+            </Block>
+          </Yoga>
         </Content>
       </div>
     </LiteParallax>

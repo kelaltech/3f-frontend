@@ -9,7 +9,7 @@ import LiteImage from '../lite-image/lite-image'
 
 function Header() {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false)
-  
+
   return (
     <div className={styles['header']}>
       <header className={styles['header-in-1']}>
