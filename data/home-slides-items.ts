@@ -30,7 +30,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
   },
 
   {
-    src: require('./product-pictures/sample-3.jpg'),
+    src: require('./product-pictures/sample-3.JPG'),
     links: [
       {
         href: '/products#sofa_set',
@@ -60,7 +60,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sample-13.jpg'),
+    src: require('./product-pictures/sample-13.JPG'),
     links: [
       {
         href: '/products#BEDROOM_FURNITURE',
