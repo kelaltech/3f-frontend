@@ -9,11 +9,11 @@ import LiteImage from '../lite-image/lite-image'
 
 function Header() {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false)
-
+  
   return (
     <div className={styles['header']}>
       <header className={styles['header-in-1']}>
-        <Content size="3XL" className={styles['header-in-2']}>
+        <Content className={styles['header-in-2']}>
           <Link href="/">
             <a
               className={styles['header-logo-and-wordmark']}

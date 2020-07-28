@@ -22,7 +22,7 @@ function Home({
     <Page space={false}>
       <HomeSlides />
       <HomeAbout />
-      <HomeProducts productData={products} />
+      {/* <HomeProducts productData={products} /> */}
       <HomeInstagram />
       <HomeNews newsData={news} />
       <HomeLocations />

@@ -7,8 +7,10 @@ import {
   Loading,
   TextArea,
   Warning,
+  Yoga,
 } from 'gerami'
 import Axios from 'axios'
+import Link from 'next/link'
 
 import styles from './home-contact.module.scss'
 import { IMessage } from '../../../../../pages/api/message'
@@ -44,8 +46,30 @@ function HomeContact() {
           <Block first className="center">
             <Img path={'brand/logo-red.png'} height={120} />
           </Block>
+          <Yoga maxCol={2}>
+            <Block last>
+              <Block className={'center'} first last>
+                <span className="fg-whitish" style={{fontSize: '24px', fontWeight: 'bold'}}>How can we help you?</span>
+              </Block>
+              <Content
+                size="L"
+                transparent
+                className={styles['home-contact-form-container']}
+              >
+                <p style={{textAlign: "center", fontSize: '17px'}} className="fg-whitish padding-top-big padding-bottom-big">
+                  We are here to answer any questions you might have about our company and our products. Reach out to us and we'll respond as soon as possible.
+                </p>
+                <hr/>
+                <p style={{textAlign: "center", fontSize: '17px'}} className="fg-whitish padding-top-big">
+                  Please feel free to visit us. You can find the closest showroom to you {' '}
+                  <Link href="/locations">
+                    <a>Here</a>
+                  </Link> 
+                </p>
+              </Content>
+            </Block>  
 
-          <Block last>
+            <Block last>
             <Block className="center" first last>
               <h1 className="fg-whitish">Contact Us</h1>
             </Block>
@@ -142,6 +166,8 @@ function HomeContact() {
               </form>
             </Content>
           </Block>
+                         
+          </Yoga>                
         </Content>
       </div>
     </LiteParallax>

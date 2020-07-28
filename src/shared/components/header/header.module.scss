@@ -1,11 +1,13 @@
 @import '../../../assets/styles/theme';
 @import 'header-height';
 
+$navMobileRate: 1.4;
+
 .header {
-  position: fixed;
+  position: sticky;
   z-index: 7;
 
-  height: $headerHeight;
+  // height: $headerHeight;
   width: 100%;
 
   top: 0;
@@ -20,19 +22,21 @@
   );
 
   .header-in-1 {
-    margin: $headerMarginHeight;
+    // margin: $headerMarginHeight;
 
     .header-in-2 {
       display: flex;
 
-      padding: $headerPaddingHeight ($headerPaddingHeight + $space / 2);
-
+      padding: $headerPaddingHeight ($headerPaddingHeight + 4 * $space);
+      @media (max-width: $mobile * $navMobileRate){
+        padding: $headerPaddingHeight ($headerPaddingHeight + $space);
+      }
       background-image: linear-gradient(
         to bottom,
         transparentize($bg, 0.03),
         transparentize($bg, 0.14)
       );
-      background-color: transparent !important;
+      // background-color: transparent !important;
       box-shadow: $shade-L !important;
     }
   }
@@ -46,7 +50,7 @@
   text-decoration: none !important;
 
   box-shadow: none !important;
-
+  
   .header-logo {
     display: inline-block;
     vertical-align: top;
@@ -71,7 +75,6 @@
   }
 }
 
-$navMobileRate: 1.4;
 
 .header-nav-container {
   display: block;
@@ -134,7 +137,7 @@ $navMobileRate: 1.4;
   .gerami-menu-drop {
     display: inline-block;
 
-    margin-top: $headerContentHeight;
+    // margin-top: $headerContentHeight;
 
     .gerami-menu-item {
       padding: ($space) ($space * 2);

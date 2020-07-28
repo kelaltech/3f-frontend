@@ -2,7 +2,7 @@ import { HomeSlidesItemType } from '../src/types/home-slides-item-type'
 
 export const homeSlideItems: HomeSlidesItemType[] = [
   {
-    src: require('./product-pictures/sample-14.jpeg'),
+    src: require('./product-pictures/sample-14.jpg'),
     links: [
       {
         href: '/products#sofa_set',
@@ -12,14 +12,14 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sample-2.jpeg'),
+    src: require('./product-pictures/sample-2.jpg'),
     links: [
       { href: '/products', children: 'See All Products' },
       { href: '/about', children: 'Learn More' },
     ],
   },
   {
-    src: require('./product-pictures/sample-1.jpeg'),
+    src: require('./product-pictures/sample-1.jpg'),
     links: [
       {
         href: '/products#kitchen_cabinate',
@@ -30,7 +30,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
   },
 
   {
-    src: require('./product-pictures/sample-3.jpeg'),
+    src: require('./product-pictures/sample-3.jpg'),
     links: [
       {
         href: '/products#sofa_set',
@@ -40,7 +40,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sample-10.jpeg'),
+    src: require('./product-pictures/sample-10.jpg'),
     links: [
       {
         href: '/products#dining_table',
@@ -60,7 +60,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sample-13.jpeg'),
+    src: require('./product-pictures/sample-13.jpg'),
     links: [
       {
         href: '/products#BEDROOM_FURNITURE',
