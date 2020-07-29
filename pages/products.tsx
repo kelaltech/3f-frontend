@@ -7,6 +7,7 @@ import Products from '../src/app/products/products'
 import { GetStaticProps } from 'next'
 import { Product } from '../src/types/product-type'
 import { strapiApiBase } from '../constants'
+
 function ProductsPage({ products }: { products: Product[] }) {
   return (
     <>
@@ -22,10 +23,15 @@ function ProductsPage({ products }: { products: Product[] }) {
 export default ProductsPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  // newsMetas.find((n) => n.id === params.newsId)
-  const products = await fetch(`${strapiApiBase}/products`).then((res) =>
-    res.json()
-  )
+  const products: Product[] = await fetch(
+    `${strapiApiBase}/products`
+  ).then((res) => res.json())
 
-  return { props: { products } }
+  return {
+    props: {
+      products: products.sort((a, b) =>
+        a.sorting != null && b.sorting != null ? a.sorting - b.sorting : 0
+      ),
+    },
+  }
 }

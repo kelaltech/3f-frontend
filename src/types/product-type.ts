@@ -5,6 +5,7 @@ export interface Product {
   updated_at: string
   descriptions: string
   productTypes: ProductType[]
+  sorting: null | number
 }
 
 export interface ProductType {
