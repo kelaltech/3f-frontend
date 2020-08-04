@@ -68,5 +68,4 @@ export const homeSlideItems: HomeSlidesItemType[] = [
       // { href: '/products', children: 'See All Products' },
     ],
   },
-
 ]
