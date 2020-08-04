@@ -11,7 +11,7 @@ export const locations: LocationsWithCategoryType[] = [
     locations: [
       {
         name: '(3F) Finfinne Furniture Factory HQ',
-        address: 'Saris Adey Abeba Area, 4\nAddis Ababa, Ethiopia',
+        address: 'Saris Adey Abeba Area, \nAddis Ababa, Ethiopia',
         mapUrl: 'https://goo.gl/maps/xkuAzDZNMevSugLi8',
       },
     ],

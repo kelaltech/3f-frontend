@@ -2,7 +2,7 @@ import { LocationType } from '../src/types/location-type'
 
 export const homeLocationsShowrooms: LocationType[] = [
   {
-    name: 'Jacros Showroom',
+    name: 'Salite Mihet Showroom',
     address:
       'Salite Mihet Area, Civil Service College, S, 1\nAddis Ababa, Ethiopia',
     mapUrl: 'https://goo.gl/maps/dosmgWqNgzoV3Bjo8',
