@@ -69,7 +69,7 @@ function Footer() {
                 </div>
                 <div>
                   <a href="tel:+251114425826">+251 11 157 2735</a>
-                </div>                               
+                </div>
               </div>
 
               <div className="margin-top-big">
