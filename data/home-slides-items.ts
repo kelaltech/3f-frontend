@@ -2,7 +2,7 @@ import { HomeSlidesItemType } from '../src/types/home-slides-item-type'
 
 export const homeSlideItems: HomeSlidesItemType[] = [
   {
-    src: require('./product-pictures/sample-14.jpg'),
+    src: require('./product-pictures/sofa-1.jpg'),
     links: [
       {
         href: '/product/2',
@@ -12,14 +12,14 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sample-2.jpg'),
+    src: require('./product-pictures/all.jpg'),
     links: [
       { href: '/products', children: 'See All Products' },
       { href: '/about', children: 'Learn More' },
     ],
   },
   {
-    src: require('./product-pictures/sample-1.jpg'),
+    src: require('./product-pictures/kitchen-2.jpg'),
     links: [
       {
         href: '/product/36',
@@ -29,7 +29,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sample-13.JPG'),
+    src: require('./product-pictures/bed-1.JPG'),
     links: [
       {
         href: '/product/13',
@@ -39,7 +39,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sample-3.JPG'),
+    src: require('./product-pictures/sofa-2.JPG'),
     links: [
       {
         href: '/product/2',
@@ -49,7 +49,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sample-10.jpg'),
+    src: require('./product-pictures/dining-1.jpg'),
     links: [
       {
         href: '/product/29',
@@ -59,7 +59,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sample-6.jpeg'),
+    src: require('./product-pictures/bed-2.jpeg'),
     links: [
       {
         href: '/product/13',
@@ -68,4 +68,24 @@ export const homeSlideItems: HomeSlidesItemType[] = [
       // { href: '/products', children: 'See All Products' },
     ],
   },
+  {
+    src: require('./product-pictures/kitchen-3.jpg'),
+    links: [
+      {
+        href: '/product/36',
+        children: 'More kitchen cabinate',
+      },
+      // { href: '/products', children: 'See All Products' },
+    ],
+  },
+  {
+    src: require('./product-pictures/kitchen-1.jpg'),
+    links: [
+      {
+        href: '/product/36',
+        children: 'More kitchen cabinate',
+      },
+      // { href: '/products', children: 'See All Products' },
+    ],
+  }
 ]

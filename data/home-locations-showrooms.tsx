@@ -4,18 +4,13 @@ export const homeLocationsShowrooms: LocationType[] = [
   {
     name: 'Salite Mihet Showroom',
     address:
-      'Salite Mihet Area, Civil Service College, S, 1\nAddis Ababa, Ethiopia',
+      'Salite Mihet Area, Civil Service College\nAddis Ababa, Ethiopia',
     mapUrl: 'https://goo.gl/maps/dosmgWqNgzoV3Bjo8',
   },
   {
-    name: 'Piazza Showroom',
+    name: 'Saris Showroom',
     address:
-      'Samueal Deressa Building, Mahatma Gandhi St\nAddis Ababa, Ethiopia',
-    mapUrl: 'https://goo.gl/maps/qwBwBLneYniaZBKm9',
-  },
-  {
-    name: 'Urael Showroom',
-    address: 'Meskel Square Area, Jomo Kenyatta St\nAddis Ababa, Ethiopia',
-    mapUrl: 'https://goo.gl/maps/BkqVYZPASjHuzrpQA',
-  },
+      'Adey Abeba, Saris\nAddis Ababa, Ethiopia ',
+    mapUrl: 'https://goo.gl/maps/xkuAzDZNMevSugLi8',
+  }  
 ]

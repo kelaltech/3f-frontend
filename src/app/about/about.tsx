@@ -25,7 +25,7 @@ function About() {
         <Content size={'XXL'} className={styles['back-card']}>
           <Block className={`${styles['back-card-block']}`}>
             <h1>About</h1>
-            <p className={'center'}>
+            <p>
               Finfine Furniture factory (3F) is established in 1959 E.C. and the
               company has historic existence. It's been almost five decades
               since its establishment. The company is playing a critical role in

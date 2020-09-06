@@ -65,17 +65,11 @@ function Footer() {
                   Phone
                 </div>
                 <div>
-                  <a href="tel:+251114420022">+251 11 442 0022</a>
+                  <a href="tel:+251114420022">+251 11 157 2729</a>
                 </div>
                 <div>
-                  <a href="tel:+251114425826">+251 11 442 5826</a>
-                </div>
-                <div>
-                  <a href="tel:+251114420427">+251 11 442 0427</a>
-                </div>
-                <div>
-                  <a href="tel:+251114402299">+251 11 440 2299</a>
-                </div>
+                  <a href="tel:+251114425826">+251 11 157 2735</a>
+                </div>                               
               </div>
 
               <div className="margin-top-big">
@@ -88,7 +82,7 @@ function Footer() {
                 >
                   Fax
                 </div>
-                <div>+251 11 443 1566</div>
+                <div>+251 115 64574</div>
               </div>
             </Block>
           </div>

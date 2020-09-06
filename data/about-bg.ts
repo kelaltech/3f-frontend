@@ -1,3 +1,3 @@
 export const aboutBg = {
-  src: require('./product-pictures/aboutBG.jpg'),
+  src: require('./about/aboutBG.jpg'),
 }
