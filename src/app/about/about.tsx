@@ -49,7 +49,7 @@ function About() {
           </div>
         </Content>
       </Block>
-
+    
       {/*values*/}
       <Block
         first
@@ -71,7 +71,7 @@ function About() {
         <Content size={'XL'} className={styles['value-back-card']}>
           <Block first className={styles['value-back-card-block']}>
             <h1>Our Values</h1>
-            <p className={'fg-whitish'}>
+            <p>
               <span>
                 - We devote ourselves to achieve better results by using limited
                 resources.
@@ -130,44 +130,30 @@ function About() {
       </Block>
 
       {/*Team*/}
-      <Block last>
-        <h1 className={'center'}>Meet the Team</h1>
-        <Content size={'XXL'} transparent className={styles['back-card']}>
+      <Content style={{backgroundColor: '#bc2239'}}>
+          <Block first/>
+          <h1 style={{color: 'white'}} className={'center'}>Managment Team</h1>
+          <Block first/>
+        </Content>
+      <Block last> 
+        <Content size={'XXL'} transparent className={`center ${styles['back-card']}`}>
           <Block last className={styles['back-card-block']}>
-            <Yoga maxCol={3}>
+            <Yoga maxCol={2}>
               <div>
-                <Content size={'XS'} className={'padding-normal'}>
-                  <Img
-                    path={'about/value-pointer.png'}
-                    alt={'3F logo'}
-                    height={300}
-                  />
-                </Content>
-                <h4 className={'margin-top-big'}>Genet Sahilu (Mrs.)</h4>
-                <span>Dep.general manager</span>
+                <h1 className={'margin-top-big'}>Genet Sahilu (Mrs.)</h1>
+                <span>General manager</span>
               </div>
-
               <div>
-                <Content size={'XS'} className={'padding-normal'}>
-                  <Img
-                    path={'about/value-pointer.png'}
-                    alt={'3f logo'}
-                    height={300}
-                  />
-                </Content>
-                <h4 className={'margin-top-big'}>Demelash Shimelis (Mr.)</h4>
+                <h1 className={'margin-top-big'}>Sirak Tesfaye (Mr.)</h1>
+                <span>Dep. General manager</span>
+              </div>  
+              <div>
+                <h1 className={'margin-top-big'}>Demelash Shimelis (Mr.)</h1>
                 <span>Marketing manager</span>
               </div>
 
               <div>
-                <Content size={'XS'} className={'padding-normal'}>
-                  <Img
-                    path={'about/value-pointer.png'}
-                    alt={'3f logo'}
-                    height={300}
-                  />
-                </Content>
-                <h4 className={'margin-top-big'}>Adane Tasena (Mr.)</h4>
+                <h1 className={'margin-top-big'}>Abel Getachew (Mr.)</h1>
                 <span>Procurement Division Manager</span>
               </div>
             </Yoga>
