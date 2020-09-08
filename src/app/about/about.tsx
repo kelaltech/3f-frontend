@@ -49,7 +49,7 @@ function About() {
           </div>
         </Content>
       </Block>
-    
+
       {/*values*/}
       <Block
         first
@@ -130,13 +130,19 @@ function About() {
       </Block>
 
       {/*Team*/}
-      <Content style={{backgroundColor: '#bc2239'}}>
-          <Block first/>
-          <h1 style={{color: 'white'}} className={'center'}>Managment Team</h1>
-          <Block first/>
-        </Content>
-      <Block last> 
-        <Content size={'XXL'} transparent className={`center ${styles['back-card']}`}>
+      <Content style={{ backgroundColor: '#bc2239' }}>
+        <Block first />
+        <h1 style={{ color: 'white' }} className={'center'}>
+          Managment Team
+        </h1>
+        <Block first />
+      </Content>
+      <Block last>
+        <Content
+          size={'XXL'}
+          transparent
+          className={`center ${styles['back-card']}`}
+        >
           <Block last className={styles['back-card-block']}>
             <Yoga maxCol={2}>
               <div>
@@ -146,7 +152,7 @@ function About() {
               <div>
                 <h1 className={'margin-top-big'}>Sirak Tesfaye (Mr.)</h1>
                 <span>Dep. General manager</span>
-              </div>  
+              </div>
               <div>
                 <h1 className={'margin-top-big'}>Demelash Shimelis (Mr.)</h1>
                 <span>Marketing manager</span>

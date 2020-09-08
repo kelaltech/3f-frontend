@@ -2,7 +2,7 @@ import { HomeSlidesItemType } from '../src/types/home-slides-item-type'
 
 export const homeSlideItems: HomeSlidesItemType[] = [
   {
-    src: require('./product-pictures/sofa-1.jpg'),
+    src: require('./product-pictures/sofa-1.JPG'),
     links: [
       {
         href: '/product/2',
