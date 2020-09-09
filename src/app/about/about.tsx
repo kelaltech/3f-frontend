@@ -94,7 +94,7 @@ function About() {
         </Content>
       </Block>
 
-      {/*vision*/}
+      {/*Mission*/}
       <Block
         first
         className={`margin-top-very-big ${styles['ab-card-box']} ${styles['ab-vision-box']}`}
