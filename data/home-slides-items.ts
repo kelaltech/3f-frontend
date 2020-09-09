@@ -39,7 +39,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sofa-2.JPG'),
+    src: require('./product-pictures/sofa-2.jgp'),
     links: [
       {
         href: '/product/2',
