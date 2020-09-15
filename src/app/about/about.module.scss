@@ -44,25 +44,26 @@
 
 .ab-card-box {
   position: relative;
-  height: 70vh;
+  background-color: $accent;
 
-  @media screen and (max-width: 1040px) {
+  @media screen and (max-width: 1260px) {
     display: flex;
   }
-  @media screen and (max-width: $mobile) {
+
+  @media screen and (max-width: 814px) {
     flex-direction: column-reverse;
-    height: 100vh;
     margin-top: 0 !important;
+    .front-card {
+      max-width: 100% !important;
+      padding: 24px;
+    }
   }
+
   .back-card {
-    height: 400px;
-    // text-align: center;
+    height: 100%;
     background-color: #bc2239;
     color: white;
 
-    @media screen and (max-width: 600px) {
-      height: 500px;
-    }
     .back-card-block {
       width: 63.5%;
       height: inherit;
@@ -70,7 +71,22 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      @media screen and (max-width: 1040px) {
+      padding-top: 25px !important;
+
+      p {
+        span {
+          display: inline-block;
+          margin-bottom: $space/3;
+          padding-left: $space;
+
+          &:before {
+            width: 10px;
+            height: 10px;
+            background-color: #bc2239;
+          }
+        }
+      }
+      @media screen and (max-width: 1260px) {
         width: 100%;
         align-self: center;
       }
@@ -78,8 +94,8 @@
   }
   .front-card {
     position: absolute;
-    right: 100px;
-    top: -$space;
+    right: -100px;
+    top: -50px;
     height: 300px;
     display: flex;
     align-items: center;
@@ -88,91 +104,44 @@
     font-size: 30px;
     color: $primary;
 
-    @media screen and (max-width: 1040px) {
+    @media screen and (max-width: 1260px) {
       position: static !important;
+      height: inherit;
+      margin: 0 !important;
     }
   }
-}
-
-.ab-who-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media screen and (max-width: 550px) {
-    flex-wrap: wrap;
-    justify-content: center;
-    div {
-      margin-right: 0 !important;
-      img {
-        height: 50px;
-      }
-    }
-  }
-}
-
-.ab-vision-box {
-  @media screen and (max-width: $mobile) {
-    flex-direction: column;
-  }
-
-  .back-vision-card {
-    @media screen and (max-width: 640px) {
-      font-size: 14px;
-    }
-  }
-}
-.vision-box {
-  background-color: $accent;
-  color: $bg;
-}
-.vision-sub-box {
-  p {
-    text-align: left;
-  }
-  display: flex;
-  align-items: center;
-}
-
-.vision-front-card {
-  background-color: $accent !important;
 }
 
 .value-card-box {
   position: relative;
-  height: 70vh;
-  // height: 100vh !important;
 
-  @media screen and (max-width: 1040px) {
+  @media screen and (max-width: 1260px) {
     display: flex;
   }
-  @media screen and (max-width: $mobile) {
+
+  @media screen and (max-width: 814px) {
     flex-direction: column;
     margin-top: 0 !important;
-    height: 75vh;
+    .front-card {
+      max-width: 100% !important;
+      padding: 24px;
+    }
   }
 
   .value-back-card {
-    height: 350px;
-    background-color: $primary;
+    height: 100%;
+    background-color: #bc2239;
     color: white;
 
-    @media screen and (max-width: 600px) {
-      height: 500px;
-    }
-
-    @media screen and (max-width: 1040px) {
-      height: auto !important;
-    }
-
     .value-back-card-block {
-      width: 63.5%;
-      float: right;
+      width: 100%;
       height: inherit;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding-left: 300px;
+
       p {
         margin-bottom: 32px;
         span {
@@ -187,16 +156,17 @@
           }
         }
       }
-      @media screen and (max-width: 1040px) {
+      @media screen and (max-width: 1260px) {
         width: 100%;
         align-self: center;
+        padding-left: 0;
       }
     }
   }
   .value-front-card {
     position: absolute;
-    left: 100px;
-    top: -$space;
+    top: -50px;
+    left: -100px;
     height: 300px;
     display: flex;
     align-items: center;
@@ -204,9 +174,14 @@
     flex-direction: column;
     font-size: 30px;
     color: $primary;
+
+    font-size: 30px;
     padding: 42px;
-    @media screen and (max-width: 1040px) {
+
+    @media screen and (max-width: 1260px) {
       position: static !important;
+      height: inherit;
+      margin: 0 !important;
     }
   }
 }

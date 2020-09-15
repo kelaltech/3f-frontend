@@ -21,7 +21,16 @@ function About() {
           </span>
         </Block>
       </div>
-      <Block className={`margin-top-very-big ${styles['ab-card-box']}`}>
+
+      {/* about */}
+
+      <Block first last />
+
+      <Content
+        size={'XXL'}
+        transparent
+        className={`margin-top-very-big ${styles['ab-card-box']}`}
+      >
         <Content size={'XXL'} className={styles['back-card']}>
           <Block className={`${styles['back-card-block']}`}>
             <h1>About</h1>
@@ -48,11 +57,13 @@ function About() {
             </div>
           </div>
         </Content>
-      </Block>
-
-      {/*values*/}
-      <Block
-        first
+      </Content>
+      <Block first last />
+      <Block first last />
+      {/* values */}
+      <Content
+        size={'XXL'}
+        transparent
         className={`margin-top-very-big ${styles['value-card-box']}`}
       >
         <Content
@@ -92,42 +103,50 @@ function About() {
             </p>
           </Block>
         </Content>
-      </Block>
+      </Content>
+      <Block first last />
+      <Block first last />
 
-      {/*Mission*/}
-      <Block
-        first
-        className={`margin-top-very-big ${styles['ab-card-box']} ${styles['ab-vision-box']}`}
+      {/* mission */}
+
+      <Content
+        size={'XXL'}
+        transparent
+        className={`margin-top-very-big ${styles['ab-card-box']}`}
       >
-        <Content size={'S'} className={styles['front-card']}>
-          <div>
-            <Img path={'about/eye.png'} alt={'3f logo'} height={100} />
-          </div>
-        </Content>
-        <Content
-          size={'XL'}
-          className={`${styles['back-card']} ${styles['vision-front-card']}`}
-        >
-          <Block
-            className={`${styles['back-card-block']} ${styles['back-vision-card']}`}
-          >
+        <Content size={'XXL'} className={styles['back-card']}>
+          <Block className={`${styles['back-card-block']}`}>
             <h1>Our Mission</h1>
-            <span>
-              - To create value for our customer through reliablity, flexiblity,
-              integrity & speed.
-            </span>
-            <span>
-              - To create a culture that values & supports employee engamgment,
-              encourages pesonal development and faster team collaboration.
-            </span>
-            <span>
-              - To be committed to our global responsibility of enviromental
-              care by manufacturing product that meet our standard of
-              sustainablity.
-            </span>
+            <p>
+              <span>
+                - To create value for our customer through reliablity,
+                flexiblity, integrity & speed.
+              </span>
+              <span>
+                - To create a culture that values & supports employee
+                engamgment, encourages pesonal development and faster team
+                collaboration.
+              </span>
+              <span>
+                - To be committed to our global responsibility of enviromental
+                care by manufacturing product that meet our standard of
+                sustainablity.
+              </span>
+            </p>
           </Block>
         </Content>
-      </Block>
+        <Content size={'S'} className={styles['front-card']}>
+          <div>
+            <div className={'margin-right-very-big'}>
+              <Img path={'about/eye.png'} alt={'3f logo'} height={100} />
+            </div>
+          </div>
+        </Content>
+      </Content>
+
+      <Block first last />
+      <Block first last />
+      <Block first last />
 
       {/*Team*/}
       <Content style={{ backgroundColor: '#bc2239' }}>
