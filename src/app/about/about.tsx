@@ -16,8 +16,10 @@ function About() {
       >
         <Block className={`center ${styles['about-hero-tag']}`}>
           <h1> Vission </h1>
-          <span> <h2>To be the Leader of Quality! </h2> 
-            Furniture Manufacturing <DotSpace/> Local & Export Market{' '}
+          <span>
+            {' '}
+            <h2>To be the Leader of Quality! </h2>
+            Furniture Manufacturing <DotSpace /> Local & Export Market{' '}
           </span>
         </Block>
       </div>
