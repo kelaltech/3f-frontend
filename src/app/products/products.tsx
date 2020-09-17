@@ -13,11 +13,11 @@ function Products({ productData }: { productData: Product[] }) {
   return (
     <Page space={false}>
       <LiteParallax
-        src={{ src: require('../../assets/images/brand/logo-white.png') }}
-        strength={500}
+        src={{ src: require('../../../data/product-pictures/product-bg.jpg') }}
+        strength={200}
         className="bg-accent"
       >
-        <div className={`${styles['products-header']} bg-accent fg-whitish`}>
+        <div className={`${styles['products-header']} fg-whitish`}>
           <Content size="3XL" transparent>
             <Block first last className="center">
               <h1 className="fg-white">Our Products</h1>

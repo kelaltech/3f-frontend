@@ -52,12 +52,12 @@ function ProductDetail({ product }: ProductDetailProps) {
       <LiteParallax
         src={`${
           product.productCatagoryType === 'sofa_set'
-            ? product.productTypes[0].eachProduct[1]?.images[0]?.formats.large
+            ? product.productTypes[0].eachProduct[0]?.images[0]?.formats.large
                 .url
             : product.productTypes[0].eachProduct[0]?.images[0]?.formats.large
                 .url ?? undefined
         }`}
-        strength={250}
+        strength={500}
       >
         <div className={`${styles['product-detail-top-pic']}`}>
           <div className={`${styles['product-detail-overlay']}`}>

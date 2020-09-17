@@ -2,10 +2,7 @@ import { LocationsWithCategoryType } from '../src/types/locations-with-category-
 import { homeLocationsShowrooms } from './home-locations-showrooms'
 
 export const locations: LocationsWithCategoryType[] = [
-  {
-    categoryTitle: 'Our Showrooms',
-    locations: homeLocationsShowrooms,
-  },
+ 
   {
     categoryTitle: 'Our HQ',
     locations: [
@@ -16,5 +13,9 @@ export const locations: LocationsWithCategoryType[] = [
       },
     ],
     maxPerCol: 1,
+  }, 
+  {
+    categoryTitle: 'Our Showrooms',
+    locations: homeLocationsShowrooms,
   },
 ]

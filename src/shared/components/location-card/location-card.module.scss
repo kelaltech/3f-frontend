@@ -6,7 +6,7 @@
 .location-card-name {
   border-bottom: 2px solid transparentize($bg, 0.77);
 
-  font-size: $font-L;
+  font-size: 30px;
   font-weight: bold;
 
   color: $bg;
@@ -22,7 +22,7 @@
 
 .location-card-description-address {
   flex: 1;
-
+  font-size: 17px;
   padding: 0 ($space) 0 0;
 }
 

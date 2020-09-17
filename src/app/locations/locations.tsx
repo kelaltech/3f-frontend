@@ -22,7 +22,7 @@ function Locations() {
           <Content size="3XL" transparent key={i}>
             <Block first last className="center">
               {typeof location.categoryTitle === 'string' ? (
-                <h1 className="fg-white">
+                <h1 className="fg-white" style={{fontSize: '45px'}}>
                   <pre>{location.categoryTitle}</pre>
                 </h1>
               ) : (

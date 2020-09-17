@@ -16,7 +16,7 @@ function HomeLocations() {
       <div className="bg-accent fg-whitish padding-vertical-very-big">
         <Content size="3XL" transparent className="padding-vertical-big">
           <Block first>
-            <h1 className="center fg-white">Come Visit Our Showrooms</h1>
+            <h1 className="center fg-white" style={{fontSize: '45px'}}>Come Visit Our Showrooms</h1>
           </Block>
 
           <Block className="margin-vertical-none">
@@ -24,7 +24,7 @@ function HomeLocations() {
           </Block>
 
           <Block className="padding-top-none">
-            <Yoga maxCol={3}>
+            <Yoga maxCol={2}>
               {homeLocationsShowrooms.map((location, i) => (
                 <LocationCard
                   location={location}

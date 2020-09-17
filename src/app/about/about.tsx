@@ -15,9 +15,9 @@ function About() {
         style={{ backgroundImage: `url(${aboutBg.src})` }}
       >
         <Block className={`center ${styles['about-hero-tag']}`}>
-          <h1>To be the Leader of Quality!</h1>
-          <span>
-            Furniture Manufacturing <DotSpace /> Local & Export Market{' '}
+          <h1> Vission </h1>
+          <span> <h2>To be the Leader of Quality! </h2> 
+            Furniture Manufacturing <DotSpace/> Local & Export Market{' '}
           </span>
         </Block>
       </div>
@@ -151,7 +151,7 @@ function About() {
       {/*Team*/}
       <Content style={{ backgroundColor: '#bc2239' }}>
         <Block first />
-        <h1 style={{ color: 'white' }} className={'center'}>
+        <h1 style={{ color: 'white', fontSize: '30px' }} className={'center'}>
           Managment Team
         </h1>
         <Block first />
