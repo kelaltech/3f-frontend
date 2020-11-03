@@ -1,12 +1,11 @@
-import React from 'react'
 import { Block, Content, Yoga } from 'gerami'
-// import Masonry from 'react-masonry-component'
 
-import styles from './news.module.scss'
-import Page from '../../shared/components/page/page'
-import NewsCard from '../../shared/components/news-card/news-card'
 import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
+import NewsCard from '../../shared/components/news-card/news-card'
+import Page from '../../shared/components/page/page'
 import { NewsMetaType } from '../../types/news-meta-type'
+// import Masonry from 'react-masonry-component'
+import styles from './news.module.scss'
 
 type NewsType = {
   id: string

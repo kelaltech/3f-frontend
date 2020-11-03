@@ -1,8 +1,7 @@
-import React from 'react'
-import { NextSeo } from 'next-seo/lib'
+import { NextSeo } from 'next-seo'
 
-import Layout from '../src/shared/components/layout/layout'
 import About from '../src/app/about/about'
+import Layout from '../src/shared/components/layout/layout'
 
 function AboutPage() {
   return (

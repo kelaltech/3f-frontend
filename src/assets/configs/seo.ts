@@ -1,4 +1,4 @@
-import { NextSeoProps } from 'next-seo/lib'
+import { NextSeoProps } from 'next-seo'
 
 export default {
   title: 'Official Website – (3F) Finfine Furniture Factory PLC',
@@ -17,9 +17,9 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ethio3f.com/',
+    url: 'https://www.ethio3f.com/',
     site_name: '(3F) Finfine Furniture Factory PLC',
-    images: [{ url: 'https://ethio3f.com/promo.png' }],
+    images: [{ url: 'https://www.ethio3f.com/promo.png' }],
   },
 
   twitter: {

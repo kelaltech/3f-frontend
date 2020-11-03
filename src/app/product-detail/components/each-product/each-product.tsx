@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-import styles from './each-product.module.scss'
-import FullImageMode from '../full-image-mode/full-image-mode'
-import { Block, Yoga, Button } from 'gerami'
+import { Block, Button, Yoga } from 'gerami'
+import { useState } from 'react'
+
 import { EachProduct as EachProductType } from '../../../../types/product-type'
+import FullImageMode from '../full-image-mode/full-image-mode'
+import styles from './each-product.module.scss'
+
 type eachProductType = {
   each: EachProductType
 }

@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import { Block, Content, Yoga, Anchor } from 'gerami'
-import styles from './product-detail.module.scss'
+import { Anchor, Block, Content, Yoga } from 'gerami'
+import Markdown from 'markdown-to-jsx'
+import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import EachProduct from './components/each-product/each-product'
-import { NextSeo } from 'next-seo/lib'
+import { useEffect, useState } from 'react'
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -12,21 +11,23 @@ import {
   TwitterShareButton,
   WhatsappShareButton,
 } from 'react-share'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
+
 import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
 import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import Page from '../../shared/components/page/page'
 // import LiteImage from '../../shared/components/lite-image/lite-image'
 import { nameProductCategory } from '../../lib/name-product-category'
-import { Product } from '../../types/product-type'
 import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
-import Markdown from 'markdown-to-jsx'
+import Page from '../../shared/components/page/page'
+import { Product } from '../../types/product-type'
+import EachProduct from './components/each-product/each-product'
+import styles from './product-detail.module.scss'
 
 type ProductDetailProps = {
   product: Product

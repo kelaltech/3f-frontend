@@ -1,9 +1,8 @@
-import React from 'react'
+import Link from 'next/link'
 import Slider from 'react-slick'
 
-import styles from './home-slides.module.scss'
 import { homeSlideItems } from '../../../../../data/home-slides-items'
-import Link from 'next/link'
+import styles from './home-slides.module.scss'
 
 function HomeSlides() {
   return (

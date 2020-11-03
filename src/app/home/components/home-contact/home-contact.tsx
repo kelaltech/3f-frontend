@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import Axios from 'axios'
 import {
   Block,
   Button,
@@ -9,15 +9,15 @@ import {
   Warning,
   Yoga,
 } from 'gerami'
-import Axios from 'axios'
 import Link from 'next/link'
+import { useState } from 'react'
 
-import styles from './home-contact.module.scss'
+import { homeContactBg } from '../../../../../data/home-contact-bg'
 import { IMessage } from '../../../../../pages/api/message'
+import Img from '../../../../shared/components/img/img'
 import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
-import { homeContactBg } from '../../../../../data/home-contact-bg'
-import Img from '../../../../shared/components/img/img'
+import styles from './home-contact.module.scss'
 
 function HomeContact() {
   const [msg, setMsg] = useState<IMessage>({ from: '', subject: '', text: '' })

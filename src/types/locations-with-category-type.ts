@@ -1,5 +1,6 @@
-import { LocationType } from './location-type'
 import { ReactNode } from 'react'
+
+import { LocationType } from './location-type'
 
 export type LocationsWithCategoryType = {
   categoryTitle: string | ReactNode

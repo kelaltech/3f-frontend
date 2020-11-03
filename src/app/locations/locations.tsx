@@ -1,11 +1,10 @@
-import React from 'react'
 import { Block, Content, Yoga } from 'gerami'
 
-import styles from './locations.module.scss'
-import Page from '../../shared/components/page/page'
-import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 import { locations } from '../../../data/locations'
+import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 import LocationCard from '../../shared/components/location-card/location-card'
+import Page from '../../shared/components/page/page'
+import styles from './locations.module.scss'
 
 function Locations() {
   return (

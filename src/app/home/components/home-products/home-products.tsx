@@ -1,13 +1,12 @@
-import React from 'react'
 import { Block, Content, FlexSpacer } from 'gerami'
 import Link from 'next/link'
 import Slider from 'react-slick'
 
-import styles from './home-products.module.scss'
+import { nameProductCategory } from '../../../../lib/name-product-category'
 // import { homeProducts } from '../../../../../data/home-products'
 import ProductCard from '../../../../shared/components/product-card/product-card'
 import { Product } from '../../../../types/product-type'
-import { nameProductCategory } from '../../../../lib/name-product-category'
+import styles from './home-products.module.scss'
 
 function HomeProducts({ productData }: { productData: Product[] }) {
   return (

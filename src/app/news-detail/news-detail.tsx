@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
 import { Block, Content, Yoga } from 'gerami'
+import Markdown from 'markdown-to-jsx'
+import { NextSeo } from 'next-seo'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import { NextSeo } from 'next-seo/lib'
-import styles from './news-detail.module.scss'
+import { useEffect, useState } from 'react'
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -12,17 +12,19 @@ import {
   TwitterShareButton,
   WhatsappShareButton,
 } from 'react-share'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
+
 import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
 import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft'
-import Markdown from 'markdown-to-jsx'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import Page from '../../shared/components/page/page'
 import { NewsMetaType } from '../../types/news-meta-type'
+import styles from './news-detail.module.scss'
 
 type NewsDetailProps = {
   news: NewsMetaType

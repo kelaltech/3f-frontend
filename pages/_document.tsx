@@ -1,15 +1,14 @@
-import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
+          <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-          <link rel="preconnect" href="https://www.google-analytics.com" />
 
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />

@@ -1,12 +1,11 @@
-import React from 'react'
-import { NextSeo } from 'next-seo/lib'
 import fetch from 'isomorphic-unfetch'
-
-import Layout from '../src/shared/components/layout/layout'
-import Products from '../src/app/products/products'
 import { GetStaticProps } from 'next'
-import { Product } from '../src/types/product-type'
+import { NextSeo } from 'next-seo'
+
 import { strapiApiBase } from '../constants'
+import Products from '../src/app/products/products'
+import Layout from '../src/shared/components/layout/layout'
+import { Product } from '../src/types/product-type'
 
 function ProductsPage({ products }: { products: Product[] }) {
   return (

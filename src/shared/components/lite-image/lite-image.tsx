@@ -1,4 +1,3 @@
-import React from 'react'
 import { Image } from 'gerami'
 import { IImageProps } from 'gerami/src/components/Image/Image'
 

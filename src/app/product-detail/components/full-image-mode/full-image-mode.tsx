@@ -1,9 +1,11 @@
-import React from 'react'
-import styles from './full-image-mode.module.scss'
-import Slider from 'react-slick'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
 import { Content } from 'gerami'
+import Slider from 'react-slick'
+
+import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import styles from './full-image-mode.module.scss'
+
 type fullImageType = {
   onClose: (isFullScren: boolean) => void
   each: any
