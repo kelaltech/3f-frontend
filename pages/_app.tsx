@@ -1,14 +1,13 @@
-import React from 'react'
+import { DefaultSeo } from 'next-seo'
 import App from 'next/app'
-import { DefaultSeo } from 'next-seo/lib'
-
-import '../src/assets/styles/index.scss'
-import { initGA, logPageView } from '../src/assets/scripts/google-analytics'
-import SEO from '../src/assets/configs/seo'
 
 // fontawesome config for SSR
-import '@fortawesome/fontawesome-svg-core/styles.css'
 import * as faSvgCore from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+import SEO from '../src/assets/configs/seo'
+import '../src/assets/styles/index.scss'
+
 faSvgCore.config.autoAddCss = false
 
 // AMP support
@@ -27,13 +26,6 @@ class MyApp extends App {
     // })
     // // fix for semi-triggered aos
     // window.addEventListener('load', () => Aos.refresh())
-
-    // google analytics
-    if (!(window as any).GA_INITIALIZED) {
-      initGA()
-      ;(window as any).GA_INITIALIZED = true
-    }
-    logPageView()
   }
 
   render() {

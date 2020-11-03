@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 import { Parallax, ParallaxProps } from 'react-parallax'
 
 import { IImgSrcInput } from '../../../lib/img-src'

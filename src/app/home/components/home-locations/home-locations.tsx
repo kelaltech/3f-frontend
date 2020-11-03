@@ -1,10 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
 import { Block, Content, Yoga } from 'gerami'
+import Link from 'next/link'
 
 import { homeLocationsShowrooms } from '../../../../../data/home-locations-showrooms'
-import LocationCard from '../../../../shared/components/location-card/location-card'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
+import LocationCard from '../../../../shared/components/location-card/location-card'
 
 function HomeLocations() {
   return (

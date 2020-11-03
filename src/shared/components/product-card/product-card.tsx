@@ -1,9 +1,10 @@
-import React from 'react'
-import { ProductType } from '../../../types/product-type'
 import { Card } from 'gerami'
 import Link from 'next/link'
+
 import { strapiApiBase } from '../../../../constants'
+import { ProductType } from '../../../types/product-type'
 import styles from './product-card.module.scss'
+
 // import useImgSrc from '../../hooks/use-img-src/use-img-src'
 // import { nameProductCategory } from '../../../lib/name-product-category'
 // import { stringifyCurrency } from '../../../lib/stringify-currency'

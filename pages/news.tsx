@@ -1,12 +1,11 @@
-import React from 'react'
-import { NextSeo } from 'next-seo/lib'
 import fetch from 'isomorphic-unfetch'
-
-import Layout from '../src/shared/components/layout/layout'
-import News from '../src/app/news/news'
 import { GetStaticProps } from 'next'
-import { NewsMetaType } from '../src/types/news-meta-type'
+import { NextSeo } from 'next-seo'
+
 import { strapiApiBase } from '../constants'
+import News from '../src/app/news/news'
+import Layout from '../src/shared/components/layout/layout'
+import { NewsMetaType } from '../src/types/news-meta-type'
 
 function NewsPage({ news }: { news: NewsMetaType[] }) {
   return (

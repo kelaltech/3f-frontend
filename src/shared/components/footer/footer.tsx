@@ -1,17 +1,16 @@
-import React from 'react'
-
 import { Block, Content } from 'gerami'
 import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import styles from './footer.module.scss'
 import DotSpace from '../dot-space/dot-space'
 import Img from '../img/img'
+import styles from './footer.module.scss'
 
 function Footer() {
   return (

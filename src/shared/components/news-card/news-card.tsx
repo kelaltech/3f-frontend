@@ -1,9 +1,9 @@
-import React, { PropsWithChildren } from 'react'
 import Link from 'next/link'
+import { PropsWithChildren } from 'react'
 
-import styles from './news-card.module.scss'
 import { strapiApiBase } from '../../../../constants'
 import { NewsMetaType } from '../../../types/news-meta-type'
+import styles from './news-card.module.scss'
 
 export type NewsCardProps = {
   newsMeta: NewsMetaType

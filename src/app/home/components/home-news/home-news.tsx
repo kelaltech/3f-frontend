@@ -1,12 +1,13 @@
-import React, { useMemo } from 'react'
 import { Block, Content, FlexSpacer } from 'gerami'
 import Link from 'next/link'
+import { useMemo } from 'react'
 import Slider from 'react-slick'
 
-import styles from './home-news.module.scss'
 import { homeNewsMetas } from '../../../../../data/home-news-metas'
 import NewsCard from '../../../../shared/components/news-card/news-card'
 import { NewsMetaType } from '../../../../types/news-meta-type'
+import styles from './home-news.module.scss'
+
 function HomeNews({ newsData }: { newsData: NewsMetaType[] }) {
   return (
     <div className="padding-vertical-very-big">

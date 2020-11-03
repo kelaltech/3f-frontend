@@ -1,11 +1,12 @@
-import React from 'react'
-import { NextSeo } from 'next-seo/lib'
-import { GetStaticProps, GetStaticPaths } from 'next'
 import fetch from 'isomorphic-unfetch'
-import Layout from '../../src/shared/components/layout/layout'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { NextSeo } from 'next-seo'
+
+import { strapiApiBase } from '../../constants'
 import NewsDetail from '../../src/app/news-detail/news-detail'
+import Layout from '../../src/shared/components/layout/layout'
 import { NewsMetaType } from '../../src/types/news-meta-type'
-import { strapiApiBase } from './../../constants'
+
 type NewsType = {
   id: string
   title: string

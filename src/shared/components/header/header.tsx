@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
 import { Button, Content, FlexSpacer, MenuDrop, MenuItem } from 'gerami'
 import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons/faBars'
+import { useState } from 'react'
 
-import styles from './header.module.scss'
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import LiteImage from '../lite-image/lite-image'
+import styles from './header.module.scss'
 
 function Header() {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false)

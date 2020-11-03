@@ -1,11 +1,10 @@
-import React from 'react'
 import { Block, Content, Yoga } from 'gerami'
 
-import styles from './about.module.scss'
-import Page from '../../shared/components/page/page'
-import Img from '../../shared/components/img/img'
 import { aboutBg } from '../../../data/about-bg'
 import DotSpace from '../../shared/components/dot-space/dot-space'
+import Img from '../../shared/components/img/img'
+import Page from '../../shared/components/page/page'
+import styles from './about.module.scss'
 
 function About() {
   return (

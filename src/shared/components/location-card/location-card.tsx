@@ -1,11 +1,11 @@
-import React from 'react'
 import { Block } from 'gerami'
 import { IBlockProps } from 'gerami/src/components/Block/Block'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkedAlt'
 
-import styles from './location-card.module.scss'
+import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkedAlt'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { LocationType } from '../../../types/location-type'
+import styles from './location-card.module.scss'
 
 type LocationCardProps = {
   location: LocationType

@@ -1,11 +1,10 @@
-import React from 'react'
-import { NextSeo } from 'next-seo/lib'
 import fetch from 'isomorphic-unfetch'
-
 import { GetStaticProps } from 'next'
+import { NextSeo } from 'next-seo'
+
 import { strapiApiBase } from '../constants'
-import Layout from '../src/shared/components/layout/layout'
 import Home from '../src/app/home/home'
+import Layout from '../src/shared/components/layout/layout'
 import { NewsMetaType } from '../src/types/news-meta-type'
 import { Product } from '../src/types/product-type'
 

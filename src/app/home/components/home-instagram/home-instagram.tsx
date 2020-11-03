@@ -1,12 +1,12 @@
-import React from 'react'
 import { Content } from 'gerami'
 
-import styles from './home-instagram.module.scss'
-import LiteImage from '../../../../shared/components/lite-image/lite-image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
-import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { homeInstagramTop } from '../../../../../data/home-instagram-top'
+import LiteImage from '../../../../shared/components/lite-image/lite-image'
+import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
+import styles from './home-instagram.module.scss'
 
 function HomeInstagram() {
   return (

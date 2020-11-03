@@ -1,10 +1,9 @@
-import React from 'react'
 import { Block, Content } from 'gerami'
 import Link from 'next/link'
 
-import styles from './home-about.module.scss'
-import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
 import Img from '../../../../shared/components/img/img'
+import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
+import styles from './home-about.module.scss'
 
 function HomeAbout() {
   return (
