@@ -40,7 +40,7 @@
     "@types/react-slick": "0.23.4",
     "@zeit/next-mdx": "1.2.0",
     "aos": "2.3.4",
-    "axios": "0.21.0",
+    "axios": "0.21.1",
     "brotli-webpack-plugin": "1.1.0",
     "compression-webpack-plugin": "6.0.5",
     "cross-env": "7.0.2",
