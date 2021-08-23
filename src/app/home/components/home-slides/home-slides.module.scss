@@ -10,16 +10,17 @@
 }
 
 .home-slides {
-  .home-slides-item {
+  .home-slide-item-container{
+    position: relative;
     height: 85vh;
     min-height: $mobile;
     width: 100%;
-
-    background-attachment: scroll;
+    > div{
+      overflow: initial !important;
+    }
+  }
+  .home-slides-item {
     background-color: $bg;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
 
     animation: home-slides-item-drama 15s ease-in-out 0s infinite alternate;
     transition: all 5s linear;
@@ -38,11 +39,11 @@
     margin-top: -$space * 11;
 
     text-align: center;
-
+    
     .home-slides-item-link {
       z-index: 10000;
 
-      margin: $space / 2;
+      margin: $space * 0.5;
       padding: ($space) ($space * 2);
 
       border-radius: $radius;

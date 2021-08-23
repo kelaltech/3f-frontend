@@ -8,7 +8,7 @@ import LocationCard from '../../../../shared/components/location-card/location-c
 function HomeLocations() {
   return (
     <LiteParallax
-      src={{ src: require('../../../../assets/images/brand/logo-white.png') }}
+      src={'/images/brand/logo-white.png'}
       strength={250}
       className="bg-accent"
     >

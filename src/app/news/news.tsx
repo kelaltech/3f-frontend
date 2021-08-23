@@ -4,7 +4,6 @@ import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 import NewsCard from '../../shared/components/news-card/news-card'
 import Page from '../../shared/components/page/page'
 import { NewsMetaType } from '../../types/news-meta-type'
-// import Masonry from 'react-masonry-component'
 import styles from './news.module.scss'
 
 type NewsType = {
@@ -16,7 +15,7 @@ function News({ newsData }: { newsData: NewsMetaType[] }) {
   return (
     <Page space={false}>
       <LiteParallax
-        src={{ src: require('../../assets/images/brand/logo-white.png') }}
+        src={'/images/brand/logo-white.png'}
         strength={500}
         className="bg-accent"
       >

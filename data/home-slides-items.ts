@@ -1,8 +1,16 @@
 import { HomeSlidesItemType } from '../src/types/home-slides-item-type'
-
+import sofa1 from './product-pictures/sofa-1.JPG'
+import all from './product-pictures/all.jpg'
+import kitchen2 from './product-pictures/kitchen-2.jpg'
+import bed1 from './product-pictures/bed-1.JPG'
+import sofa2 from './product-pictures/sofa-2.jpg'
+import dining1 from './product-pictures/dining-1.jpg'
+import bed2 from './product-pictures/bed-2.jpeg'
+import kitchen3 from './product-pictures/kitchen-3.jpg'
+import kitchen1 from './product-pictures/kitchen-1.jpg'
 export const homeSlideItems: HomeSlidesItemType[] = [
   {
-    src: require('./product-pictures/sofa-1.JPG'),
+    src: sofa1,
     links: [
       {
         href: '/product/2',
@@ -12,14 +20,14 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/all.jpg'),
+    src: all,
     links: [
       { href: '/products', children: 'See All Products' },
       { href: '/about', children: 'Learn More' },
     ],
   },
   {
-    src: require('./product-pictures/kitchen-2.jpg'),
+    src: kitchen2,
     links: [
       {
         href: '/product/36',
@@ -29,7 +37,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/bed-1.JPG'),
+    src: bed1,
     links: [
       {
         href: '/product/13',
@@ -39,7 +47,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/sofa-2.jpg'),
+    src: sofa2,
     links: [
       {
         href: '/product/2',
@@ -49,7 +57,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/dining-1.jpg'),
+    src: dining1,
     links: [
       {
         href: '/product/29',
@@ -59,7 +67,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/bed-2.jpeg'),
+    src: bed2,
     links: [
       {
         href: '/product/13',
@@ -69,7 +77,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/kitchen-3.jpg'),
+    src: kitchen3,
     links: [
       {
         href: '/product/36',
@@ -79,7 +87,7 @@ export const homeSlideItems: HomeSlidesItemType[] = [
     ],
   },
   {
-    src: require('./product-pictures/kitchen-1.jpg'),
+    src: kitchen1,
     links: [
       {
         href: '/product/36',

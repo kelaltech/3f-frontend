@@ -12,7 +12,7 @@ function Products({ productData }: { productData: Product[] }) {
   return (
     <Page space={false}>
       <LiteParallax
-        src={{ src: require('../../../data/product-pictures/product-bg.jpg') }}
+        src={'/images/product-bg.jpg'}
         strength={200}
         className="bg-accent"
       >

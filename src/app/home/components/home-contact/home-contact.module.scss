@@ -15,7 +15,7 @@
 }
 
 .home-contact-form-send-message-input {
-  margin: 0 0 ($space / 2);
+  margin: 0 0 ($space * 0.5);
 
   width: 100% !important;
   min-width: 100% !important;
@@ -28,7 +28,7 @@
 }
 
 .home-contact-form-send-message-submit {
-  margin: ($space / 4) 0 0;
+  margin: ($space * 0.25) 0 0;
   padding: 0;
 
   height: $space * 3.5;

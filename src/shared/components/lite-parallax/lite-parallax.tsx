@@ -5,7 +5,7 @@ import { IImgSrcInput } from '../../../lib/img-src'
 import useImgSrc from '../../hooks/use-img-src/use-img-src'
 
 export type LiteParallaxProps = Omit<ParallaxProps, 'bgImage'> & {
-  src?: IImgSrcInput
+  src?: string
 }
 
 function LiteParallax({
@@ -13,7 +13,7 @@ function LiteParallax({
   src,
   ...restAsParallaxProps
 }: PropsWithChildren<LiteParallaxProps>) {
-  const source = useImgSrc(src)
+  const source = `/_next/image?url=${src}&w=1920&q=75`
 
   return source === undefined ? (
     <>{children}</>

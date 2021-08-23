@@ -9,7 +9,7 @@ import styles from './locations.module.scss'
 function Locations() {
   return (
     <LiteParallax
-      src={{ src: require('../../assets/images/brand/logo-white.png') }}
+      src={'/images/brand/logo-white.png'}
       strength={500}
       className="bg-accent"
     >

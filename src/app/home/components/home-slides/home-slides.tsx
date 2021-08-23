@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 
 import { homeSlideItems } from '../../../../../data/home-slides-items'
 import styles from './home-slides.module.scss'
-
+import Image from 'next/image'
 function HomeSlides() {
   return (
     <>
@@ -21,10 +21,15 @@ function HomeSlides() {
       >
         {homeSlideItems.map((item, i) => (
           <div key={i}>
-            <div
+            <div className={styles['home-slide-item-container']} >
+              <Image
               className={styles['home-slides-item']}
-              style={{ backgroundImage: `url(${item.src})` }}
+              src={item.src}
+              layout="fill"
+              objectFit="cover"
             />
+            </div>
+            
             <div className={styles['home-slides-item-links-container']}>
               {item.links &&
                 item.links.map(({ href, className, ...aProps }, i) => (

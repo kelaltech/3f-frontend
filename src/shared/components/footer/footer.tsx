@@ -7,9 +7,10 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import logoWhite from '../../../assets/images/brand/logo-white.png'
+  
 import DotSpace from '../dot-space/dot-space'
-import Img from '../img/img'
+import Image from 'next/image'
 import styles from './footer.module.scss'
 
 function Footer() {
@@ -88,7 +89,7 @@ function Footer() {
 
           <div className="top" style={{ flex: 1 }}>
             <Block first>
-              <Img path={'brand/logo-white.png'} height={70} />
+              <Image src={logoWhite} height={70} width={93} />
             </Block>
 
             <Block first>

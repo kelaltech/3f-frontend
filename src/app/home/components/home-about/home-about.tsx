@@ -1,14 +1,14 @@
 import { Block, Content } from 'gerami'
 import Link from 'next/link'
 
-import Img from '../../../../shared/components/img/img'
+import Image from 'next/image'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
 import styles from './home-about.module.scss'
-
+import logoWhite from '../../../../assets/images/brand/logo-white.png'
 function HomeAbout() {
   return (
     <LiteParallax
-      src={{ src: require('../../../../assets/images/brand/logo-white.png') }}
+      src={'/images/brand/logo-white.png'}
       strength={250}
       className={`${styles['home-about-lite-parallax']} bg-accent`}
     >
@@ -18,7 +18,7 @@ function HomeAbout() {
             <div
               className={`inline-block middle center ${styles['home-about-flex-in-1']}`}
             >
-              <Img path={'brand/logo-white.png'} height={240} />
+              <Image src={logoWhite} height={240} width={318} />
             </div>
 
             <div

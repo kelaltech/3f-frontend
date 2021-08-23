@@ -1,7 +1,7 @@
 @import '../../../assets/styles/theme';
 
 .news-card-container {
-  margin: ($space / 2);
+  margin: ($space * 0.5);
   padding: ($space);
 
   border-top: solid (($border + 1px)) transparentize($accent, 0.05);
@@ -34,7 +34,7 @@
 }
 
 .news-card-subtitle {
-  padding: ($space / 2) 0 0;
+  padding: ($space * 0.5) 0 0;
 
   font-size: $font-S;
   font-weight: normal;

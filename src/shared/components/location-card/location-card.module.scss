@@ -41,13 +41,13 @@
 .location-card-description-maps-link-icon {
   display: inline-block;
 
-  margin: ($space / 2) 0;
+  margin: ($space * 0.5) 0;
 
   font-size: $font-M * 2;
 }
 
 .location-card-description-maps-link-label {
-  margin: 0 0 ($space / 2);
+  margin: 0 0 ($space * 0.5);
 
   text-align: center;
 }

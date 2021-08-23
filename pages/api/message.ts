@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+ import { NextApiRequest, NextApiResponse } from 'next'
 
 import { email } from '../../src/lib/api/email'
 

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../../assets/styles/theme';
 
 .about-hero-container {
@@ -76,7 +78,7 @@
       p {
         span {
           display: inline-block;
-          margin-bottom: $space/3;
+          margin-bottom: math.div($space, 3);
           padding-left: $space;
 
           &:before {
@@ -146,7 +148,7 @@
         margin-bottom: 32px;
         span {
           display: inline-block;
-          margin-bottom: $space/3;
+          margin-bottom: math.div($space, 3);
           padding-left: $space;
 
           &:before {
@@ -183,5 +185,10 @@
       height: inherit;
       margin: 0 !important;
     }
+  }
+}
+.about-block-remove{
+  @media screen and (max-width: 815px) {
+    display: none;
   }
 }

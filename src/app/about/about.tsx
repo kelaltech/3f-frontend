@@ -2,14 +2,19 @@ import { Block, Content, Yoga } from 'gerami'
 
 import { aboutBg } from '../../../data/about-bg'
 import DotSpace from '../../shared/components/dot-space/dot-space'
-import Img from '../../shared/components/img/img'
+import Image from 'next/image'
 import Page from '../../shared/components/page/page'
 import styles from './about.module.scss'
+import logoRed from '../../assets/images/brand/logo-red.png'
+import valuePointer from '../../assets/images/about/value-pointer.png'
+import eye from '../../assets/images/about/eye.png'
+import LiteParallax from '../../shared/components/lite-parallax/lite-parallax'
 
 function About() {
   return (
     <Page>
-      <div
+      <LiteParallax
+        src={'/images/about/aboutBG.jpg'}
         className={`${styles['about-hero-container']}`}
         style={{ backgroundImage: `url(${aboutBg.src})` }}
       >
@@ -21,7 +26,7 @@ function About() {
             Furniture Manufacturing <DotSpace /> Local & Export Market{' '}
           </span>
         </Block>
-      </div>
+      </LiteParallax>
 
       {/* about */}
 
@@ -35,7 +40,7 @@ function About() {
         <Content size={'XXL'} className={styles['back-card']}>
           <Block className={`${styles['back-card-block']}`}>
             <h1>About</h1>
-            <p>
+            <p style={{paddingBottom: 32}}>
               Finfine Furniture factory (3F) is established in 1959 E.C. and the
               company has historic existence. It's been almost five decades
               since its establishment. The company is playing a critical role in
@@ -54,7 +59,7 @@ function About() {
         <Content size={'S'} className={styles['front-card']}>
           <div>
             <div className={'margin-right-very-big'}>
-              <Img path={'brand/logo-red.png'} alt={'3f logo'} height={150} />
+              <Image src={logoRed} alt={'3f logo'} height={150} width={199} />
             </div>
           </div>
         </Content>
@@ -72,10 +77,11 @@ function About() {
           className={`${styles['front-card']} ${styles['value-front-card']}`}
         >
           <div>
-            <Img
-              path={'about/value-pointer.png'}
+            <Image
+              src={valuePointer}
               alt={'3f logo'}
-              height={100}
+              height={150}
+              width={88}
             />
           </div>
         </Content>
@@ -118,7 +124,7 @@ function About() {
         <Content size={'XXL'} className={styles['back-card']}>
           <Block className={`${styles['back-card-block']}`}>
             <h1>Our Mission</h1>
-            <p>
+            <p style={{paddingBottom: 32}}>
               <span>
                 - To create value for our customer through reliablity,
                 flexiblity, integrity & speed.
@@ -139,14 +145,14 @@ function About() {
         <Content size={'S'} className={styles['front-card']}>
           <div>
             <div className={'margin-right-very-big'}>
-              <Img path={'about/eye.png'} alt={'3f logo'} height={100} />
+              <Image src={eye} alt={'3f logo'} height={100} width={176} />
             </div>
           </div>
         </Content>
       </Content>
 
-      <Block first last />
-      <Block first last />
+      <Block first last className={styles['about-block-remove']} />
+      <Block first last className={styles['about-block-remove']} />
       <Block first last />
 
       {/*Team*/}

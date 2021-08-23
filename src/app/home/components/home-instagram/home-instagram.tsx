@@ -2,16 +2,15 @@ import { Content } from 'gerami'
 
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import Image from 'next/image'
 import { homeInstagramTop } from '../../../../../data/home-instagram-top'
-import LiteImage from '../../../../shared/components/lite-image/lite-image'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
 import styles from './home-instagram.module.scss'
 
 function HomeInstagram() {
   return (
     <LiteParallax
-      src={{ src: require('../../../../assets/images/brand/logo-white.png') }}
+      src={'/images/brand/logo-white.png'}
       strength={250}
       className="bg-primary"
     >
@@ -19,11 +18,12 @@ function HomeInstagram() {
         <Content size="3XL" transparent>
           <div className={styles['home-instagram-flex']}>
             {homeInstagramTop.map((src, i) => (
-              <LiteImage
+              <div key={i} className={`${styles['home-instagram-photo']}`}>
+                <Image
                 src={src}
-                className={styles['home-instagram-photo']}
-                key={i}
-              />
+                layout="fill" objectFit="cover"
+                /> 
+              </div>
             ))}
             <a
               href="https://www.instagram.com/ethio3f"

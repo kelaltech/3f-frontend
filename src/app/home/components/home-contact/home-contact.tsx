@@ -12,12 +12,11 @@ import {
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { homeContactBg } from '../../../../../data/home-contact-bg'
 import { IMessage } from '../../../../../pages/api/message'
-import Img from '../../../../shared/components/img/img'
-import LiteImage from '../../../../shared/components/lite-image/lite-image'
+import Image from 'next/image'
 import LiteParallax from '../../../../shared/components/lite-parallax/lite-parallax'
 import styles from './home-contact.module.scss'
+import logoRed from '../../../../assets/images/brand/logo-red.png'
 
 function HomeContact() {
   const [msg, setMsg] = useState<IMessage>({ from: '', subject: '', text: '' })
@@ -40,11 +39,11 @@ function HomeContact() {
   }
 
   return (
-    <LiteParallax src={homeContactBg} strength={250}>
+    <LiteParallax src={'/images/contact/sample-9.jpeg'} strength={250}>
       <div className="padding-vertical-very-big bg-blackish">
         <Content size="3XL" transparent className="padding-vertical-big">
           <Block first className="center">
-            <Img path={'brand/logo-red.png'} height={120} />
+            <Image src={logoRed} height={120} width={160} />
           </Block>
           <Yoga maxCol={2}>
             <Block last>
