@@ -1,5 +1,5 @@
 export type HomeSlidesItemType = {
-  src: string
+  src: any
   links?: React.DetailedHTMLProps<
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
